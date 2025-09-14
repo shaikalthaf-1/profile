@@ -51,7 +51,13 @@
       <button id="menuBtn" class="menu-btn" aria-label="menu">☰</button>
           <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
-            <li><a href="#founder">Founder</a></li>
+            <li class="dropdown">
+              <a href="#founder" class="dropdown-toggle">Founder <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="skillithub.html">Skill IT Hub</a></li>
+                <li><a href="macrocloud.html">MacroCloud</a></li>
+              </ul>
+            </li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
@@ -194,7 +200,7 @@
             </div>
             <h4>Skill IT Hub</h4>
             <p>Upskilling platform and services for modern DevOps and Cloud—hands‑on labs, mentorship, and deployment playbooks.</p>
-            <a class="btn neu ghost sm" href="#" aria-disabled="true">Learn More</a>
+            <a class="btn neu ghost sm" href="skillithub.html">Learn More</a>
         </article>
         <article class="founder-card neu-outset reveal active flex-shrink-0">
             <div class="macrocloud-logo">
@@ -202,59 +208,153 @@
             </div>
             <h4>MacroCloud</h4>
             <p>Multi‑cloud migration console—track progress, authN/Z, alerting; Flat UI overlay on a Neumorphic base.</p>
-           <a class="btn neu ghost sm" href="https://macrocloud.in/" target="_blank" rel="noopener noreferrer">Learn More</a>
+           <a class="btn neu ghost sm" href="macrocloud.html">Learn More</a>
         </article>
     </div>
 </section>
 
       <section id="portfolio" class="section">
         <h3>Portfolio / Case Studies</h3>
-        <div class="masonry">
-          <article class="mason card neu-outset reveal">
-            <div class="mason-img placeholder"></div>
-            <h4>AI Cloud Automation</h4>
-            <p>End‑to‑end AI workload deployments with CI/CD, observability, and guardrails.</p>
-            <p class="meta">Azure · Kubernetes · Jenkins · Terraform</p>
+        <p class="section-subtitle">Explore my key projects and technical achievements across cloud infrastructure, AI automation, and multi-cloud platforms.</p>
+        
+        <!-- Portfolio Filter -->
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="cloud">Cloud</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="devops">DevOps</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card neu-outset reveal" data-category="ai automation">
+            <div class="card-image">
+              <img src="assets/img/ai.svg" alt="AI Cloud Automation" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="ai-automation">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>AI Cloud Automation Framework</h4>
+              <p class="card-description">End-to-end AI workload deployment platform with intelligent resource provisioning, automated scaling, and comprehensive monitoring across multiple cloud providers.</p>
+              <div class="card-tags">
+                <span class="tag ai">AI</span>
+                <span class="tag cloud">Cloud</span>
+                <span class="tag automation">Automation</span>
+              </div>
+              <div class="card-tech">
+                <span>Azure</span> · <span>Kubernetes</span> · <span>Jenkins</span> · <span>Terraform</span>
+              </div>
+            </div>
           </article>
-          <article class="mason card neu-outset reveal">
-            <div class="mason-img placeholder tall"></div>
-            <h4>Palo Alto Automation</h4>
-            <p>NGFW automation for DMZ/NAT with ARM, Bash, and Azure LB.</p>
-            <p class="meta">ARM · Bash · Azure</p>
+
+          <article class="portfolio-card neu-outset reveal" data-category="cloud devops automation">
+            <div class="card-image">
+              <img src="assets/img/cloud.svg" alt="Multi-Cloud Migration" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="cloud-migration">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>Multi-Cloud Migration Case Study</h4>
+              <p class="card-description">Seamless migration of enterprise workloads across AWS, Azure, and GCP with zero downtime, cost optimization, and enhanced security posture.</p>
+              <div class="card-tags">
+                <span class="tag cloud">Cloud</span>
+                <span class="tag devops">DevOps</span>
+                <span class="tag automation">Migration</span>
+              </div>
+              <div class="card-tech">
+                <span>AWS</span> · <span>Azure</span> · <span>GCP</span> · <span>Terraform</span>
+              </div>
+            </div>
           </article>
-          <article class="mason card neu-outset reveal">
-            <div class="mason-img placeholder wide"></div>
-            <h4>MacroCloud UI</h4>
-            <p>Multi‑cloud UI prototype with progress, auth, and incident views.</p>
-            <p class="meta">React · Tailwind · Azure</p>
+
+          <article class="portfolio-card neu-outset reveal" data-category="cloud devops">
+            <div class="card-image">
+              <img src="assets/img/devops.svg" alt="Palo Alto Automation" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="palo-alto">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>Palo Alto NGFW Automation</h4>
+              <p class="card-description">Automated deployment and configuration of Palo Alto Next-Generation Firewalls with DMZ setup, NAT policies, and Azure Load Balancer integration.</p>
+              <div class="card-tags">
+                <span class="tag cloud">Cloud</span>
+                <span class="tag devops">DevOps</span>
+                <span class="tag automation">Security</span>
+              </div>
+              <div class="card-tech">
+                <span>ARM</span> · <span>Bash</span> · <span>Azure</span> · <span>Palo Alto</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card neu-outset reveal" data-category="ai devops">
+            <div class="card-image">
+              <img src="assets/img/ai.svg" alt="AI Infrastructure Monitoring" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="ai-monitoring">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>AI-Driven Infrastructure Monitoring</h4>
+              <p class="card-description">Intelligent monitoring system using machine learning to predict infrastructure failures, optimize resource allocation, and automate incident response.</p>
+              <div class="card-tags">
+                <span class="tag ai">AI</span>
+                <span class="tag devops">DevOps</span>
+                <span class="tag automation">Monitoring</span>
+              </div>
+              <div class="card-tech">
+                <span>Python</span> · <span>ML Models</span> · <span>Prometheus</span> · <span>Grafana</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card neu-outset reveal" data-category="cloud devops">
+            <div class="card-image">
+              <img src="assets/img/software.svg" alt="MacroCloud Platform" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="macrocloud">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>MacroCloud Platform</h4>
+              <p class="card-description">Comprehensive multi-cloud management platform with unified deployment, monitoring, and cost optimization across AWS, Azure, and GCP.</p>
+              <div class="card-tags">
+                <span class="tag cloud">Cloud</span>
+                <span class="tag devops">Platform</span>
+                <span class="tag automation">SaaS</span>
+              </div>
+              <div class="card-tech">
+                <span>React</span> · <span>Node.js</span> · <span>Tailwind</span> · <span>Multi-Cloud APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card neu-outset reveal" data-category="devops automation">
+            <div class="card-image">
+              <img src="assets/img/devops.svg" alt="GitOps Pipeline" class="portfolio-img" loading="lazy">
+              <div class="card-overlay">
+                <button class="read-more-btn" data-project="gitops">Read More</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h4>Enterprise GitOps Pipeline</h4>
+              <p class="card-description">Complete GitOps implementation with automated deployments, rollback capabilities, and compliance monitoring for enterprise-scale applications.</p>
+              <div class="card-tags">
+                <span class="tag devops">DevOps</span>
+                <span class="tag automation">GitOps</span>
+                <span class="tag cloud">CI/CD</span>
+              </div>
+              <div class="card-tech">
+                <span>GitLab</span> · <span>ArgoCD</span> · <span>Kubernetes</span> · <span>Helm</span>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="projects" class="section">
-      <h3>Selected Projects</h3>
-      <div class="grid">
-        <article class="card">
-          <h4>AI_Cloud_Automation</h4>
-          <p>End-to-end automation platform for deploying AI workloads to cloud providers with CI/CD and monitoring.</p>
-          <p class="meta">Tech: Docker · Kubernetes · Jenkins · Azure</p>
-          <p class="links"><a href="#">Repository</a> · <a href="#">Live demo</a></p>
-        </article>
-
-        <article class="card">
-          <h4>MacroCloud (UI)</h4>
-          <p>Design and prototype for a multi-cloud migration UI and console with migration progress, authentication, and alerts.</p>
-          <p class="meta">Tech: React · Tailwind · Azure</p>
-          <p class="links"><a href="#">Repository</a></p>
-        </article>
-
-        <article class="card">
-          <h4>Palo Alto Automation</h4>
-          <p>Automation scripts and ARM templates to configure Palo Alto NGFW for DMZ and NAT with Azure Load Balancer.</p>
-          <p class="meta">Tech: ARM · Bash · Palo Alto</p>
-        </article>
-      </div>
-    </section>
 
       <section id="skills" class="section">
         <h3>Skills & Tools</h3>
