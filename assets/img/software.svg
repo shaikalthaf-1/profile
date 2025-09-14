@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Software engineering illustration">
+  <defs>
+    <linearGradient id="s1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="24" fill="#0b1220"/>
+  <rect x="200" y="140" width="800" height="360" rx="16" fill="#0f1724" stroke="#1f2937" stroke-width="4"/>
+  <rect x="200" y="140" width="800" height="48" rx="16" fill="#111827"/>
+  <circle cx="232" cy="164" r="8" fill="#ef4444"/>
+  <circle cx="256" cy="164" r="8" fill="#f59e0b"/>
+  <circle cx="280" cy="164" r="8" fill="#22c55e"/>
+  <text x="240" y="290" fill="url(#s1)" font-size="120" font-family="Inter,Segoe UI,Arial" font-weight="800">{ }</text>
+  <text x="60" y="560" fill="#e2e8f0" font-size="56" font-family="Inter,Segoe UI,Arial" font-weight="700">Product UI & APIs</text>
+  <text x="60" y="600" fill="#94a3b8" font-size="28" font-family="Inter,Segoe UI,Arial">React • Tailwind • Serverless • Auth</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI engineering illustration">
+  <defs>
+    <linearGradient id="a1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="24" fill="#0b1220"/>
+  <g transform="translate(260,150)" stroke="url(#a1)" stroke-width="6">
+    <circle cx="140" cy="90" r="18"/>
+    <circle cx="300" cy="60" r="18"/>
+    <circle cx="460" cy="120" r="18"/>
+    <circle cx="220" cy="200" r="18"/>
+    <circle cx="380" cy="220" r="18"/>
+    <path d="M140 90 L300 60 L460 120 L380 220 L220 200 Z"/>
+  </g>
+  <text x="60" y="560" fill="#e2e8f0" font-size="56" font-family="Inter,Segoe UI,Arial" font-weight="700">AI Cloud & MLOps</text>
+  <text x="60" y="600" fill="#94a3b8" font-size="28" font-family="Inter,Segoe UI,Arial">AKS • Pipelines • Model Registry • Observability</text>
+</svg>
