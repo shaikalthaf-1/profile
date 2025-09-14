@@ -66,6 +66,33 @@ p{color:var(--muted);line-height:1.5}
   4px 4px 10px rgba(0,0,0,0.18),
   -4px -4px 10px rgba(255,255,255,0.5),
   0 0 0 2px rgba(94,168,234,0.15) inset}
+
+/* Primary CTA Button (Booking) */
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), #4a90e2);
+  color: white !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  box-shadow: 
+    8px 8px 16px rgba(0,0,0,0.15),
+    -8px -8px 16px rgba(255,255,255,0.6),
+    inset 2px 2px 5px rgba(255,255,255,0.2),
+    0 4px 15px rgba(74, 144, 226, 0.3);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    12px 12px 24px rgba(0,0,0,0.2),
+    -12px -12px 24px rgba(255,255,255,0.7),
+    inset 2px 2px 5px rgba(255,255,255,0.3),
+    0 8px 25px rgba(74, 144, 226, 0.4);
+  background: linear-gradient(135deg, #4a90e2, var(--accent));
+}
 .titles{margin:0.4rem 0 1rem}
 .title-lg{font-size:1.2rem;font-weight:700}
 .title-md{font-size:1rem;color:var(--muted);font-weight:600}
@@ -806,6 +833,58 @@ p{color:var(--muted);line-height:1.5}
 }
 
 /* Contact and CTA */
+.contact-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.contact-booking {
+  padding: 2rem;
+  background: var(--bg-surface);
+  border-radius: 16px;
+  box-shadow: 
+    8px 8px 16px rgba(0,0,0,0.15),
+    -8px -8px 16px rgba(255,255,255,0.6);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.contact-booking h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact-booking p {
+  margin: 0 0 1.5rem 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.booking-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.contact-alternative h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact-alternative p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -992,6 +1071,26 @@ p{color:var(--muted);line-height:1.5}
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+  }
+  
+  /* Booking functionality responsive */
+  .cta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .contact-options {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-booking {
+    padding: 1.5rem;
+  }
+  
+  .booking-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
   }
   
   /* Dropdown mobile */
