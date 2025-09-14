@@ -19,7 +19,7 @@ class ReplotStaticHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header('Expires', '0')
         
         # CORS headers for iframe compatibility
-        self.send_header('X-Frame-Options', 'ALLOWALL')
+        self.send_header('Content-Security-Policy', "frame-ancestors 'self' https://*.replit.dev")
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
@@ -37,8 +37,8 @@ def main():
     # Change to directory containing the HTML files
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     
-    # Create server
-    with socketserver.TCPServer((HOST, PORT), ReplotStaticHandler) as httpd:
+    # Create server with threading for better concurrency
+    with socketserver.ThreadingTCPServer((HOST, PORT), ReplotStaticHandler) as httpd:
         print(f"✅ Server starting on http://{HOST}:{PORT}")
         print(f"📁 Serving files from: {os.getcwd()}")
         print(f"🌐 Website will be available at your Replit preview URL")
