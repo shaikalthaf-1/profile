@@ -1,0 +1,42 @@
+You are a professional web developer. I want you to update my personal portfolio website with modern, professional design and clean structure. Generate complete code for index.html, styles.css, and script.js. 
+
+Updates needed:
+
+1. Create separate dedicated pages for:
+   - Skill IT Hub (Founder & CEO profile)
+     • Highlight Shaik Althaf’s experience in AI and cloud automation.
+     • Emphasize his vision to provide students with practical, industry-relevant skills.
+     • Mention commitment to connecting learners with real job opportunities.
+     • Keep tone professional and inspiring.
+   - MacroCloud (Founder & CEO profile)
+     • Highlight expertise in multi-cloud management.
+     • Showcase vision for simplifying cloud infrastructure.
+     • Emphasize platform’s ability to deploy, automate, manage, and migrate across AWS, Azure, and GCP from a single interface.
+     • Highlight benefits and unique features of MacroCloud.
+     • Keep tone professional and forward-thinking.
+
+2. Update "Portfolio / Case Studies" section:
+   - Add case study cards for projects (Cloud automation, AI-driven solutions, Migration projects).
+   - Each card should have title, short description, and “Read More” link (that can be expanded later).
+   - Design should be clean, responsive, and modern.
+
+3. Keep index.html as the homepage with:
+   - Hero section (with Shaik Althaf’s name, role, and professional tagline).
+   - Links to About, Skills, Experience, Portfolio, Testimonials, Contact, plus the two new founder pages.
+   - Testimonials and Contact sections remain.
+
+4. Design guidelines:
+   - Use a modern, clean, responsive design.
+   - Professional fonts and consistent color palette.
+   - Smooth hover effects and subtle animations.
+   - Navigation bar with dropdown or links to new pages.
+   - Include footer with © 2025 Shaik Althaf · Built with ❤️ GitHub.
+
+Deliverables:
+- index.html (homepage)
+- skillithub.html (new page)
+- macrocloud.html (new page)
+- styles.css (modern, responsive styles)
+- script.js (smooth navigation, animations if needed)
+
+Make the output complete and production-ready with neat formatting.
