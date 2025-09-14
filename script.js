@@ -1,60 +1,159 @@
-// Enhanced JS for nav, theme, portfolio filtering, animations, and contact form
+// Enhanced JavaScript for Shaik Althaf Portfolio Website
+// Comprehensive interactive functionality with error handling
 
-// Mobile Navigation Toggle
-document.getElementById('menuBtn')?.addEventListener('click', function(){
-  const nav = document.getElementById('navLinks');
-  if(window.innerWidth <= 900){
-    nav.classList.toggle('menu-open');
-  }
+// DOM Content Loaded - Initialize all features
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all features
+  initializeTheme();
+  initializeNavigation();
+  initializePortfolioFilter();
+  initializeModal();
+  initializeContactForm();
+  initializeSmoothScrolling();
+  initializeAnimations();
+  initializeLazyLoading();
+  updateLegacyContent();
+  
+  console.log('Portfolio website initialized successfully');
 });
 
-// Contact Form Handler
-function handleSubmit(e){
-  e.preventDefault();
-  const form = document.getElementById('contactForm');
-  const msg = document.getElementById('formMsg');
-  msg.textContent = 'Thanks! Message captured locally (demo).';
-  form.reset();
-}
-
-// Smooth Scrolling for Anchor Links
-function smoothScrollTo(target) {
-  const element = document.querySelector(target);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+// Theme Toggle Functionality
+function initializeTheme() {
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  
+  // Set initial theme
+  root.setAttribute('data-theme', savedTheme);
+  if (themeBtn) {
+    themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+    themeBtn.setAttribute('aria-label', `Switch to ${savedTheme === 'dark' ? 'light' : 'dark'} theme`);
+    
+    // Add click listener
+    themeBtn.addEventListener('click', function() {
+      const currentTheme = root.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      themeBtn.setAttribute('aria-label', `Switch to ${newTheme === 'dark' ? 'light' : 'dark'} theme`);
+      
+      // Add transition effect
+      root.style.transition = 'all 0.3s ease';
+      setTimeout(() => {
+        root.style.transition = '';
+      }, 300);
     });
   }
 }
 
-// Enhanced Portfolio Filtering
-class PortfolioFilter {
-  constructor() {
-    this.filterButtons = document.querySelectorAll('.filter-btn');
-    this.portfolioCards = document.querySelectorAll('.portfolio-card');
-    this.init();
-  }
-
-  init() {
-    this.filterButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const filter = e.target.dataset.filter;
-        this.setActiveFilter(e.target);
-        this.filterProjects(filter);
-      });
+// Enhanced Navigation System
+function initializeNavigation() {
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  
+  // Mobile menu toggle
+  if (menuBtn && navLinks) {
+    menuBtn.textContent = '☰';
+    menuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+    
+    menuBtn.addEventListener('click', function() {
+      const isOpen = navLinks.classList.contains('menu-open');
+      navLinks.classList.toggle('menu-open');
+      menuBtn.setAttribute('aria-expanded', !isOpen);
+      menuBtn.textContent = isOpen ? '☰' : '✕';
+    });
+    
+    // Close mobile menu when clicking on links
+    navLinks.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A' && navLinks.classList.contains('menu-open')) {
+        navLinks.classList.remove('menu-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      }
     });
   }
+  
+  // Founder dropdown functionality (fix selector mismatch)
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isOpen = dropdown.classList.contains('show');
+      dropdown.classList.toggle('show');
+      dropdownToggle.setAttribute('aria-expanded', !isOpen);
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Keyboard support for dropdown
+    dropdownToggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dropdownToggle.click();
+      }
+    });
+  }
+  
+  // Active navigation highlighting
+  const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sections = document.querySelectorAll('section[id]');
+  
+  function updateActiveNav() {
+    const scrollPosition = window.scrollY + 100;
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navItems.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', updateActiveNav);
+}
 
-  setActiveFilter(activeBtn) {
-    this.filterButtons.forEach(btn => btn.classList.remove('active'));
+// Portfolio Filter System
+function initializePortfolioFilter() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  
+  if (filterButtons.length === 0 || portfolioCards.length === 0) {
+    console.log('Portfolio filter elements not found - skipping initialization');
+    return;
+  }
+  
+  function setActiveFilter(activeBtn) {
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-pressed', 'false');
+    });
     activeBtn.classList.add('active');
+    activeBtn.setAttribute('aria-pressed', 'true');
   }
-
-  filterProjects(filter) {
-    this.portfolioCards.forEach(card => {
+  
+  function filterProjects(filter) {
+    portfolioCards.forEach((card, index) => {
       const categories = card.dataset.category || '';
-      const shouldShow = filter === 'all' || categories.includes(filter);
+      const shouldShow = filter === 'all' || categories.split(' ').includes(filter);
       
       if (shouldShow) {
         card.style.display = 'block';
@@ -65,7 +164,7 @@ class PortfolioFilter {
           card.style.transition = 'all 0.4s ease';
           card.style.opacity = '1';
           card.style.transform = 'translateY(0)';
-        }, 100);
+        }, index * 100);
       } else {
         card.style.opacity = '0';
         card.style.transform = 'translateY(-20px)';
@@ -75,27 +174,42 @@ class PortfolioFilter {
       }
     });
   }
+  
+  // Add event listeners to filter buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const filter = this.dataset.filter;
+      setActiveFilter(this);
+      filterProjects(filter);
+    });
+    
+    // Keyboard support
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+  
+  // Initialize with 'all' filter
+  const allFilter = document.querySelector('.filter-btn[data-filter="all"]');
+  if (allFilter) {
+    setActiveFilter(allFilter);
+    filterProjects('all');
+  }
 }
 
-// Portfolio Project Details Modal
-class ProjectModal {
-  constructor() {
-    this.modal = null;
-    this.projects = this.getProjectData();
-    this.init();
-  }
-
-  init() {
-    this.createModal();
-    this.bindEvents();
-  }
-
-  createModal() {
+// Modal System for Project Details
+function initializeModal() {
+  // Create modal HTML if it doesn't exist
+  if (!document.getElementById('projectModal')) {
     const modalHTML = `
-      <div id="projectModal" class="project-modal">
+      <div id="projectModal" class="project-modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-content">
-          <button class="modal-close">&times;</button>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
           <div class="modal-body">
             <div class="modal-image">
               <img src="" alt="" id="modalImage">
@@ -107,279 +221,183 @@ class ProjectModal {
               <div id="modalTech" class="modal-tech"></div>
               <div id="modalDetails" class="modal-details"></div>
               <div class="modal-actions">
-                <button class="btn neu" onclick="window.open('#', '_blank')">View Live Demo</button>
-                <button class="btn neu ghost" onclick="window.open('#', '_blank')">View Code</button>
+                <button class="btn neu" id="modalDemoBtn">View Live Demo</button>
+                <button class="btn neu ghost" id="modalCodeBtn">View Code</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     `;
-    
     document.body.insertAdjacentHTML('beforeend', modalHTML);
-    this.modal = document.getElementById('projectModal');
+    
+    // Add modal styles
+    addModalStyles();
   }
-
-  bindEvents() {
-    // Read More button clicks
-    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('read-more-btn')) {
-        e.preventDefault();
-        const projectId = e.target.dataset.project;
-        this.showProject(projectId);
-      }
-    });
-
-    // Modal close events
-    this.modal.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal-backdrop') || e.target.classList.contains('modal-close')) {
-        this.hideModal();
-      }
-    });
-
-    // ESC key to close modal
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.modal.classList.contains('active')) {
-        this.hideModal();
-      }
-    });
-  }
-
-  showProject(projectId) {
-    const project = this.projects[projectId];
+  
+  const modal = document.getElementById('projectModal');
+  const closeBtn = modal.querySelector('.modal-close');
+  const backdrop = modal.querySelector('.modal-backdrop');
+  
+  // Project data
+  const projectData = {
+    'ai-automation': {
+      title: 'AI Cloud Automation Framework',
+      image: 'assets/img/ai.svg',
+      tags: ['AI', 'Cloud', 'Automation'],
+      description: 'A comprehensive framework for deploying and managing AI workloads in cloud environments with intelligent resource provisioning and automated scaling.',
+      tech: 'Azure, Kubernetes, Jenkins, Terraform, Python, Docker',
+      details: `
+        <h4>Project Overview</h4>
+        <p>This framework revolutionizes how AI workloads are deployed and managed in cloud environments by combining intelligent resource provisioning with automated scaling capabilities.</p>
+        <h4>Key Features</h4>
+        <ul>
+          <li>Intelligent resource allocation based on workload requirements</li>
+          <li>Automated scaling for training and inference workloads</li>
+          <li>Cost optimization through dynamic resource management</li>
+          <li>Comprehensive monitoring and observability</li>
+          <li>Multi-cloud support (Azure, AWS, GCP)</li>
+        </ul>
+        <h4>Impact</h4>
+        <p>Reduced deployment time by 60% and operational costs by 30% for AI workloads across multiple enterprise clients.</p>
+      `
+    },
+    'cloud-migration': {
+      title: 'Multi-Cloud Migration Case Study',
+      image: 'assets/img/cloud.svg',
+      tags: ['Cloud', 'DevOps', 'Migration'],
+      description: 'Seamless migration of enterprise workloads across AWS, Azure, and GCP with zero downtime and enhanced security.',
+      tech: 'AWS, Azure, GCP, Terraform, Ansible, Jenkins',
+      details: `
+        <h4>Challenge</h4>
+        <p>Large enterprise needed to migrate critical workloads across multiple cloud providers to avoid vendor lock-in and optimize costs.</p>
+        <h4>Solution</h4>
+        <ul>
+          <li>Comprehensive assessment of existing infrastructure</li>
+          <li>Custom migration tools and automation scripts</li>
+          <li>Phased migration approach with rollback capabilities</li>
+          <li>Enhanced security and compliance implementation</li>
+        </ul>
+        <h4>Results</h4>
+        <p>Successfully migrated 200+ applications with zero downtime, achieving 25% cost reduction and improved disaster recovery capabilities.</p>
+      `
+    }
+  };
+  
+  // Modal show/hide functions
+  function showModal(projectId) {
+    const project = projectData[projectId];
     if (!project) return;
-
+    
     // Populate modal content
-    document.getElementById('modalImage').src = project.image;
-    document.getElementById('modalTitle').textContent = project.title;
-    document.getElementById('modalDescription').innerHTML = project.description;
-    document.getElementById('modalTech').innerHTML = project.tech;
-    document.getElementById('modalDetails').innerHTML = project.details;
+    modal.querySelector('#modalImage').src = project.image;
+    modal.querySelector('#modalTitle').textContent = project.title;
+    modal.querySelector('#modalDescription').textContent = project.description;
+    modal.querySelector('#modalTech').innerHTML = `<strong>Technologies:</strong> ${project.tech}`;
+    modal.querySelector('#modalDetails').innerHTML = project.details;
     
     // Populate tags
-    const tagsContainer = document.getElementById('modalTags');
+    const tagsContainer = modal.querySelector('#modalTags');
     tagsContainer.innerHTML = project.tags.map(tag => 
       `<span class="tag ${tag.toLowerCase()}">${tag}</span>`
     ).join('');
-
-    // Show modal with animation
-    this.modal.classList.add('active');
+    
+    // Show modal
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    
+    // Focus management
+    closeBtn.focus();
   }
-
-  hideModal() {
-    this.modal.classList.remove('active');
+  
+  function hideModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
-  getProjectData() {
-    return {
-      'ai-automation': {
-        title: 'AI Cloud Automation Framework',
-        image: 'assets/img/ai.svg',
-        tags: ['AI', 'Cloud', 'Automation'],
-        description: 'A comprehensive framework for deploying and managing AI workloads in cloud environments with intelligent resource provisioning and automated scaling.',
-        tech: '<strong>Technologies:</strong> Azure, Kubernetes, Jenkins, Terraform, Python, Docker',
-        details: `
-          <h4>Project Overview</h4>
-          <p>This framework revolutionizes how AI workloads are deployed and managed in cloud environments. By combining intelligent resource provisioning with automated scaling capabilities, it ensures optimal performance while minimizing costs.</p>
-          
-          <h4>Key Features</h4>
-          <ul>
-            <li>Intelligent resource allocation based on workload requirements</li>
-            <li>Automated scaling for training and inference workloads</li>
-            <li>Cost optimization through dynamic resource management</li>
-            <li>Comprehensive monitoring and observability</li>
-            <li>Multi-cloud support (Azure, AWS, GCP)</li>
-          </ul>
-          
-          <h4>Impact</h4>
-          <p>Reduced deployment time by 60% and operational costs by 30% for AI workloads across multiple enterprise clients.</p>
-        `
-      },
-      'cloud-migration': {
-        title: 'Multi-Cloud Migration Case Study',
-        image: 'assets/img/cloud.svg',
-        tags: ['Cloud', 'DevOps', 'Migration'],
-        description: 'Seamless migration of enterprise workloads across AWS, Azure, and GCP with zero downtime and enhanced security.',
-        tech: '<strong>Technologies:</strong> AWS, Azure, GCP, Terraform, Ansible, Jenkins',
-        details: `
-          <h4>Challenge</h4>
-          <p>Large enterprise needed to migrate critical workloads across multiple cloud providers to avoid vendor lock-in and optimize costs.</p>
-          
-          <h4>Solution</h4>
-          <ul>
-            <li>Comprehensive assessment of existing infrastructure</li>
-            <li>Custom migration tools and automation scripts</li>
-            <li>Phased migration approach with rollback capabilities</li>
-            <li>Enhanced security and compliance implementation</li>
-          </ul>
-          
-          <h4>Results</h4>
-          <p>Successfully migrated 200+ applications with zero downtime, achieving 25% cost reduction and improved disaster recovery capabilities.</p>
-        `
-      },
-      'palo-alto': {
-        title: 'Palo Alto NGFW Automation',
-        image: 'assets/img/devops.svg',
-        tags: ['Cloud', 'DevOps', 'Security'],
-        description: 'Automated deployment and configuration of Palo Alto Next-Generation Firewalls with DMZ setup and Azure integration.',
-        tech: '<strong>Technologies:</strong> ARM Templates, Bash, Azure, Palo Alto NGFW',
-        details: `
-          <h4>Project Scope</h4>
-          <p>Automated the deployment and configuration of Palo Alto NGFWs for enterprise security architecture with DMZ implementation.</p>
-          
-          <h4>Implementation</h4>
-          <ul>
-            <li>ARM template development for infrastructure deployment</li>
-            <li>Automated NGFW configuration and policy management</li>
-            <li>DMZ setup with proper network segmentation</li>
-            <li>Integration with Azure Load Balancer</li>
-            <li>Monitoring and alerting implementation</li>
-          </ul>
-          
-          <h4>Outcome</h4>
-          <p>Reduced deployment time from weeks to hours while ensuring consistent security configurations across all environments.</p>
-        `
-      },
-      'ai-monitoring': {
-        title: 'AI-Driven Infrastructure Monitoring',
-        image: 'assets/img/ai.svg',
-        tags: ['AI', 'DevOps', 'Monitoring'],
-        description: 'Intelligent monitoring system using machine learning to predict infrastructure failures and optimize resource allocation.',
-        tech: '<strong>Technologies:</strong> Python, ML Models, Prometheus, Grafana, Kubernetes',
-        details: `
-          <h4>Innovation</h4>
-          <p>Revolutionary monitoring system that uses machine learning to predict infrastructure issues before they impact users.</p>
-          
-          <h4>Capabilities</h4>
-          <ul>
-            <li>Predictive failure analysis with 95% accuracy</li>
-            <li>Automated incident response and self-healing</li>
-            <li>Resource optimization recommendations</li>
-            <li>Anomaly detection and alerting</li>
-            <li>Performance trend analysis</li>
-          </ul>
-          
-          <h4>Business Impact</h4>
-          <p>Reduced unplanned downtime by 80% and improved system performance by 40% through proactive issue resolution.</p>
-        `
-      },
-      'macrocloud': {
-        title: 'MacroCloud Platform',
-        image: 'assets/img/software.svg',
-        tags: ['Cloud', 'Platform', 'SaaS'],
-        description: 'Comprehensive multi-cloud management platform with unified deployment and monitoring capabilities.',
-        tech: '<strong>Technologies:</strong> React, Node.js, Tailwind CSS, Multi-Cloud APIs',
-        details: `
-          <h4>Platform Overview</h4>
-          <p>MacroCloud is a revolutionary platform that simplifies multi-cloud infrastructure management through a unified interface.</p>
-          
-          <h4>Core Features</h4>
-          <ul>
-            <li>Unified multi-cloud deployment</li>
-            <li>Cost optimization and monitoring</li>
-            <li>Security and compliance management</li>
-            <li>Automated migration tools</li>
-            <li>Real-time analytics and reporting</li>
-          </ul>
-          
-          <h4>Market Position</h4>
-          <p>Leading solution for enterprises seeking cloud freedom and operational efficiency across AWS, Azure, and GCP.</p>
-        `
-      },
-      'gitops': {
-        title: 'Enterprise GitOps Pipeline',
-        image: 'assets/img/devops.svg',
-        tags: ['DevOps', 'GitOps', 'CI/CD'],
-        description: 'Complete GitOps implementation with automated deployments and compliance monitoring for enterprise applications.',
-        tech: '<strong>Technologies:</strong> GitLab CI, ArgoCD, Kubernetes, Helm, Terraform',
-        details: `
-          <h4>GitOps Implementation</h4>
-          <p>Comprehensive GitOps solution enabling declarative infrastructure and application management through Git workflows.</p>
-          
-          <h4>Pipeline Features</h4>
-          <ul>
-            <li>Automated CI/CD with GitLab</li>
-            <li>ArgoCD for continuous deployment</li>
-            <li>Helm charts for application packaging</li>
-            <li>Automated rollback capabilities</li>
-            <li>Compliance and audit logging</li>
-          </ul>
-          
-          <h4>Enterprise Benefits</h4>
-          <p>Improved deployment frequency by 10x while maintaining 99.9% uptime and full compliance with enterprise security policies.</p>
-        `
-      }
-    };
-  }
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize enhanced features
-  initializeApp();
-});
-
-function initializeApp() {
-  // Normalize icons/labels present in HTML
-  const menuBtn = document.getElementById('menuBtn');
-  if(menuBtn){ 
-    menuBtn.textContent = '☰'; 
-    menuBtn.setAttribute('aria-label','Open menu'); 
-  }
-
-  // Initialize Theme Toggle
-  initializeTheme();
-
-  // Initialize Portfolio Features
-  if (document.querySelector('.portfolio-grid')) {
-    new PortfolioFilter();
-    new ProjectModal();
-  }
-
-  // Initialize Smooth Scrolling
-  initializeSmoothScrolling();
-
-  // Initialize Animations
-  initializeScrollAnimations();
-
-  // Initialize Navigation
-  initializeNavigation();
-
-  // Legacy content updates
-  updateLegacyContent();
-}
-
-// Theme Management
-function initializeTheme() {
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('theme');
-  const theme = saved || 'dark'; // Default to dark theme
   
-  root.setAttribute('data-theme', theme);
-  if(btn){ 
-    btn.textContent = theme === 'dark' ? '🌙' : '☀️'; 
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? '🌙' : '☀️';
+  // Event listeners
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('read-more-btn')) {
+      e.preventDefault();
+      const projectId = e.target.dataset.project;
+      showModal(projectId);
+    }
+  });
+  
+  closeBtn.addEventListener('click', hideModal);
+  backdrop.addEventListener('click', hideModal);
+  
+  // Keyboard support
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      hideModal();
+    }
+  });
+}
+
+// Contact Form Handler
+function initializeContactForm() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
       
-      // Add transition effect
-      root.style.transition = 'all 0.3s ease';
+      const formMsg = document.getElementById('formMsg');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      
+      // Show loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+      
+      // Simulate form submission
       setTimeout(() => {
-        root.style.transition = '';
-      }, 300);
+        if (formMsg) {
+          formMsg.textContent = 'Thanks! Your message has been received. I will get back to you soon.';
+          formMsg.style.color = 'var(--success, #28a745)';
+        }
+        
+        contactForm.reset();
+        
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      }, 1000);
     });
   }
 }
 
-// Smooth Scrolling for Navigation Links
+// Global handleSubmit function for backward compatibility
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+  if (msg) {
+    msg.textContent = 'Thanks! Message captured locally (demo).';
+    msg.style.color = 'var(--success, #28a745)';
+  }
+  if (form) form.reset();
+}
+
+// Smooth Scrolling System
 function initializeSmoothScrolling() {
-  document.addEventListener('click', (e) => {
+  function smoothScrollTo(target) {
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+  
+  // Add smooth scrolling to all anchor links
+  document.addEventListener('click', function(e) {
     const link = e.target.closest('a[href^="#"]');
     if (link && link.getAttribute('href') !== '#') {
       e.preventDefault();
@@ -387,52 +405,19 @@ function initializeSmoothScrolling() {
       smoothScrollTo(targetId);
     }
   });
-}
-
-// Enhanced Navigation with Active State Management
-function initializeNavigation() {
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  const sections = document.querySelectorAll('section[id]');
   
-  // Update active navigation on scroll
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY + 100;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  });
-
-  // Mobile menu auto-close on link click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const nav = document.getElementById('navLinks');
-      if (nav && nav.classList.contains('menu-open')) {
-        nav.classList.remove('menu-open');
-      }
-    });
-  });
+  // Make smoothScrollTo globally available
+  window.smoothScrollTo = smoothScrollTo;
 }
 
-// Enhanced Scroll Animations
-function initializeScrollAnimations() {
+// Animation System
+function initializeAnimations() {
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   };
-
-  const observer = new IntersectionObserver((entries) => {
+  
+  const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in');
@@ -446,19 +431,19 @@ function initializeScrollAnimations() {
       }
     });
   }, observerOptions);
-
+  
   // Observe all reveal elements
   document.querySelectorAll('.reveal, .neu-outset, .portfolio-card').forEach(el => {
     observer.observe(el);
   });
 }
 
-// Performance Optimization - Lazy Loading for Images
+// Lazy Loading for Images
 function initializeLazyLoading() {
   const images = document.querySelectorAll('img[loading="lazy"]');
   
   if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver(function(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
@@ -470,7 +455,7 @@ function initializeLazyLoading() {
         }
       });
     });
-
+    
     images.forEach(img => imageObserver.observe(img));
   } else {
     // Fallback for older browsers
@@ -482,69 +467,57 @@ function initializeLazyLoading() {
   }
 }
 
-// Legacy Content Updates (keeping existing functionality)
+// Legacy Content Updates
 function updateLegacyContent() {
-
+  // Update hero content if needed
   const hero = document.querySelector('.hero');
-  const p = hero?.querySelector('.hero-left p');
+  const heroP = hero?.querySelector('.hero-left p');
   const cta = hero?.querySelector('.cta');
-  if(p && /Cloud Networking|production-grade/.test(p.textContent || '')){
-    p.innerHTML = 'Automating cloud infrastructure and AI platforms across Azure, AWS, and GCP. <strong>Terraform • Ansible • Kubernetes • Jenkins • GitHub Actions</strong>';
+  
+  if (heroP && /Cloud Networking|production-grade/.test(heroP.textContent || '')) {
+    heroP.innerHTML = 'Automating cloud infrastructure and AI platforms across Azure, AWS, and GCP. <strong>Terraform • Ansible • Kubernetes • Jenkins • GitHub Actions</strong>';
   }
-  if(cta){
-    const [a,b] = cta.querySelectorAll('a');
-    if(a){ a.textContent = 'Explore My Work'; a.classList.add('neu'); a.setAttribute('href', '#portfolio'); }
-    if(b){ b.textContent = 'Contact Me'; b.classList.add('neu','ghost'); b.setAttribute('href','#contact'); b.removeAttribute('target'); b.removeAttribute('rel'); }
+  
+  if (cta) {
+    const [primaryBtn, secondaryBtn] = cta.querySelectorAll('a');
+    if (primaryBtn) {
+      primaryBtn.textContent = 'Explore My Work';
+      primaryBtn.classList.add('neu');
+      primaryBtn.setAttribute('href', '#portfolio');
+    }
+    if (secondaryBtn) {
+      secondaryBtn.textContent = 'Contact Me';
+      secondaryBtn.classList.add('neu', 'ghost');
+      secondaryBtn.setAttribute('href', '#contact');
+      secondaryBtn.removeAttribute('target');
+      secondaryBtn.removeAttribute('rel');
+    }
   }
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.reveal, .neu-outset').forEach(el=> io.observe(el));
-
-  // Simple slider
-  const slider = document.querySelector('.slider');
-  if(slider){
-    const slides = Array.from(slider.querySelectorAll('.slide'));
-    let idx = 0;
-    const show = (i)=>{ slides.forEach((s,j)=> s.classList.toggle('active', j===i)); };
-    slider.querySelector('.prev')?.addEventListener('click', ()=>{ idx=(idx-1+slides.length)%slides.length; show(idx); });
-    slider.querySelector('.next')?.addEventListener('click', ()=>{ idx=(idx+1)%slides.length; show(idx); });
-    setInterval(()=>{ idx=(idx+1)%slides.length; show(idx); }, 6000);
-  }
-
-  // Parallax-ish hero background
-  const bg = document.querySelector('.hero-bg');
-  if(bg){
-    window.addEventListener('scroll', ()=>{
-      const y = window.scrollY * 0.15;
-      bg.style.transform = `translateY(${y}px)`;
-    });
-  }
-
-  // Fix encoding artifacts like replacement chars in meta bullets
-  document.querySelectorAll('.meta').forEach(el=>{
+  
+  // Fix encoding issues
+  document.querySelectorAll('.meta').forEach(el => {
     el.textContent = el.textContent.replace(/�/g, '•');
   });
-  const heroP = document.querySelector('.hero-left p');
-  if(heroP){ heroP.innerHTML = heroP.innerHTML.replace(/�/g, '•'); }
-
+  
+  if (heroP) {
+    heroP.innerHTML = heroP.innerHTML.replace(/�/g, '•');
+  }
+  
   // Normalize hero info icons
   const heroInfo = document.querySelectorAll('.hero-info li');
-  if(heroInfo[0]) heroInfo[0].textContent = '✉️ shaikalthafcgl@gmail.com';
-  if(heroInfo[1]) heroInfo[1].textContent = '📍 India';
-
+  if (heroInfo[0]) heroInfo[0].textContent = '✉️ shaikalthafcgl@gmail.com';
+  if (heroInfo[1]) heroInfo[1].textContent = '📍 India';
+  
   // Footer cleanup
   const footerP = document.querySelector('.footer .container p');
-  if(footerP){
-    let t = footerP.textContent;
-    t = t.replace(/^c\s/, '© ').replace(/\?\?/g, '❤️').replace(/�/g, '•');
-    footerP.textContent = t;
+  if (footerP) {
+    let text = footerP.textContent;
+    text = text.replace(/^c\s/, '© ').replace(/\?\?/g, '❤️').replace(/�/g, '•');
+    footerP.textContent = text;
   }
 }
 
-// Add Modal Styles Dynamically
+// Add Modal Styles
 function addModalStyles() {
   const modalStyles = `
     .project-modal {
@@ -715,10 +688,20 @@ function addModalStyles() {
   document.head.appendChild(styleSheet);
 }
 
-// Initialize modal styles when DOM loads
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', addModalStyles);
-} else {
-  addModalStyles();
-}
+// Error handling
+window.addEventListener('error', function(e) {
+  console.error('Script error:', e.error);
+});
 
+// Export functions for global access
+window.smoothScrollTo = function(target) {
+  const element = document.querySelector(target);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
+
+window.handleSubmit = handleSubmit;
