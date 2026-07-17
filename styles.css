@@ -1104,6 +1104,37 @@ h2 em {
   color: var(--muted);
 }
 
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.impact-card {
+  min-height: 18rem;
+  padding: clamp(1.8rem, 4vw, 3rem);
+  border: 1px solid #c6e0e7;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: var(--shadow-sm);
+}
+
+.impact-card .card-index {
+  margin-bottom: 4rem;
+}
+
+.impact-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.impact-card p {
+  max-width: 38rem;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .repository-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1447,6 +1478,7 @@ h2 em {
   .overview-grid,
   .work-grid,
   .repository-grid,
+  .impact-grid,
   .contact-layout {
     grid-template-columns: 1fr;
   }
