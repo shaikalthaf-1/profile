@@ -7,7 +7,7 @@
 Building secure cloud networks, multi-cloud platforms, and the engineering foundations of **MacroCloud**.
 
 <p align="center">
-  <img src="./Shaik_Althaf_Profile1.png" alt="Shaik Althaf" width="180" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.15);" />
+  <img src="https://raw.githubusercontent.com/shaikalthaf-1/shaikalthaf-1/refs/heads/main/Shaik_Althaf_Profile1.png" alt="Shaik Althaf" width="180" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.15);" />
 </p>
 
 <p align="center">
