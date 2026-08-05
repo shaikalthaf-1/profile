@@ -1,6 +1,6 @@
 # ALTHAF SHAIK — Enterprise Executive Portfolio
 
-> Senior Cloud & Network Automation Engineer · Enterprise Azure | Terraform | DevOps | Palo Alto Networks | Platform Engineering
+> Senior DevOps & Network Automation Engineer · Enterprise Azure | Terraform | DevOps | Palo Alto Networks | Platform Engineering
 
 This repository contains the complete production-ready enterprise web application for **ALTHAF SHAIK**, built using Microsoft Fluent Design aesthetics, a pure white background system (`#FFFFFF` / `#F8FAFC`), and zero black backgrounds.
 
@@ -9,7 +9,7 @@ This repository contains the complete production-ready enterprise web applicatio
 ## 🚀 Key Architectural Highlights
 
 - **Enterprise Design System**: Inspired by Microsoft Azure, HashiCorp, Cloudflare, and GitHub Enterprise (`#0078D4` Azure Blue, `#38BDF8` Sky Accent, Deep Slate `#0F172A`).
-- **Primary Career Focus**: Senior Cloud & Network Automation Engineer at **Uniper** *(Client Assignment via Dhakium)*.
+- **Primary Career Focus**: Senior DevOps & Network Automation Engineer at **Uniper** *(Client Assignment via Dhakium)*.
 - **10 Complete Pages**:
   1. `index.html` — Full Screen Hero, Canvas Network Animation, Statistics Counters, Marquee Tech Slider.
   2. `about.html` — 9 Core Engineering Pillars, Animated Career Timeline, Skills Evolution, Engineering Principles.
