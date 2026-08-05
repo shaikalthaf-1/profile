@@ -1,103 +1,103 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0078d4">
-  <title>404 — Page Not Found | ALTHAF SHAIK</title>
-  <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <link rel="shortcut icon" href="../favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Shaik Althaf" />
-  <link rel="manifest" href="../site.webmanifest" />
-  <meta name="description" content="The requested page could not be found. Return to Althaf Shaik's enterprise portfolio.">
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20260805_v5">
-
-<style>
-/* CRITICAL INLINE LAYOUT FALLBACK */
-:root {
-  --azure-primary: #0078d4;
-  --bg-main: #ffffff;
-  --bg-surface: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --border-subtle: #e2e8f0;
-  --border-azure: rgba(0, 120, 212, 0.25);
-  --shell-max: 1280px;
-  --header-height: 4.5rem;
-}
-body { margin: 0; background: #ffffff; color: #0f172a; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
-.shell { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-.site-header { position: fixed; top: 0; left: 0; right: 0; height: 4.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 1000; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-.brand { display: flex; align-items: center; gap: 0.75rem; color: #0f172a; text-decoration: none; font-weight: 700; }
-.brand-avatar-mini { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid #0078d4; }
-.primary-nav { display: flex; align-items: center; gap: 1.25rem; }
-.primary-nav a { text-decoration: none; color: #334155; font-size: 0.925rem; font-weight: 500; padding: 0.4rem 0.75rem; border-radius: 8px; }
-.primary-nav a:hover { color: #0078d4; background: rgba(0,120,212,0.08); }
-.nav-resume-btn { background: rgba(0,120,212,0.08)!important; color: #0078d4!important; border: 1px solid rgba(0,120,212,0.25)!important; font-weight: 600!important; }
-.nav-cta { background: #0078d4!important; color: #ffffff!important; font-weight: 600!important; border-radius: 8px!important; padding: 0.5rem 1.1rem!important; }
-.hero { position: relative; min-height: 90vh; display: flex; align-items: center; padding-top: 6rem; padding-bottom: 4rem; overflow: hidden; background: #ffffff; }
-.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
-.status-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1rem; background: #ffffff; border: 1px solid rgba(0,120,212,0.25); border-radius: 9999px; font-size: 0.875rem; font-weight: 600; color: #0078d4; margin-bottom: 1.25rem; }
-.status-dot-active { width: 8px; height: 8px; border-radius: 50%; background: #10b981; }
-.hero h1 { font-size: clamp(2.4rem, 4.2vw, 3.8rem); margin: 0 0 1rem 0; color: #0f172a; }
-.hero-title-sub { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
-.hero-title-sub span { background: rgba(0,120,212,0.08); color: #0078d4; padding: 0.25rem 0.75rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(0,120,212,0.2); }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
-.button { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.85rem 1.75rem; font-size: 0.975rem; font-weight: 600; border-radius: 14px; text-decoration: none; cursor: pointer; border: 1px solid transparent; }
-.button-primary { background: #0078d4; color: #ffffff; }
-.button-secondary { background: #ffffff; color: #0078d4; border-color: rgba(0,120,212,0.25); }
-.button-ghost { background: #f8fafc; color: #0f172a; border-color: #e2e8f0; }
-.portrait-stage { position: relative; display: flex; flex-direction: column; align-items: center; }
-.portrait-frame { position: relative; width: 100%; max-width: 400px; border-radius: 24px; overflow: hidden; background: #ffffff; border: 2px solid rgba(0,120,212,0.25); }
-.portrait-frame img { width: 100%; height: 440px; object-fit: cover; object-position: center top; display: block; }
-.marquee-section { padding: 2rem 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; overflow: hidden; }
-.marquee-title { text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-weight: 700; margin-bottom: 1.25rem; }
-.marquee-track { display: flex; gap: 1.5rem; width: max-content; animation: marquee 25s linear infinite; }
-@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.marquee-item { display: flex; align-items: center; gap: 0.6rem; background: #ffffff; border: 1px solid #e2e8f0; padding: 0.6rem 1.25rem; border-radius: 14px; font-size: 0.9rem; font-weight: 600; color: #0f172a; white-space: nowrap; }
-.overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-.statement-card, .pillar-card, .case-study-card, .tech-card, .cert-card, .award-card, .leadership-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; }
-@media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; } .overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { .overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { grid-template-columns: 1fr; } }
-</style>
-
-</head>
-<body>
-  <header class="site-header" data-header>
-    <div class="header-inner shell">
-      <a class="brand" href="../">
-        <span class="brand-avatar-mini" aria-hidden="true">
-          <img src="../assets/images/Shaik_Profile.svg" alt="Althaf Shaik Avatar" width="40" height="40">
-        </span>
-        <span><strong>ALTHAF SHAIK</strong><small>Sr. DevOps Engineer · Uniper</small></span>
-      </a>
-    </div>
-  </header>
-
-  <main style="padding-top: calc(var(--header-height) + 5rem); padding-bottom: 5rem; text-align: center;">
-    <div class="shell" style="max-width: 600px;">
-      <div style="font-size: 5rem; font-weight: 800; color: var(--azure-primary); font-family: var(--font-heading);">404</div>
-      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Resource Not Found</h1>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2rem;">The page or cloud resource you are attempting to reach does not exist or has been relocated.</p>
-      
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a class="button button-primary" href="../">Return to Home Page 🏠</a>
-        <a class="button button-secondary" href="../case-studies/">View Case Studies ↗</a>
-        <a class="button button-ghost" href="../contact/">Contact Support ↗</a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-bottom">
-      <span>© <span data-year></span> ALTHAF SHAIK · All Rights Reserved</span>
-      <span><a href="../">Home</a> · <a href="../contact/">Contact</a></span>
-    </div>
-  </footer>
-
-  <script src="../assets/js/script.js?v=20260805_v4" defer></script>
-</body>
-</html>
+·<·!·d·o·c·t·y·p·e· ·h·t·m·l·>·
+·<·h·t·m·l· ·l·a·n·g·=·"·e·n·"·>·
+·<·h·e·a·d·>·
+· · ·<·m·e·t·a· ·c·h·a·r·s·e·t·=·"·u·t·f·-·8·"·>·
+· · ·<·m·e·t·a· ·n·a·m·e·=·"·v·i·e·w·p·o·r·t·"· ·c·o·n·t·e·n·t·=·"·w·i·d·t·h·=·d·e·v·i·c·e·-·w·i·d·t·h·,· ·i·n·i·t·i·a·l·-·s·c·a·l·e·=·1·"·>·
+· · ·<·m·e·t·a· ·n·a·m·e·=·"·t·h·e·m·e·-·c·o·l·o·r·"· ·c·o·n·t·e·n·t·=·"·#·0·0·7·8·d·4·"·>·
+· · ·<·t·i·t·l·e·>·4·0·4· ·—· ·P·a·g·e· ·N·o·t· ·F·o·u·n·d· ·|· ·A·L·T·H·A·F· ·S·H·A·I·K·<·/·t·i·t·l·e·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·i·c·o·n·"· ·t·y·p·e·=·"·i·m·a·g·e·/·p·n·g·"· ·h·r·e·f·=·"·.·.·/·f·a·v·i·c·o·n·-·9·6·x·9·6·.·p·n·g·"· ·s·i·z·e·s·=·"·9·6·x·9·6·"· ·/·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·i·c·o·n·"· ·t·y·p·e·=·"·i·m·a·g·e·/·s·v·g·+·x·m·l·"· ·h·r·e·f·=·"·.·.·/·f·a·v·i·c·o·n·.·s·v·g·"· ·/·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·s·h·o·r·t·c·u·t· ·i·c·o·n·"· ·h·r·e·f·=·"·.·.·/·f·a·v·i·c·o·n·.·i·c·o·"· ·/·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·a·p·p·l·e·-·t·o·u·c·h·-·i·c·o·n·"· ·s·i·z·e·s·=·"·1·8·0·x·1·8·0·"· ·h·r·e·f·=·"·.·.·/·a·p·p·l·e·-·t·o·u·c·h·-·i·c·o·n·.·p·n·g·"· ·/·>·
+· · ·<·m·e·t·a· ·n·a·m·e·=·"·a·p·p·l·e·-·m·o·b·i·l·e·-·w·e·b·-·a·p·p·-·t·i·t·l·e·"· ·c·o·n·t·e·n·t·=·"·S·h·a·i·k· ·A·l·t·h·a·f·"· ·/·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·m·a·n·i·f·e·s·t·"· ·h·r·e·f·=·"·.·.·/·s·i·t·e·.·w·e·b·m·a·n·i·f·e·s·t·"· ·/·>·
+· · ·<·m·e·t·a· ·n·a·m·e·=·"·d·e·s·c·r·i·p·t·i·o·n·"· ·c·o·n·t·e·n·t·=·"·T·h·e· ·r·e·q·u·e·s·t·e·d· ·p·a·g·e· ·c·o·u·l·d· ·n·o·t· ·b·e· ·f·o·u·n·d·.· ·R·e·t·u·r·n· ·t·o· ·A·l·t·h·a·f· ·S·h·a·i·k·'·s· ·e·n·t·e·r·p·r·i·s·e· ·p·o·r·t·f·o·l·i·o·.·"·>·
+· · ·<·l·i·n·k· ·r·e·l·=·"·s·t·y·l·e·s·h·e·e·t·"· ·h·r·e·f·=·"·.·.·/·a·s·s·e·t·s·/·c·s·s·/·s·t·y·l·e·s·.·c·s·s·?·v·=·2·0·2·6·0·8·0·5·_·v·5·"·>·
+·
+·<·s·t·y·l·e·>·
+·/·*· ·C·R·I·T·I·C·A·L· ·I·N·L·I·N·E· ·L·A·Y·O·U·T· ·F·A·L·L·B·A·C·K· ·*·/·
+·:·r·o·o·t· ·{·
+· · ·-·-·a·z·u·r·e·-·p·r·i·m·a·r·y·:· ·#·0·0·7·8·d·4·;·
+· · ·-·-·b·g·-·m·a·i·n·:· ·#·f·f·f·f·f·f·;·
+· · ·-·-·b·g·-·s·u·r·f·a·c·e·:· ·#·f·8·f·a·f·c·;·
+· · ·-·-·t·e·x·t·-·p·r·i·m·a·r·y·:· ·#·0·f·1·7·2·a·;·
+· · ·-·-·t·e·x·t·-·s·e·c·o·n·d·a·r·y·:· ·#·3·3·4·1·5·5·;·
+· · ·-·-·b·o·r·d·e·r·-·s·u·b·t·l·e·:· ·#·e·2·e·8·f·0·;·
+· · ·-·-·b·o·r·d·e·r·-·a·z·u·r·e·:· ·r·g·b·a·(·0·,· ·1·2·0·,· ·2·1·2·,· ·0·.·2·5·)·;·
+· · ·-·-·s·h·e·l·l·-·m·a·x·:· ·1·2·8·0·p·x·;·
+· · ·-·-·h·e·a·d·e·r·-·h·e·i·g·h·t·:· ·4·.·5·r·e·m·;·
+·}·
+·b·o·d·y· ·{· ·m·a·r·g·i·n·:· ·0·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·c·o·l·o·r·:· ·#·0·f·1·7·2·a·;· ·f·o·n·t·-·f·a·m·i·l·y·:· ·'·I·n·t·e·r·'·,· ·s·y·s·t·e·m·-·u·i·,· ·s·a·n·s·-·s·e·r·i·f·;· ·l·i·n·e·-·h·e·i·g·h·t·:· ·1·.·6·;· ·}·
+·.·s·h·e·l·l· ·{· ·m·a·x·-·w·i·d·t·h·:· ·1·2·8·0·p·x·;· ·m·a·r·g·i·n·:· ·0· ·a·u·t·o·;· ·p·a·d·d·i·n·g·:· ·0· ·1·.·5·r·e·m·;· ·}·
+·.·s·i·t·e·-·h·e·a·d·e·r· ·{· ·p·o·s·i·t·i·o·n·:· ·f·i·x·e·d·;· ·t·o·p·:· ·0·;· ·l·e·f·t·:· ·0·;· ·r·i·g·h·t·:· ·0·;· ·h·e·i·g·h·t·:· ·4·.·5·r·e·m·;· ·b·a·c·k·g·r·o·u·n·d·:· ·r·g·b·a·(·2·5·5·,·2·5·5·,·2·5·5·,·0·.·9·5·)·;· ·b·a·c·k·d·r·o·p·-·f·i·l·t·e·r·:· ·b·l·u·r·(·1·2·p·x·)·;· ·b·o·r·d·e·r·-·b·o·t·t·o·m·:· ·1·p·x· ·s·o·l·i·d· ·#·e·2·e·8·f·0·;· ·z·-·i·n·d·e·x·:· ·1·0·0·0·;· ·}·
+·.·h·e·a·d·e·r·-·i·n·n·e·r· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·j·u·s·t·i·f·y·-·c·o·n·t·e·n·t·:· ·s·p·a·c·e·-·b·e·t·w·e·e·n·;· ·h·e·i·g·h·t·:· ·1·0·0·%·;· ·}·
+·.·b·r·a·n·d· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·g·a·p·:· ·0·.·7·5·r·e·m·;· ·c·o·l·o·r·:· ·#·0·f·1·7·2·a·;· ·t·e·x·t·-·d·e·c·o·r·a·t·i·o·n·:· ·n·o·n·e·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·7·0·0·;· ·}·
+·.·b·r·a·n·d·-·a·v·a·t·a·r·-·m·i·n·i· ·{· ·w·i·d·t·h·:· ·4·0·p·x·;· ·h·e·i·g·h·t·:· ·4·0·p·x·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·5·0·%·;· ·o·v·e·r·f·l·o·w·:· ·h·i·d·d·e·n·;· ·b·o·r·d·e·r·:· ·2·p·x· ·s·o·l·i·d· ·#·0·0·7·8·d·4·;· ·}·
+·.·p·r·i·m·a·r·y·-·n·a·v· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·g·a·p·:· ·1·.·2·5·r·e·m·;· ·}·
+·.·p·r·i·m·a·r·y·-·n·a·v· ·a· ·{· ·t·e·x·t·-·d·e·c·o·r·a·t·i·o·n·:· ·n·o·n·e·;· ·c·o·l·o·r·:· ·#·3·3·4·1·5·5·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·9·2·5·r·e·m·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·5·0·0·;· ·p·a·d·d·i·n·g·:· ·0·.·4·r·e·m· ·0·.·7·5·r·e·m·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·8·p·x·;· ·}·
+·.·p·r·i·m·a·r·y·-·n·a·v· ·a·:·h·o·v·e·r· ·{· ·c·o·l·o·r·:· ·#·0·0·7·8·d·4·;· ·b·a·c·k·g·r·o·u·n·d·:· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·0·8·)·;· ·}·
+·.·n·a·v·-·r·e·s·u·m·e·-·b·t·n· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·0·8·)·!·i·m·p·o·r·t·a·n·t·;· ·c·o·l·o·r·:· ·#·0·0·7·8·d·4·!·i·m·p·o·r·t·a·n·t·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·2·5·)·!·i·m·p·o·r·t·a·n·t·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·!·i·m·p·o·r·t·a·n·t·;· ·}·
+·.·n·a·v·-·c·t·a· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·#·0·0·7·8·d·4·!·i·m·p·o·r·t·a·n·t·;· ·c·o·l·o·r·:· ·#·f·f·f·f·f·f·!·i·m·p·o·r·t·a·n·t·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·!·i·m·p·o·r·t·a·n·t·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·8·p·x·!·i·m·p·o·r·t·a·n·t·;· ·p·a·d·d·i·n·g·:· ·0·.·5·r·e·m· ·1·.·1·r·e·m·!·i·m·p·o·r·t·a·n·t·;· ·}·
+·.·h·e·r·o· ·{· ·p·o·s·i·t·i·o·n·:· ·r·e·l·a·t·i·v·e·;· ·m·i·n·-·h·e·i·g·h·t·:· ·9·0·v·h·;· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·p·a·d·d·i·n·g·-·t·o·p·:· ·6·r·e·m·;· ·p·a·d·d·i·n·g·-·b·o·t·t·o·m·:· ·4·r·e·m·;· ·o·v·e·r·f·l·o·w·:· ·h·i·d·d·e·n·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·}·
+·.·h·e·r·o·-·g·r·i·d· ·{· ·d·i·s·p·l·a·y·:· ·g·r·i·d·;· ·g·r·i·d·-·t·e·m·p·l·a·t·e·-·c·o·l·u·m·n·s·:· ·1·.·2·f·r· ·0·.·8·f·r·;· ·g·a·p·:· ·4·r·e·m·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·}·
+·.·s·t·a·t·u·s·-·p·i·l·l· ·{· ·d·i·s·p·l·a·y·:· ·i·n·l·i·n·e·-·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·g·a·p·:· ·0·.·6·r·e·m·;· ·p·a·d·d·i·n·g·:· ·0·.·4·r·e·m· ·1·r·e·m·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·2·5·)·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·9·9·9·9·p·x·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·8·7·5·r·e·m·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·;· ·c·o·l·o·r·:· ·#·0·0·7·8·d·4·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·1·.·2·5·r·e·m·;· ·}·
+·.·s·t·a·t·u·s·-·d·o·t·-·a·c·t·i·v·e· ·{· ·w·i·d·t·h·:· ·8·p·x·;· ·h·e·i·g·h·t·:· ·8·p·x·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·5·0·%·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·1·0·b·9·8·1·;· ·}·
+·.·h·e·r·o· ·h·1· ·{· ·f·o·n·t·-·s·i·z·e·:· ·c·l·a·m·p·(·2·.·4·r·e·m·,· ·4·.·2·v·w·,· ·3·.·8·r·e·m·)·;· ·m·a·r·g·i·n·:· ·0· ·0· ·1·r·e·m· ·0·;· ·c·o·l·o·r·:· ·#·0·f·1·7·2·a·;· ·}·
+·.·h·e·r·o·-·t·i·t·l·e·-·s·u·b· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·f·l·e·x·-·w·r·a·p·:· ·w·r·a·p·;· ·g·a·p·:· ·0·.·5·r·e·m·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·1·.·2·5·r·e·m·;· ·}·
+·.·h·e·r·o·-·t·i·t·l·e·-·s·u·b· ·s·p·a·n· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·0·8·)·;· ·c·o·l·o·r·:· ·#·0·0·7·8·d·4·;· ·p·a·d·d·i·n·g·:· ·0·.·2·5·r·e·m· ·0·.·7·5·r·e·m·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·8·p·x·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·9·r·e·m·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·2·)·;· ·}·
+·.·h·e·r·o·-·a·c·t·i·o·n·s· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·f·l·e·x·-·w·r·a·p·:· ·w·r·a·p·;· ·g·a·p·:· ·1·r·e·m·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·2·.·5·r·e·m·;· ·}·
+·.·b·u·t·t·o·n· ·{· ·d·i·s·p·l·a·y·:· ·i·n·l·i·n·e·-·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·j·u·s·t·i·f·y·-·c·o·n·t·e·n·t·:· ·c·e·n·t·e·r·;· ·g·a·p·:· ·0·.·6·r·e·m·;· ·p·a·d·d·i·n·g·:· ·0·.·8·5·r·e·m· ·1·.·7·5·r·e·m·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·9·7·5·r·e·m·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·1·4·p·x·;· ·t·e·x·t·-·d·e·c·o·r·a·t·i·o·n·:· ·n·o·n·e·;· ·c·u·r·s·o·r·:· ·p·o·i·n·t·e·r·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·t·r·a·n·s·p·a·r·e·n·t·;· ·}·
+·.·b·u·t·t·o·n·-·p·r·i·m·a·r·y· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·#·0·0·7·8·d·4·;· ·c·o·l·o·r·:· ·#·f·f·f·f·f·f·;· ·}·
+·.·b·u·t·t·o·n·-·s·e·c·o·n·d·a·r·y· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·c·o·l·o·r·:· ·#·0·0·7·8·d·4·;· ·b·o·r·d·e·r·-·c·o·l·o·r·:· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·2·5·)·;· ·}·
+·.·b·u·t·t·o·n·-·g·h·o·s·t· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·8·f·a·f·c·;· ·c·o·l·o·r·:· ·#·0·f·1·7·2·a·;· ·b·o·r·d·e·r·-·c·o·l·o·r·:· ·#·e·2·e·8·f·0·;· ·}·
+·.·p·o·r·t·r·a·i·t·-·s·t·a·g·e· ·{· ·p·o·s·i·t·i·o·n·:· ·r·e·l·a·t·i·v·e·;· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·f·l·e·x·-·d·i·r·e·c·t·i·o·n·:· ·c·o·l·u·m·n·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·}·
+·.·p·o·r·t·r·a·i·t·-·f·r·a·m·e· ·{· ·p·o·s·i·t·i·o·n·:· ·r·e·l·a·t·i·v·e·;· ·w·i·d·t·h·:· ·1·0·0·%·;· ·m·a·x·-·w·i·d·t·h·:· ·4·0·0·p·x·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·2·4·p·x·;· ·o·v·e·r·f·l·o·w·:· ·h·i·d·d·e·n·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·b·o·r·d·e·r·:· ·2·p·x· ·s·o·l·i·d· ·r·g·b·a·(·0·,·1·2·0·,·2·1·2·,·0·.·2·5·)·;· ·}·
+·.·p·o·r·t·r·a·i·t·-·f·r·a·m·e· ·i·m·g· ·{· ·w·i·d·t·h·:· ·1·0·0·%·;· ·h·e·i·g·h·t·:· ·4·4·0·p·x·;· ·o·b·j·e·c·t·-·f·i·t·:· ·c·o·v·e·r·;· ·o·b·j·e·c·t·-·p·o·s·i·t·i·o·n·:· ·c·e·n·t·e·r· ·t·o·p·;· ·d·i·s·p·l·a·y·:· ·b·l·o·c·k·;· ·}·
+·.·m·a·r·q·u·e·e·-·s·e·c·t·i·o·n· ·{· ·p·a·d·d·i·n·g·:· ·2·r·e·m· ·0·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·8·f·a·f·c·;· ·b·o·r·d·e·r·-·t·o·p·:· ·1·p·x· ·s·o·l·i·d· ·#·e·2·e·8·f·0·;· ·b·o·r·d·e·r·-·b·o·t·t·o·m·:· ·1·p·x· ·s·o·l·i·d· ·#·e·2·e·8·f·0·;· ·o·v·e·r·f·l·o·w·:· ·h·i·d·d·e·n·;· ·}·
+·.·m·a·r·q·u·e·e·-·t·i·t·l·e· ·{· ·t·e·x·t·-·a·l·i·g·n·:· ·c·e·n·t·e·r·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·8·r·e·m·;· ·t·e·x·t·-·t·r·a·n·s·f·o·r·m·:· ·u·p·p·e·r·c·a·s·e·;· ·l·e·t·t·e·r·-·s·p·a·c·i·n·g·:· ·0·.·1·e·m·;· ·c·o·l·o·r·:· ·#·6·4·7·4·8·b·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·7·0·0·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·1·.·2·5·r·e·m·;· ·}·
+·.·m·a·r·q·u·e·e·-·t·r·a·c·k· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·g·a·p·:· ·1·.·5·r·e·m·;· ·w·i·d·t·h·:· ·m·a·x·-·c·o·n·t·e·n·t·;· ·a·n·i·m·a·t·i·o·n·:· ·m·a·r·q·u·e·e· ·2·5·s· ·l·i·n·e·a·r· ·i·n·f·i·n·i·t·e·;· ·}·
+·@·k·e·y·f·r·a·m·e·s· ·m·a·r·q·u·e·e· ·{· ·0·%· ·{· ·t·r·a·n·s·f·o·r·m·:· ·t·r·a·n·s·l·a·t·e·X·(·0·)·;· ·}· ·1·0·0·%· ·{· ·t·r·a·n·s·f·o·r·m·:· ·t·r·a·n·s·l·a·t·e·X·(·-·5·0·%·)·;· ·}· ·}·
+·.·m·a·r·q·u·e·e·-·i·t·e·m· ·{· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·a·l·i·g·n·-·i·t·e·m·s·:· ·c·e·n·t·e·r·;· ·g·a·p·:· ·0·.·6·r·e·m·;· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·#·e·2·e·8·f·0·;· ·p·a·d·d·i·n·g·:· ·0·.·6·r·e·m· ·1·.·2·5·r·e·m·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·1·4·p·x·;· ·f·o·n·t·-·s·i·z·e·:· ·0·.·9·r·e·m·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·6·0·0·;· ·c·o·l·o·r·:· ·#·0·f·1·7·2·a·;· ·w·h·i·t·e·-·s·p·a·c·e·:· ·n·o·w·r·a·p·;· ·}·
+·.·o·v·e·r·v·i·e·w·-·g·r·i·d·,· ·.·p·i·l·l·a·r·s·-·g·r·i·d·,· ·.·c·a·s·e·-·s·t·u·d·i·e·s·-·g·r·i·d·,· ·.·t·e·c·h·-·g·r·i·d·,· ·.·c·e·r·t·s·-·g·r·i·d·,· ·.·a·w·a·r·d·s·-·g·r·i·d·,· ·.·l·e·a·d·e·r·s·h·i·p·-·g·r·i·d· ·{· ·d·i·s·p·l·a·y·:· ·g·r·i·d·;· ·g·r·i·d·-·t·e·m·p·l·a·t·e·-·c·o·l·u·m·n·s·:· ·r·e·p·e·a·t·(·3·,· ·1·f·r·)·;· ·g·a·p·:· ·1·.·7·5·r·e·m·;· ·}·
+·.·s·t·a·t·e·m·e·n·t·-·c·a·r·d·,· ·.·p·i·l·l·a·r·-·c·a·r·d·,· ·.·c·a·s·e·-·s·t·u·d·y·-·c·a·r·d·,· ·.·t·e·c·h·-·c·a·r·d·,· ·.·c·e·r·t·-·c·a·r·d·,· ·.·a·w·a·r·d·-·c·a·r·d·,· ·.·l·e·a·d·e·r·s·h·i·p·-·c·a·r·d· ·{· ·b·a·c·k·g·r·o·u·n·d·:· ·#·f·f·f·f·f·f·;· ·b·o·r·d·e·r·:· ·1·p·x· ·s·o·l·i·d· ·#·e·2·e·8·f·0·;· ·b·o·r·d·e·r·-·r·a·d·i·u·s·:· ·1·4·p·x·;· ·p·a·d·d·i·n·g·:· ·1·.·7·5·r·e·m·;· ·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·f·l·e·x·-·d·i·r·e·c·t·i·o·n·:· ·c·o·l·u·m·n·;· ·j·u·s·t·i·f·y·-·c·o·n·t·e·n·t·:· ·s·p·a·c·e·-·b·e·t·w·e·e·n·;· ·}·
+·@·m·e·d·i·a· ·(·m·a·x·-·w·i·d·t·h·:· ·1·0·2·4·p·x·)· ·{· ·.·h·e·r·o·-·g·r·i·d· ·{· ·g·r·i·d·-·t·e·m·p·l·a·t·e·-·c·o·l·u·m·n·s·:· ·1·f·r·;· ·}· ·.·o·v·e·r·v·i·e·w·-·g·r·i·d·,· ·.·p·i·l·l·a·r·s·-·g·r·i·d·,· ·.·c·a·s·e·-·s·t·u·d·i·e·s·-·g·r·i·d·,· ·.·t·e·c·h·-·g·r·i·d·,· ·.·c·e·r·t·s·-·g·r·i·d·,· ·.·a·w·a·r·d·s·-·g·r·i·d·,· ·.·l·e·a·d·e·r·s·h·i·p·-·g·r·i·d· ·{· ·g·r·i·d·-·t·e·m·p·l·a·t·e·-·c·o·l·u·m·n·s·:· ·r·e·p·e·a·t·(·2·,· ·1·f·r·)·;· ·}· ·}·
+·@·m·e·d·i·a· ·(·m·a·x·-·w·i·d·t·h·:· ·7·6·8·p·x·)· ·{· ·.·o·v·e·r·v·i·e·w·-·g·r·i·d·,· ·.·p·i·l·l·a·r·s·-·g·r·i·d·,· ·.·c·a·s·e·-·s·t·u·d·i·e·s·-·g·r·i·d·,· ·.·t·e·c·h·-·g·r·i·d·,· ·.·c·e·r·t·s·-·g·r·i·d·,· ·.·a·w·a·r·d·s·-·g·r·i·d·,· ·.·l·e·a·d·e·r·s·h·i·p·-·g·r·i·d· ·{· ·g·r·i·d·-·t·e·m·p·l·a·t·e·-·c·o·l·u·m·n·s·:· ·1·f·r·;· ·}· ·}·
+·<·/·s·t·y·l·e·>·
+·
+·<·/·h·e·a·d·>·
+·<·b·o·d·y·>·
+· · ·<·h·e·a·d·e·r· ·c·l·a·s·s·=·"·s·i·t·e·-·h·e·a·d·e·r·"· ·d·a·t·a·-·h·e·a·d·e·r·>·
+· · · · ·<·d·i·v· ·c·l·a·s·s·=·"·h·e·a·d·e·r·-·i·n·n·e·r· ·s·h·e·l·l·"·>·
+· · · · · · ·<·a· ·c·l·a·s·s·=·"·b·r·a·n·d·"· ·h·r·e·f·=·"·.·.·/·"·>·
+· · · · · · · · ·<·s·p·a·n· ·c·l·a·s·s·=·"·b·r·a·n·d·-·a·v·a·t·a·r·-·m·i·n·i·"· ·a·r·i·a·-·h·i·d·d·e·n·=·"·t·r·u·e·"·>·
+· · · · · · · · · · ·<·i·m·g· ·s·r·c·=·"·.·.·/·a·s·s·e·t·s·/·i·m·a·g·e·s·/·S·h·a·i·k·_·P·r·o·f·i·l·e·.·s·v·g·"· ·a·l·t·=·"·A·l·t·h·a·f· ·S·h·a·i·k· ·A·v·a·t·a·r·"· ·w·i·d·t·h·=·"·4·0·"· ·h·e·i·g·h·t·=·"·4·0·"·>·
+· · · · · · · · ·<·/·s·p·a·n·>·
+· · · · · · · · ·<·s·p·a·n·>·<·s·t·r·o·n·g·>·A·L·T·H·A·F· ·S·H·A·I·K·<·/·s·t·r·o·n·g·>·<·s·m·a·l·l·>·S·r·.· ·D·e·v·O·p·s· ·E·n·g·i·n·e·e·r· ··· ·U·n·i·p·e·r·<·/·s·m·a·l·l·>·<·/·s·p·a·n·>·
+· · · · · · ·<·/·a·>·
+· · · · ·<·/·d·i·v·>·
+· · ·<·/·h·e·a·d·e·r·>·
+·
+· · ·<·m·a·i·n· ·s·t·y·l·e·=·"·p·a·d·d·i·n·g·-·t·o·p·:· ·c·a·l·c·(·v·a·r·(·-·-·h·e·a·d·e·r·-·h·e·i·g·h·t·)· ·+· ·5·r·e·m·)·;· ·p·a·d·d·i·n·g·-·b·o·t·t·o·m·:· ·5·r·e·m·;· ·t·e·x·t·-·a·l·i·g·n·:· ·c·e·n·t·e·r·;·"·>·
+· · · · ·<·d·i·v· ·c·l·a·s·s·=·"·s·h·e·l·l·"· ·s·t·y·l·e·=·"·m·a·x·-·w·i·d·t·h·:· ·6·0·0·p·x·;·"·>·
+· · · · · · ·<·d·i·v· ·s·t·y·l·e·=·"·f·o·n·t·-·s·i·z·e·:· ·5·r·e·m·;· ·f·o·n·t·-·w·e·i·g·h·t·:· ·8·0·0·;· ·c·o·l·o·r·:· ·v·a·r·(·-·-·a·z·u·r·e·-·p·r·i·m·a·r·y·)·;· ·f·o·n·t·-·f·a·m·i·l·y·:· ·v·a·r·(·-·-·f·o·n·t·-·h·e·a·d·i·n·g·)·;·"·>·4·0·4·<·/·d·i·v·>·
+· · · · · · ·<·h·1· ·s·t·y·l·e·=·"·f·o·n·t·-·s·i·z·e·:· ·2·r·e·m·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·1·r·e·m·;·"·>·R·e·s·o·u·r·c·e· ·N·o·t· ·F·o·u·n·d·<·/·h·1·>·
+· · · · · · ·<·p· ·s·t·y·l·e·=·"·f·o·n·t·-·s·i·z·e·:· ·1·.·0·5·r·e·m·;· ·c·o·l·o·r·:· ·v·a·r·(·-·-·t·e·x·t·-·s·e·c·o·n·d·a·r·y·)·;· ·m·a·r·g·i·n·-·b·o·t·t·o·m·:· ·2·r·e·m·;·"·>·T·h·e· ·p·a·g·e· ·o·r· ·c·l·o·u·d· ·r·e·s·o·u·r·c·e· ·y·o·u· ·a·r·e· ·a·t·t·e·m·p·t·i·n·g· ·t·o· ·r·e·a·c·h· ·d·o·e·s· ·n·o·t· ·e·x·i·s·t· ·o·r· ·h·a·s· ·b·e·e·n· ·r·e·l·o·c·a·t·e·d·.·<·/·p·>·
+· · · · · · ·
+· · · · · · ·<·d·i·v· ·s·t·y·l·e·=·"·d·i·s·p·l·a·y·:· ·f·l·e·x·;· ·g·a·p·:· ·1·r·e·m·;· ·j·u·s·t·i·f·y·-·c·o·n·t·e·n·t·:· ·c·e·n·t·e·r·;· ·f·l·e·x·-·w·r·a·p·:· ·w·r·a·p·;·"·>·
+· · · · · · · · ·<·a· ·c·l·a·s·s·=·"·b·u·t·t·o·n· ·b·u·t·t·o·n·-·p·r·i·m·a·r·y·"· ·h·r·e·f·=·"·.·.·/·"·>·R·e·t·u·r·n· ·t·o· ·H·o·m·e· ·P·a·g·e· ·🏠·<·/·a·>·
+· · · · · · · · ·<·a· ·c·l·a·s·s·=·"·b·u·t·t·o·n· ·b·u·t·t·o·n·-·s·e·c·o·n·d·a·r·y·"· ·h·r·e·f·=·"·.·.·/·c·a·s·e·-·s·t·u·d·i·e·s·/·"·>·V·i·e·w· ·C·a·s·e· ·S·t·u·d·i·e·s· ·↗·<·/·a·>·
+· · · · · · · · ·<·a· ·c·l·a·s·s·=·"·b·u·t·t·o·n· ·b·u·t·t·o·n·-·g·h·o·s·t·"· ·h·r·e·f·=·"·.·.·/·c·o·n·t·a·c·t·/·"·>·C·o·n·t·a·c·t· ·S·u·p·p·o·r·t· ·↗·<·/·a·>·
+· · · · · · ·<·/·d·i·v·>·
+· · · · ·<·/·d·i·v·>·
+· · ·<·/·m·a·i·n·>·
+·
+· · ·<·f·o·o·t·e·r· ·c·l·a·s·s·=·"·s·i·t·e·-·f·o·o·t·e·r·"·>·
+· · · · ·<·d·i·v· ·c·l·a·s·s·=·"·s·h·e·l·l· ·f·o·o·t·e·r·-·b·o·t·t·o·m·"·>·
+· · · · · · ·<·s·p·a·n·>·©· ·<·s·p·a·n· ·d·a·t·a·-·y·e·a·r·>·<·/·s·p·a·n·>· ·A·L·T·H·A·F· ·S·H·A·I·K· ··· ·A·l·l· ·R·i·g·h·t·s· ·R·e·s·e·r·v·e·d·<·/·s·p·a·n·>·
+· · · · · · ·<·s·p·a·n·>·<·a· ·h·r·e·f·=·"·.·.·/·"·>·H·o·m·e·<·/·a·>· ··· ·<·a· ·h·r·e·f·=·"·.·.·/·c·o·n·t·a·c·t·/·"·>·C·o·n·t·a·c·t·<·/·a·>·<·/·s·p·a·n·>·
+· · · · ·<·/·d·i·v·>·
+· · ·<·/·f·o·o·t·e·r·>·
+·
+· · ·<·s·c·r·i·p·t· ·s·r·c·=·"·.·.·/·a·s·s·e·t·s·/·j·s·/·s·c·r·i·p·t·.·j·s·?·v·=·2·0·2·6·0·8·0·5·_·v·4·"· ·d·e·f·e·r·>·<·/·s·c·r·i·p·t·>·
+·<·/·b·o·d·y·>·
+·<·/·h·t·m·l·>·

@@ -1,21 +1,21 @@
-{
-  "name": "Shaik Althaf",
-  "short_name": "Shaik Althaf",
-  "icons": [
-    {
-      "src": "/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
-}
+·{·
+· · ·"·n·a·m·e·"·:· ·"·S·h·a·i·k· ·A·l·t·h·a·f·"·,·
+· · ·"·s·h·o·r·t·_·n·a·m·e·"·:· ·"·S·h·a·i·k· ·A·l·t·h·a·f·"·,·
+· · ·"·i·c·o·n·s·"·:· ·[·
+· · · · ·{·
+· · · · · · ·"·s·r·c·"·:· ·"·/·w·e·b·-·a·p·p·-·m·a·n·i·f·e·s·t·-·1·9·2·x·1·9·2·.·p·n·g·"·,·
+· · · · · · ·"·s·i·z·e·s·"·:· ·"·1·9·2·x·1·9·2·"·,·
+· · · · · · ·"·t·y·p·e·"·:· ·"·i·m·a·g·e·/·p·n·g·"·,·
+· · · · · · ·"·p·u·r·p·o·s·e·"·:· ·"·m·a·s·k·a·b·l·e·"·
+· · · · ·}·,·
+· · · · ·{·
+· · · · · · ·"·s·r·c·"·:· ·"·/·w·e·b·-·a·p·p·-·m·a·n·i·f·e·s·t·-·5·1·2·x·5·1·2·.·p·n·g·"·,·
+· · · · · · ·"·s·i·z·e·s·"·:· ·"·5·1·2·x·5·1·2·"·,·
+· · · · · · ·"·t·y·p·e·"·:· ·"·i·m·a·g·e·/·p·n·g·"·,·
+· · · · · · ·"·p·u·r·p·o·s·e·"·:· ·"·m·a·s·k·a·b·l·e·"·
+· · · · ·}·
+· · ·]·,·
+· · ·"·t·h·e·m·e·_·c·o·l·o·r·"·:· ·"·#·f·f·f·f·f·f·"·,·
+· · ·"·b·a·c·k·g·r·o·u·n·d·_·c·o·l·o·r·"·:· ·"·#·f·f·f·f·f·f·"·,·
+· · ·"·d·i·s·p·l·a·y·"·:· ·"·s·t·a·n·d·a·l·o·n·e·"·
+·}·

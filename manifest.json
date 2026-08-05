@@ -1,15 +1,16 @@
-{
-  "short_name": "ALTHAF SHAIK",
-  "name": "Althaf Shaik — Senior DevOps & Network Automation Engineer",
-  "icons": [
-    {
-      "src": "assets/Shaik_Profile.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/profile/",
-  "background_color": "#ffffff",
-  "theme_color": "#0078d4",
-  "display": "standalone"
-}
+·{·
+· · ·"·s·h·o·r·t·_·n·a·m·e·"·:· ·"·A·L·T·H·A·F· ·S·H·A·I·K·"·,·
+· · ·"·n·a·m·e·"·:· ·"·A·l·t·h·a·f· ·S·h·a·i·k· ·—· ·S·e·n·i·o·r· ·D·e·v·O·p·s· ·&· ·N·e·t·w·o·r·k· ·A·u·t·o·m·a·t·i·o·n· ·E·n·g·i·n·e·e·r·"·,·
+· · ·"·i·c·o·n·s·"·:· ·[·
+· · · · ·{·
+· · · · · · ·"·s·r·c·"·:· ·"·a·s·s·e·t·s·/·S·h·a·i·k·_·P·r·o·f·i·l·e·.·s·v·g·"·,·
+· · · · · · ·"·t·y·p·e·"·:· ·"·i·m·a·g·e·/·s·v·g·+·x·m·l·"·,·
+· · · · · · ·"·s·i·z·e·s·"·:· ·"·5·1·2·x·5·1·2·"·
+· · · · ·}·
+· · ·]·,·
+· · ·"·s·t·a·r·t·_·u·r·l·"·:· ·"·/·p·r·o·f·i·l·e·/·"·,·
+· · ·"·b·a·c·k·g·r·o·u·n·d·_·c·o·l·o·r·"·:· ·"·#·f·f·f·f·f·f·"·,·
+· · ·"·t·h·e·m·e·_·c·o·l·o·r·"·:· ·"·#·0·0·7·8·d·4·"·,·
+· · ·"·d·i·s·p·l·a·y·"·:· ·"·s·t·a·n·d·a·l·o·n·e·"·
+·}·
+·
