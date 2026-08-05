@@ -222,169 +222,71 @@ img, svg {
   color: #ffffff !important;
 }
 
-/* Sections General */
-.section {
-  padding: 5.5rem 0;
-  position: relative;
-}
-
-.section-heading {
-  margin-bottom: 3.5rem;
-  max-width: 750px;
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--azure-primary);
-  margin-bottom: 0.75rem;
-}
-
-.eyebrow span {
-  width: 14px;
-  height: 2px;
-  background: var(--azure-primary);
-}
-
-/* Hero Statistics Counters */
-.hero-facts {
+/* Certifications Cards Grid & Hover Animation */
+.certs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-subtle);
-  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.75rem;
 }
 
-.hero-facts div {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-facts dt {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-
-.hero-facts dd {
-  margin: 0;
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--azure-primary);
-  font-family: var(--font-heading);
-}
-
-/* Timeline Container */
-.timeline-container {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--azure-primary) 0%, var(--sky-accent) 100%);
-  border-radius: 3px;
-}
-
-.timeline-item {
-  position: relative;
-  padding-left: 60px;
-  margin-bottom: 2.5rem;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: 11px;
-  top: 4px;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 4px solid var(--azure-primary);
-  box-shadow: 0 0 12px var(--azure-glow);
-}
-
-.timeline-card {
+.cert-card {
   background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 1.75rem 2rem;
+  padding: 2rem;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
-}
-
-.timeline-card:hover {
-  border-color: var(--azure-primary);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
-}
-
-.timeline-date {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--azure-primary);
-  background: rgba(0, 120, 212, 0.08);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-full);
-  display: inline-block;
-  margin-bottom: 0.75rem;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.badge-azure { background: rgba(0, 120, 212, 0.1); color: #0078d4; border: 1px solid rgba(0, 120, 212, 0.3); }
-
-/* Award Cards */
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.award-card {
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.award-card:hover {
+.cert-card:hover {
   border-color: var(--azure-primary);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-azure), var(--shadow-md);
 }
 
-.award-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.cert-badge-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 120, 212, 0.08);
+  border: 1px solid var(--border-azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.verify-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 120, 212, 0.08);
+  color: var(--azure-primary);
+  border: 1px solid var(--border-azure);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.verify-btn:hover {
+  background: var(--azure-primary);
+  color: #ffffff;
 }
 
 /* Footer */
