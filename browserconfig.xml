@@ -1,10 +1,9 @@
-·<·?·x·m·l· ·v·e·r·s·i·o·n·=·"·1·.·0·"· ·e·n·c·o·d·i·n·g·=·"·u·t·f·-·8·"·?·>·
-·<·b·r·o·w·s·e·r·c·o·n·f·i·g·>·
-· · · · ·<·m·s·a·p·p·l·i·c·a·t·i·o·n·>·
-· · · · · · · · ·<·t·i·l·e·>·
-· · · · · · · · · · · · ·<·s·q·u·a·r·e·1·5·0·x·1·5·0·l·o·g·o· ·s·r·c·=·"·f·a·v·i·c·o·n·.·i·c·o·"·/·>·
-· · · · · · · · · · · · ·<·T·i·l·e·C·o·l·o·r·>·#·0·0·7·8·d·4·<·/·T·i·l·e·C·o·l·o·r·>·
-· · · · · · · · ·<·/·t·i·l·e·>·
-· · · · ·<·/·m·s·a·p·p·l·i·c·a·t·i·o·n·>·
-·<·/·b·r·o·w·s·e·r·c·o·n·f·i·g·>·
-·
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="favicon.ico"/>
+            <TileColor>#0078d4</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

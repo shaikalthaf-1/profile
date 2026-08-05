@@ -1,89 +1,88 @@
-·#· ·M·e·t·r·i·c·s· ·R·e·g·i·s·t·r·y·
-·
-·S·t·a·t·u·s·:· ·C·l·a·s·s·i·f·i·c·a·t·i·o·n· ·a·n·d· ·p·u·b·l·i·c·a·t·i·o·n· ·p·o·l·i·c·y· ·v·e·r·i·f·i·e·d· ·o·n· ·2·0·2·6·-·0·7·-·1·7·.· ·T·w·o· ·f·a·c·t·u·a·l· ·m·e·t·r·i·c·s· ·a·r·e· ·p·u·b·l·i·s·h·a·b·l·e·;· ·a·l·l· ·2·2· ·l·e·g·a·c·y· ·i·m·p·a·c·t· ·a·n·d· ·m·a·r·k·e·t·i·n·g· ·c·l·a·i·m·s· ·r·e·m·a·i·n· ·h·e·l·d· ·o·r· ·p·r·o·h·i·b·i·t·e·d·.·
-·
-·E·v·e·r·y· ·p·u·b·l·i·c· ·n·u·m·b·e·r· ·m·u·s·t· ·h·a·v·e· ·a· ·d·e·f·i·n·e·d· ·s·c·o·p·e·,· ·c·a·l·c·u·l·a·t·i·o·n· ·m·e·t·h·o·d·,· ·e·v·i·d·e·n·c·e· ·o·w·n·e·r·,· ·e·v·i·d·e·n·c·e· ·d·a·t·e·,· ·a·n·d· ·p·u·b·l·i·c·a·t·i·o·n· ·a·p·p·r·o·v·a·l·.· ·N·u·m·b·e·r·s· ·f·o·u·n·d· ·i·n· ·t·h·e· ·c·u·r·r·e·n·t· ·w·e·b·s·i·t·e· ·a·r·e· ·r·e·c·o·r·d·e·d· ·b·e·l·o·w· ·s·o· ·t·h·e·y· ·c·a·n·n·o·t· ·b·e· ·r·e·i·n·t·r·o·d·u·c·e·d· ·a·c·c·i·d·e·n·t·a·l·l·y·.·
-·
-·#·#· ·C·l·a·s·s·i·f·i·c·a·t·i·o·n· ·M·o·d·e·l·
-·
-·|· ·C·a·t·e·g·o·r·y· ·|· ·P·u·b·l·i·c·a·t·i·o·n· ·R·u·l·e· ·|· ·E·v·i·d·e·n·c·e· ·S·t·a·n·d·a·r·d· ·|·
-·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|·
-·|· ·`·V·e·r·i·f·i·e·d·`· ·|· ·Y·e·s·,· ·u·s·i·n·g· ·o·n·l·y· ·t·h·e· ·a·p·p·r·o·v·e·d· ·w·o·r·d·i·n·g· ·a·n·d· ·s·c·o·p·e· ·|· ·P·u·b·l·i·c· ·e·v·i·d·e·n·c·e· ·o·r· ·o·w·n·e·r·-·a·p·p·r·o·v·e·d· ·d·o·c·u·m·e·n·t·e·d· ·e·v·i·d·e·n·c·e· ·|·
-·|· ·`·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e·`· ·|· ·H·o·l·d· ·u·n·t·i·l· ·p·r·i·v·a·t·e· ·e·v·i·d·e·n·c·e· ·r·e·v·i·e·w· ·a·n·d· ·a·n·y· ·r·e·q·u·i·r·e·d· ·o·r·g·a·n·i·z·a·t·i·o·n· ·a·p·p·r·o·v·a·l· ·|· ·E·m·p·l·o·y·m·e·n·t· ·r·e·c·o·r·d·s·,· ·p·r·o·j·e·c·t· ·l·o·g·s·,· ·d·e·p·l·o·y·m·e·n·t· ·r·e·c·o·r·d·s·,· ·p·r·o·g·r·a·m· ·r·e·c·o·r·d·s·,· ·o·r· ·e·n·g·a·g·e·m·e·n·t· ·r·e·c·o·r·d·s· ·|·
-·|· ·`·N·e·e·d·s· ·E·v·i·d·e·n·c·e·`· ·|· ·H·o·l·d· ·|· ·N·o· ·a·d·e·q·u·a·t·e· ·s·u·p·p·o·r·t·i·n·g· ·e·v·i·d·e·n·c·e· ·i·s· ·c·u·r·r·e·n·t·l·y· ·i·d·e·n·t·i·f·i·e·d· ·|·
-·|· ·`·P·r·o·h·i·b·i·t·e·d·`· ·|· ·N·o· ·|· ·C·u·r·r·e·n·t· ·w·o·r·d·i·n·g· ·i·s· ·f·a·l·s·e·,· ·c·o·n·t·r·a·d·i·c·t·e·d· ·b·y· ·t·h·e· ·m·a·t·u·r·i·t·y· ·b·a·s·e·l·i·n·e·,· ·u·n·s·u·b·s·t·a·n·t·i·a·t·e·d· ·m·a·r·k·e·t·i·n·g·,· ·o·r· ·d·e·p·e·n·d·e·n·t· ·o·n· ·a·n· ·u·n·a·u·t·h·o·r·i·z·e·d· ·t·e·s·t·i·m·o·n·i·a·l· ·|·
-·
-·#·#· ·E·v·i·d·e·n·c·e· ·S·t·a·n·d·a·r·d·
-·
-·A·c·c·e·p·t·a·b·l·e· ·e·v·i·d·e·n·c·e· ·m·a·y· ·i·n·c·l·u·d·e· ·a·p·p·r·o·v·e·d· ·d·e·p·l·o·y·m·e·n·t· ·r·e·c·o·r·d·s·,· ·d·a·s·h·b·o·a·r·d·s·,· ·c·h·a·n·g·e· ·r·e·c·o·r·d·s·,· ·i·n·v·o·i·c·e·s·,· ·t·r·a·i·n·i·n·g· ·e·n·r·o·l·l·m·e·n·t· ·r·e·c·o·r·d·s·,· ·c·e·r·t·i·f·i·c·a·t·e·s·,· ·r·e·p·o·s·i·t·o·r·y· ·h·i·s·t·o·r·y·,· ·o·r· ·c·l·i·e·n·t·-·a·p·p·r·o·v·e·d· ·r·e·p·o·r·t·s·.· ·E·v·i·d·e·n·c·e· ·m·u·s·t· ·b·e· ·r·e·v·i·e·w·e·d· ·p·r·i·v·a·t·e·l·y· ·a·n·d· ·m·u·s·t· ·n·o·t· ·b·e· ·c·o·m·m·i·t·t·e·d· ·w·h·e·n· ·i·t· ·c·o·n·t·a·i·n·s· ·c·o·n·f·i·d·e·n·t·i·a·l· ·o·r· ·p·e·r·s·o·n·a·l· ·i·n·f·o·r·m·a·t·i·o·n·.·
-·
-·E·a·c·h· ·a·p·p·r·o·v·e·d· ·m·e·t·r·i·c· ·m·u·s·t· ·s·p·e·c·i·f·y·:·
-·
-·-· ·E·x·a·c·t· ·w·o·r·d·i·n·g· ·a·n·d· ·u·n·i·t·.·
-·-· ·P·o·p·u·l·a·t·i·o·n·,· ·p·r·o·j·e·c·t·,· ·a·n·d· ·t·i·m·e· ·p·e·r·i·o·d·.·
-·-· ·B·a·s·e·l·i·n·e· ·a·n·d· ·c·a·l·c·u·l·a·t·i·o·n· ·m·e·t·h·o·d·.·
-·-· ·E·v·i·d·e·n·c·e· ·o·w·n·e·r· ·a·n·d· ·l·a·s·t· ·v·e·r·i·f·i·c·a·t·i·o·n· ·d·a·t·e·.·
-·-· ·W·h·e·t·h·e·r· ·c·l·i·e·n·t· ·o·r· ·o·r·g·a·n·i·z·a·t·i·o·n· ·a·p·p·r·o·v·a·l· ·i·s· ·r·e·q·u·i·r·e·d·.·
-·-· ·E·x·p·i·r·a·t·i·o·n· ·o·r· ·r·e·v·a·l·i·d·a·t·i·o·n· ·d·a·t·e·.·
-·
-·#·#· ·V·e·r·i·f·i·e·d· ·F·a·c·t·u·a·l· ·M·e·t·r·i·c·s·
-·
-·|· ·I·D· ·|· ·A·p·p·r·o·v·e·d· ·M·e·t·r·i·c· ·|· ·S·o·u·r·c·e· ·o·f· ·E·v·i·d·e·n·c·e· ·|· ·O·w·n·e·r· ·|· ·V·e·r·i·f·i·c·a·t·i·o·n· ·S·t·a·t·u·s· ·|· ·P·u·b·l·i·c· ·A·p·p·r·o·v·a·l· ·|· ·L·a·s·t· ·R·e·v·i·e·w·e·d· ·|· ·R·e·v·a·l·i·d·a·t·i·o·n· ·|·
-·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|·
-·|· ·`·F·A·C·T·-·0·0·1·`· ·|· ·F·o·u·n·d·e·r· ·o·f· ·t·w·o· ·c·o·m·p·a·n·i·e·s·:· ·M·a·c·r·o·C·l·o·u·d· ·(·f·o·u·n·d·e·d· ·2·0·2·4·)· ·a·n·d· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·(·f·o·u·n·d·e·d· ·2·0·2·3·)· ·|· ·O·w·n·e·r·-·a·p·p·r·o·v·e·d· ·c·o·m·p·a·n·y· ·r·e·c·o·r·d·s· ·i·n· ·`·b·r·a·n·d·-·s·o·u·r·c·e·-·o·f·-·t·r·u·t·h·.·m·d·`· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·V·e·r·i·f·i·e·d· ·|· ·Y·e·s·,· ·w·i·t·h· ·c·o·m·p·a·n·y· ·n·a·m·e·s· ·a·n·d· ·f·o·u·n·d·e·d· ·y·e·a·r·s· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·W·h·e·n· ·c·o·m·p·a·n·y· ·i·n·f·o·r·m·a·t·i·o·n· ·c·h·a·n·g·e·s· ·|·
-·|· ·`·F·A·C·T·-·0·0·2·`· ·|· ·1·6· ·p·u·b·l·i·c· ·G·i·t·H·u·b· ·r·e·p·o·s·i·t·o·r·i·e·s· ·a·s· ·o·f· ·2·0·2·6·-·0·7·-·1·7· ·|· ·A·u·t·h·e·n·t·i·c·a·t·e·d· ·G·i·t·H·u·b· ·r·e·p·o·s·i·t·o·r·y· ·i·n·v·e·n·t·o·r·y· ·|· ·s·h·a·i·k·a·l·t·h·a·f·-·1· ·|· ·V·e·r·i·f·i·e·d· ·s·n·a·p·s·h·o·t· ·|· ·Y·e·s·,· ·o·n·l·y· ·w·i·t·h· ·t·h·e· ·r·e·v·i·e·w· ·d·a·t·e· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·I·m·m·e·d·i·a·t·e·l·y· ·b·e·f·o·r·e· ·p·u·b·l·i·c·a·t·i·o·n· ·a·n·d· ·e·a·c·h· ·p·r·o·f·i·l·e· ·a·u·d·i·t· ·|·
-·
-·#·#· ·L·e·g·a·c·y· ·M·e·t·r·i·c· ·C·l·a·i·m·s·
-·
-·S·h·a·i·k· ·A·l·t·h·a·f· ·i·s· ·t·h·e· ·e·v·i·d·e·n·c·e· ·o·w·n·e·r· ·u·n·l·e·s·s· ·a·n· ·e·m·p·l·o·y·e·r·,· ·c·l·i·e·n·t·,· ·p·a·r·t·n·e·r·,· ·o·r· ·p·r·o·g·r·a·m· ·r·e·c·o·r·d· ·r·e·q·u·i·r·e·s· ·a·n· ·a·d·d·i·t·i·o·n·a·l· ·a·p·p·r·o·v·e·r·.· ·`·H·o·l·d·`· ·m·e·a·n·s· ·t·h·e· ·c·l·a·i·m· ·m·u·s·t· ·b·e· ·o·m·i·t·t·e·d· ·f·r·o·m· ·a·l·l· ·p·u·b·l·i·c· ·c·o·n·t·e·n·t· ·u·n·t·i·l· ·i·t·s· ·c·a·t·e·g·o·r·y· ·c·h·a·n·g·e·s· ·t·o· ·`·V·e·r·i·f·i·e·d·`·.·
-·
-·|· ·I·D· ·|· ·C·u·r·r·e·n·t· ·C·l·a·i·m· ·|· ·C·u·r·r·e·n·t· ·S·o·u·r·c·e· ·|· ·S·o·u·r·c·e· ·o·f· ·E·v·i·d·e·n·c·e· ·|· ·E·v·i·d·e·n·c·e· ·O·w·n·e·r· ·|· ·C·a·t·e·g·o·r·y· ·|· ·P·u·b·l·i·c· ·A·p·p·r·o·v·a·l· ·|· ·L·a·s·t· ·R·e·v·i·e·w·e·d· ·|· ·S·a·f·e· ·T·r·e·a·t·m·e·n·t· ·|·
-·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·1·`· ·|· ·6·0·%· ·r·e·d·u·c·t·i·o·n· ·i·n· ·c·l·o·u·d· ·d·e·p·l·o·y·m·e·n·t· ·t·i·m·e· ·|· ·`·i·n·d·e·x·.·h·t·m·l·`·,· ·`·s·c·r·i·p·t·.·j·s·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·t·h·e· ·o·w·n·e·d· ·a·u·t·o·m·a·t·i·o·n· ·w·o·r·k·f·l·o·w· ·w·i·t·h·o·u·t· ·a· ·p·e·r·c·e·n·t·a·g·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·2·`· ·|· ·2·0·%· ·m·o·n·t·h·l·y· ·c·l·o·u·d· ·c·o·s·t· ·s·a·v·i·n·g·s· ·|· ·`·i·n·d·e·x·.·h·t·m·l·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·U·s·e· ·`·s·u·p·p·o·r·t·e·d· ·c·l·o·u·d· ·c·o·s·t· ·o·p·t·i·m·i·z·a·t·i·o·n· ·i·n·i·t·i·a·t·i·v·e·s·`· ·o·n·l·y· ·i·f· ·t·h·e· ·r·o·l·e· ·i·s· ·v·e·r·i·f·i·e·d· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·3·`· ·|· ·6·0·%· ·f·a·s·t·e·r· ·d·e·l·i·v·e·r·y· ·|· ·`·i·n·d·e·x·.·h·t·m·l·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·t·h·e· ·r·e·u·s·a·b·l·e· ·d·e·l·i·v·e·r·y· ·w·o·r·k·f·l·o·w· ·w·i·t·h·o·u·t· ·a· ·p·e·r·c·e·n·t·a·g·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·4·`· ·|· ·Z·e·r·o·-·d·o·w·n·t·i·m·e· ·K·u·b·e·r·n·e·t·e·s· ·m·a·i·n·t·e·n·a·n·c·e· ·|· ·`·i·n·d·e·x·.·h·t·m·l·`· ·|· ·N·o· ·a·p·p·r·o·v·e·d· ·c·h·a·n·g·e· ·o·r· ·i·n·c·i·d·e·n·t· ·r·e·c·o·r·d·s· ·s·u·p·p·l·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·h·i·g·h·-·a·v·a·i·l·a·b·i·l·i·t·y· ·a·n·d· ·m·a·i·n·t·e·n·a·n·c·e· ·p·a·t·t·e·r·n·s· ·w·i·t·h·o·u·t· ·a·n· ·o·u·t·c·o·m·e· ·g·u·a·r·a·n·t·e·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·5·`· ·|· ·3·0·%· ·l·o·w·e·r· ·A·I· ·w·o·r·k·l·o·a·d· ·o·p·e·r·a·t·i·o·n·a·l· ·c·o·s·t·s· ·|· ·`·s·c·r·i·p·t·.·j·s·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·r·e·s·o·u·r·c·e·-·m·a·n·a·g·e·m·e·n·t· ·a·n·d· ·c·o·s·t·-·o·p·t·i·m·i·z·a·t·i·o·n· ·d·e·s·i·g·n· ·d·e·c·i·s·i·o·n·s· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·6·`· ·|· ·2·0·0·+· ·m·i·g·r·a·t·e·d· ·a·p·p·l·i·c·a·t·i·o·n·s· ·|· ·`·s·c·r·i·p·t·.·j·s·`· ·|· ·P·o·t·e·n·t·i·a·l· ·p·r·o·j·e·c·t· ·o·r· ·c·l·i·e·n·t· ·r·e·c·o·r·d·s· ·n·o·t· ·s·u·p·p·l·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·a·n· ·a·n·o·n·y·m·o·u·s· ·m·i·g·r·a·t·i·o·n· ·m·e·t·h·o·d·o·l·o·g·y· ·w·i·t·h·o·u·t· ·s·c·a·l·e· ·c·l·a·i·m·s· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·7·`· ·|· ·Z·e·r·o·-·d·o·w·n·t·i·m·e· ·m·u·l·t·i·-·c·l·o·u·d· ·m·i·g·r·a·t·i·o·n· ·|· ·`·i·n·d·e·x·.·h·t·m·l·`·,· ·`·s·c·r·i·p·t·.·j·s·`·,· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·P·r·e·s·e·n·t· ·a·n· ·a·n·o·n·y·m·o·u·s· ·m·i·g·r·a·t·i·o·n· ·p·a·t·t·e·r·n·,· ·n·o·t· ·a· ·g·u·a·r·a·n·t·e·e·d· ·r·e·s·u·l·t· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·8·`· ·|· ·2·5·%· ·m·i·g·r·a·t·i·o·n· ·c·o·s·t· ·r·e·d·u·c·t·i·o·n· ·|· ·`·s·c·r·i·p·t·.·j·s·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·c·o·s·t·-·a·n·a·l·y·s·i·s· ·m·e·t·h·o·d·s· ·w·i·t·h·o·u·t· ·a· ·p·e·r·c·e·n·t·a·g·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·0·9·`· ·|· ·9·9·.·9·%· ·M·a·c·r·o·C·l·o·u·d· ·u·p·t·i·m·e· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·N·o· ·g·e·n·e·r·a·l·l·y· ·a·v·a·i·l·a·b·l·e· ·p·l·a·t·f·o·r·m· ·o·r· ·p·r·o·d·u·c·t·i·o·n· ·t·e·l·e·m·e·t·r·y· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·0·`· ·|· ·1·0·x· ·f·a·s·t·e·r· ·M·a·c·r·o·C·l·o·u·d· ·d·e·p·l·o·y·m·e·n·t·s· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·N·o· ·b·e·n·c·h·m·a·r·k·;· ·p·l·a·t·f·o·r·m· ·i·s· ·i·n· ·d·e·v·e·l·o·p·m·e·n·t· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·1·`· ·|· ·3·0·%· ·M·a·c·r·o·C·l·o·u·d· ·c·o·s·t· ·r·e·d·u·c·t·i·o·n· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·N·o· ·b·e·n·c·h·m·a·r·k·;· ·p·l·a·t·f·o·r·m· ·i·s· ·i·n· ·d·e·v·e·l·o·p·m·e·n·t· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·2·`· ·|· ·2·0·0·+· ·c·l·o·u·d· ·s·e·r·v·i·c·e·s· ·s·u·p·p·o·r·t·e·d· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·N·o· ·v·e·r·i·f·i·e·d· ·c·a·p·a·b·i·l·i·t·y· ·i·n·v·e·n·t·o·r·y·;· ·A·W·S· ·a·n·d· ·G·C·P· ·a·r·e· ·r·o·a·d·m·a·p· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·p·l·a·c·e· ·w·i·t·h· ·t·h·e· ·v·e·r·i·f·i·e·d· ·c·a·p·a·b·i·l·i·t·y·-·s·t·a·t·u·s· ·m·a·t·r·i·x· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·3·`· ·|· ·3·5·%· ·c·u·s·t·o·m·e·r· ·c·l·o·u·d·-·s·p·e·n·d· ·s·a·v·i·n·g·s· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·t·e·s·t·i·m·o·n·i·a·l· ·|· ·N·o· ·a·u·t·h·o·r·i·z·e·d· ·s·o·u·r·c·e·,· ·e·v·i·d·e·n·c·e·,· ·o·r· ·c·o·n·s·e·n·t· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·t·h·e· ·t·e·s·t·i·m·o·n·i·a·l· ·a·n·d· ·n·u·m·b·e·r· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·4·`· ·|· ·1·4·-·d·a·y· ·M·a·c·r·o·C·l·o·u·d· ·f·r·e·e· ·t·r·i·a·l· ·|· ·`·m·a·c·r·o·c·l·o·u·d·.·h·t·m·l·`· ·|· ·O·w·n·e·r· ·v·e·r·i·f·i·e·d· ·t·h·a·t· ·n·o· ·f·r·e·e· ·t·r·i·a·l· ·i·s· ·o·f·f·e·r·e·d· ·|· ·M·a·c·r·o·C·l·o·u·d· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·t·h·e· ·c·l·a·i·m· ·a·n·d· ·C·T·A· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·5·`· ·|· ·5·0·0·+· ·s·t·u·d·e·n·t·s· ·t·r·a·i·n·e·d· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·P·o·t·e·n·t·i·a·l· ·d·e·d·u·p·l·i·c·a·t·e·d· ·p·r·o·g·r·a·m· ·r·e·c·o·r·d·s· ·n·o·t· ·s·u·p·p·l·i·e·d· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·t·r·a·i·n·i·n·g· ·p·r·o·g·r·a·m·s· ·w·i·t·h·o·u·t· ·p·a·r·t·i·c·i·p·a·n·t· ·c·o·u·n·t·s· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·6·`· ·|· ·8·5·%· ·j·o·b· ·p·l·a·c·e·m·e·n·t· ·r·a·t·e· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·C·o·h·o·r·t· ·d·e·f·i·n·i·t·i·o·n· ·a·n·d· ·p·l·a·c·e·m·e·n·t· ·r·e·c·o·r·d·s· ·n·o·t· ·s·u·p·p·l·i·e·d· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·c·a·r·e·e·r·-·f·o·c·u·s·e·d· ·l·e·a·r·n·i·n·g· ·w·i·t·h·o·u·t· ·a· ·s·u·c·c·e·s·s· ·r·a·t·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·7·`· ·|· ·5·0·+· ·p·a·r·t·n·e·r· ·c·o·m·p·a·n·i·e·s· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·P·a·r·t·n·e·r· ·r·e·g·i·s·t·e·r· ·a·n·d· ·n·a·m·i·n·g· ·p·e·r·m·i·s·s·i·o·n· ·n·o·t· ·s·u·p·p·l·i·e·d· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·o· ·n·o·t· ·c·l·a·i·m· ·p·a·r·t·n·e·r·s·h·i·p·s·;· ·d·e·s·c·r·i·b·e· ·t·h·e· ·i·n·t·e·n·d·e·d· ·i·n·d·u·s·t·r·y·-·a·l·i·g·n·m·e·n·t· ·a·p·p·r·o·a·c·h· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·8·`· ·|· ·9·5·%· ·s·t·u·d·e·n·t· ·s·a·t·i·s·f·a·c·t·i·o·n· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·S·u·r·v·e·y· ·m·e·t·h·o·d·,· ·s·a·m·p·l·e·,· ·a·n·d· ·r·e·s·u·l·t·s· ·n·o·t· ·s·u·p·p·l·i·e·d· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·t·h·e· ·m·e·n·t·o·r·i·n·g· ·a·p·p·r·o·a·c·h· ·w·i·t·h·o·u·t· ·a· ·s·a·t·i·s·f·a·c·t·i·o·n· ·r·a·t·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·1·9·`· ·|· ·M·i·l·l·i·o·n·s· ·s·a·v·e·d· ·t·h·r·o·u·g·h· ·c·l·o·u·d· ·d·e·p·l·o·y·m·e·n·t·s· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·U·n·s·c·o·p·e·d· ·m·a·r·k·e·t·i·n·g· ·c·l·a·i·m· ·w·i·t·h· ·n·o· ·e·v·i·d·e·n·c·e· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·2·0·`· ·|· ·6·0·%· ·r·e·d·u·c·t·i·o·n· ·i·n· ·o·p·e·r·a·t·i·o·n·a·l· ·o·v·e·r·h·e·a·d· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·N·o·n·e· ·i·d·e·n·t·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·N·e·e·d·s· ·E·v·i·d·e·n·c·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·D·e·s·c·r·i·b·e· ·t·h·e· ·a·u·t·o·m·a·t·i·o·n· ·a·p·p·r·o·a·c·h· ·w·i·t·h·o·u·t· ·a· ·p·e·r·c·e·n·t·a·g·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·2·1·`· ·|· ·6·+· ·y·e·a·r·s· ·i·n·d·u·s·t·r·y· ·e·x·p·e·r·i·e·n·c·e· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·|· ·E·m·p·l·o·y·m·e·n·t· ·t·i·m·e·l·i·n·e· ·r·e·m·a·i·n·s· ·p·a·r·t·i·a·l·l·y· ·u·n·v·e·r·i·f·i·e·d· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·C·a·l·c·u·l·a·t·e· ·o·n·l·y· ·f·r·o·m· ·t·h·e· ·f·i·n·a·l· ·a·p·p·r·o·v·e·d· ·c·a·r·e·e·r· ·t·i·m·e·l·i·n·e· ·a·n·d· ·s·t·a·t·e· ·t·h·e· ·a·s·-·o·f· ·d·a·t·e· ·|·
-·|· ·`·M·E·T·R·I·C·-·0·2·2·`· ·|· ·E·m·p·l·o·y·m·e·n·t· ·w·i·t·h·i·n· ·3· ·m·o·n·t·h·s· ·o·f· ·g·r·a·d·u·a·t·i·o·n· ·|· ·`·s·k·i·l·l·i·t·h·u·b·.·h·t·m·l·`· ·t·e·s·t·i·m·o·n·i·a·l· ·|· ·N·o· ·i·d·e·n·t·i·t·y·,· ·e·v·i·d·e·n·c·e·,· ·o·r· ·p·u·b·l·i·c·a·t·i·o·n· ·c·o·n·s·e·n·t· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·P·r·o·h·i·b·i·t·e·d· ·|· ·N·o· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|· ·R·e·m·o·v·e· ·t·h·e· ·t·e·s·t·i·m·o·n·i·a·l· ·a·n·d· ·n·u·m·b·e·r· ·|·
-·
-·#·#· ·C·a·n·d·i·d·a·t·e· ·E·v·i·d·e·n·c·e· ·M·e·t·r·i·c·s·
-·
-·T·h·e·s·e· ·r·e·m·a·i·n· ·c·a·n·d·i·d·a·t·e· ·m·e·t·r·i·c·s·,· ·n·o·t· ·c·u·r·r·e·n·t· ·c·l·a·i·m·s·.·
-·
-·|· ·C·a·n·d·i·d·a·t·e· ·M·e·t·r·i·c· ·|· ·S·o·u·r·c·e· ·o·f· ·E·v·i·d·e·n·c·e· ·R·e·q·u·i·r·e·d· ·|· ·O·w·n·e·r· ·|· ·C·a·t·e·g·o·r·y· ·|· ·P·u·b·l·i·c· ·A·p·p·r·o·v·a·l· ·|· ·L·a·s·t· ·R·e·v·i·e·w·e·d· ·|·
-·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|·
-·|· ·Y·e·a·r·s· ·o·f· ·p·r·o·f·e·s·s·i·o·n·a·l· ·e·x·p·e·r·i·e·n·c·e· ·|· ·F·u·l·l·y· ·v·e·r·i·f·i·e·d· ·c·a·r·e·e·r· ·t·i·m·e·l·i·n·e· ·w·i·t·h· ·a· ·s·t·a·t·e·d· ·c·a·l·c·u·l·a·t·i·o·n· ·d·a·t·e· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·A·z·u·r·e· ·e·n·v·i·r·o·n·m·e·n·t·s· ·d·e·p·l·o·y·e·d· ·|· ·A·p·p·r·o·v·e·d· ·i·n·v·e·n·t·o·r·y· ·w·i·t·h· ·t·i·m·e·f·r·a·m·e· ·a·n·d· ·c·o·u·n·t·i·n·g· ·r·u·l·e· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·e·n·g·a·g·e·m·e·n·t· ·o·w·n·e·r· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·T·e·r·r·a·f·o·r·m· ·m·o·d·u·l·e·s· ·c·r·e·a·t·e·d· ·o·r· ·m·a·i·n·t·a·i·n·e·d· ·|· ·R·e·p·o·s·i·t·o·r·y· ·o·r· ·a·p·p·r·o·v·e·d· ·i·n·t·e·r·n·a·l· ·m·o·d·u·l·e· ·i·n·v·e·n·t·o·r·y· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·A·u·t·o·m·a·t·i·o·n· ·w·o·r·k·f·l·o·w·s· ·b·u·i·l·t· ·|· ·N·a·m·e·d· ·w·o·r·k·f·l·o·w· ·r·e·g·i·s·t·r·y· ·a·n·d· ·o·w·n·e·r·s·h·i·p· ·c·o·n·f·i·r·m·a·t·i·o·n· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·C·e·r·t·i·f·i·c·a·t·i·o·n·s· ·e·a·r·n·e·d· ·|· ·C·e·r·t·i·f·i·c·a·t·e· ·I·D·s· ·o·r· ·a·p·p·r·o·v·e·d· ·p·u·b·l·i·c· ·v·e·r·i·f·i·c·a·t·i·o·n· ·l·i·n·k·s· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·P·r·o·j·e·c·t·s· ·c·o·m·p·l·e·t·e·d· ·|· ·A·p·p·r·o·v·e·d· ·p·r·o·j·e·c·t· ·r·e·g·i·s·t·r·y· ·a·n·d· ·d·e·f·i·n·i·t·i·o·n· ·o·f· ·`·C·o·m·p·l·e·t·e·d·`· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·T·e·a·m·s· ·m·e·n·t·o·r·e·d· ·|· ·O·r·g·a·n·i·z·a·t·i·o·n·-·a·p·p·r·o·v·e·d· ·r·e·c·o·r·d·s· ·a·n·d· ·c·o·u·n·t·i·n·g· ·r·u·l·e· ·|· ·S·h·a·i·k· ·A·l·t·h·a·f· ·/· ·o·r·g·a·n·i·z·a·t·i·o·n· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·|· ·S·t·u·d·e·n·t·s· ·t·r·a·i·n·e·d· ·o·r· ·m·e·n·t·o·r·e·d· ·|· ·D·e·d·u·p·l·i·c·a·t·e·d· ·e·n·r·o·l·l·m·e·n·t· ·o·r· ·e·v·e·n·t· ·r·e·c·o·r·d·s· ·|· ·P·R·O·S·K·I·L·L· ·I·T· ·T·e·c·h·n·o·l·o·g·i·e·s· ·|· ·I·n·t·e·r·n·a·l·l·y· ·V·e·r·i·f·i·a·b·l·e· ·|· ·H·o·l·d· ·|· ·2·0·2·6·-·0·7·-·1·7· ·|·
-·
-·#·#· ·A·p·p·r·o·v·a·l· ·R·e·c·o·r·d· ·T·e·m·p·l·a·t·e·
-·
-·|· ·M·e·t·r·i·c· ·I·D· ·|· ·A·p·p·r·o·v·e·d· ·W·o·r·d·i·n·g· ·|· ·P·r·i·v·a·t·e· ·E·v·i·d·e·n·c·e· ·R·e·f·e·r·e·n·c·e· ·|· ·S·c·o·p·e· ·/· ·P·e·r·i·o·d· ·|· ·A·p·p·r·o·v·e·r· ·|· ·A·p·p·r·o·v·a·l· ·D·a·t·e· ·|· ·R·e·v·a·l·i·d·a·t·e· ·B·y· ·|·
-·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|· ·-·-·-· ·|·
-·|· ·P·e·n·d·i·n·g· ·|· ·P·e·n·d·i·n·g· ·|· ·D·o· ·n·o·t· ·c·o·m·m·i·t· ·s·e·n·s·i·t·i·v·e· ·e·v·i·d·e·n·c·e· ·|· ·P·e·n·d·i·n·g· ·|· ·P·e·n·d·i·n·g· ·|· ·P·e·n·d·i·n·g· ·|· ·P·e·n·d·i·n·g· ·|·
-·
-·A·b·s·e·n·c·e· ·o·f· ·e·v·i·d·e·n·c·e· ·m·e·a·n·s· ·a·b·s·e·n·c·e· ·o·f· ·t·h·e· ·m·e·t·r·i·c·.· ·I·t· ·m·u·s·t· ·n·o·t· ·b·e· ·r·o·u·n·d·e·d·,· ·s·o·f·t·e·n·e·d·,· ·o·r· ·r·e·p·u·b·l·i·s·h·e·d· ·t·h·r·o·u·g·h· ·t·e·s·t·i·m·o·n·i·a·l·s·,· ·s·t·r·u·c·t·u·r·e·d· ·d·a·t·a·,· ·i·m·a·g·e· ·t·e·x·t·,· ·o·r· ·m·e·t·a·d·a·t·a·.·
-·
-·P·r·e·f·e·r· ·e·v·i·d·e·n·c·e·-·l·e·d· ·q·u·a·l·i·t·a·t·i·v·e· ·s·t·a·t·e·m·e·n·t·s· ·w·h·e·n· ·a· ·n·u·m·b·e·r· ·i·s· ·h·e·l·d· ·o·r· ·p·r·o·h·i·b·i·t·e·d·.· ·D·e·s·c·r·i·b·e· ·t·h·e· ·a·r·c·h·i·t·e·c·t·u·r·e·,· ·r·e·u·s·a·b·l·e· ·w·o·r·k·f·l·o·w·,· ·o·p·e·r·a·t·i·o·n·a·l· ·p·a·t·t·e·r·n·,· ·s·e·c·u·r·i·t·y· ·d·e·c·i·s·i·o·n·,· ·o·r· ·i·m·p·l·e·m·e·n·t·a·t·i·o·n· ·l·e·s·s·o·n· ·w·i·t·h·o·u·t· ·i·n·v·e·n·t·i·n·g· ·a·n· ·o·u·t·c·o·m·e·.·
-·
+# Metrics Registry
+
+Status: Classification and publication policy verified on 2026-07-17. Two factual metrics are publishable; all 22 legacy impact and marketing claims remain held or prohibited.
+
+Every public number must have a defined scope, calculation method, evidence owner, evidence date, and publication approval. Numbers found in the current website are recorded below so they cannot be reintroduced accidentally.
+
+## Classification Model
+
+| Category | Publication Rule | Evidence Standard |
+| --- | --- | --- |
+| `Verified` | Yes, using only the approved wording and scope | Public evidence or owner-approved documented evidence |
+| `Internally Verifiable` | Hold until private evidence review and any required organization approval | Employment records, project logs, deployment records, program records, or engagement records |
+| `Needs Evidence` | Hold | No adequate supporting evidence is currently identified |
+| `Prohibited` | No | Current wording is false, contradicted by the maturity baseline, unsubstantiated marketing, or dependent on an unauthorized testimonial |
+
+## Evidence Standard
+
+Acceptable evidence may include approved deployment records, dashboards, change records, invoices, training enrollment records, certificates, repository history, or client-approved reports. Evidence must be reviewed privately and must not be committed when it contains confidential or personal information.
+
+Each approved metric must specify:
+
+- Exact wording and unit.
+- Population, project, and time period.
+- Baseline and calculation method.
+- Evidence owner and last verification date.
+- Whether client or organization approval is required.
+- Expiration or revalidation date.
+
+## Verified Factual Metrics
+
+| ID | Approved Metric | Source of Evidence | Owner | Verification Status | Public Approval | Last Reviewed | Revalidation |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `FACT-001` | Founder of two companies: MacroCloud (founded 2024) and PROSKILL IT Technologies (founded 2023) | Owner-approved company records in `brand-source-of-truth.md` | Shaik Althaf | Verified | Yes, with company names and founded years | 2026-07-17 | When company information changes |
+| `FACT-002` | 16 public GitHub repositories as of 2026-07-17 | Authenticated GitHub repository inventory | shaikalthaf-1 | Verified snapshot | Yes, only with the review date | 2026-07-17 | Immediately before publication and each profile audit |
+
+## Legacy Metric Claims
+
+Shaik Althaf is the evidence owner unless an employer, client, partner, or program record requires an additional approver. `Hold` means the claim must be omitted from all public content until its category changes to `Verified`.
+
+| ID | Current Claim | Current Source | Source of Evidence | Evidence Owner | Category | Public Approval | Last Reviewed | Safe Treatment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `METRIC-001` | 60% reduction in cloud deployment time | `index.html`, `script.js` | None identified | Shaik Althaf | Needs Evidence | Hold | 2026-07-17 | Describe the owned automation workflow without a percentage |
+| `METRIC-002` | 20% monthly cloud cost savings | `index.html` | None identified | Shaik Althaf / engagement owner | Needs Evidence | Hold | 2026-07-17 | Use `supported cloud cost optimization initiatives` only if the role is verified |
+| `METRIC-003` | 60% faster delivery | `index.html` | None identified | Shaik Althaf | Needs Evidence | Hold | 2026-07-17 | Describe the reusable delivery workflow without a percentage |
+| `METRIC-004` | Zero-downtime Kubernetes maintenance | `index.html` | No approved change or incident records supplied | Shaik Althaf / engagement owner | Needs Evidence | Hold | 2026-07-17 | Describe high-availability and maintenance patterns without an outcome guarantee |
+| `METRIC-005` | 30% lower AI workload operational costs | `script.js` | None identified | Shaik Althaf | Needs Evidence | Hold | 2026-07-17 | Describe resource-management and cost-optimization design decisions |
+| `METRIC-006` | 200+ migrated applications | `script.js` | Potential project or client records not supplied | Shaik Althaf / engagement owner | Internally Verifiable | Hold | 2026-07-17 | Describe an anonymous migration methodology without scale claims |
+| `METRIC-007` | Zero-downtime multi-cloud migration | `index.html`, `script.js`, `macrocloud.html` | None identified | Shaik Althaf / engagement owner | Needs Evidence | Hold | 2026-07-17 | Present an anonymous migration pattern, not a guaranteed result |
+| `METRIC-008` | 25% migration cost reduction | `script.js` | None identified | Shaik Althaf / engagement owner | Needs Evidence | Hold | 2026-07-17 | Describe cost-analysis methods without a percentage |
+| `METRIC-009` | 99.9% MacroCloud uptime | `macrocloud.html` | No generally available platform or production telemetry | MacroCloud | Prohibited | No | 2026-07-17 | Remove |
+| `METRIC-010` | 10x faster MacroCloud deployments | `macrocloud.html` | No benchmark; platform is in development | MacroCloud | Prohibited | No | 2026-07-17 | Remove |
+| `METRIC-011` | 30% MacroCloud cost reduction | `macrocloud.html` | No benchmark; platform is in development | MacroCloud | Prohibited | No | 2026-07-17 | Remove |
+| `METRIC-012` | 200+ cloud services supported | `macrocloud.html` | No verified capability inventory; AWS and GCP are roadmap | MacroCloud | Prohibited | No | 2026-07-17 | Replace with the verified capability-status matrix |
+| `METRIC-013` | 35% customer cloud-spend savings | `macrocloud.html` testimonial | No authorized source, evidence, or consent | MacroCloud | Prohibited | No | 2026-07-17 | Remove the testimonial and number |
+| `METRIC-014` | 14-day MacroCloud free trial | `macrocloud.html` | Owner verified that no free trial is offered | MacroCloud | Prohibited | No | 2026-07-17 | Remove the claim and CTA |
+| `METRIC-015` | 500+ students trained | `skillithub.html` | Potential deduplicated program records not supplied | PROSKILL IT Technologies | Internally Verifiable | Hold | 2026-07-17 | Describe training programs without participant counts |
+| `METRIC-016` | 85% job placement rate | `skillithub.html` | Cohort definition and placement records not supplied | PROSKILL IT Technologies | Internally Verifiable | Hold | 2026-07-17 | Describe career-focused learning without a success rate |
+| `METRIC-017` | 50+ partner companies | `skillithub.html` | Partner register and naming permission not supplied | PROSKILL IT Technologies | Internally Verifiable | Hold | 2026-07-17 | Do not claim partnerships; describe the intended industry-alignment approach |
+| `METRIC-018` | 95% student satisfaction | `skillithub.html` | Survey method, sample, and results not supplied | PROSKILL IT Technologies | Internally Verifiable | Hold | 2026-07-17 | Describe the mentoring approach without a satisfaction rate |
+| `METRIC-019` | Millions saved through cloud deployments | `skillithub.html` | Unscoped marketing claim with no evidence | Shaik Althaf | Prohibited | No | 2026-07-17 | Remove |
+| `METRIC-020` | 60% reduction in operational overhead | `skillithub.html` | None identified | Shaik Althaf | Needs Evidence | Hold | 2026-07-17 | Describe the automation approach without a percentage |
+| `METRIC-021` | 6+ years industry experience | `skillithub.html` | Employment timeline remains partially unverified | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 | Calculate only from the final approved career timeline and state the as-of date |
+| `METRIC-022` | Employment within 3 months of graduation | `skillithub.html` testimonial | No identity, evidence, or publication consent | PROSKILL IT Technologies | Prohibited | No | 2026-07-17 | Remove the testimonial and number |
+
+## Candidate Evidence Metrics
+
+These remain candidate metrics, not current claims.
+
+| Candidate Metric | Source of Evidence Required | Owner | Category | Public Approval | Last Reviewed |
+| --- | --- | --- | --- | --- | --- |
+| Years of professional experience | Fully verified career timeline with a stated calculation date | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 |
+| Azure environments deployed | Approved inventory with timeframe and counting rule | Shaik Althaf / engagement owner | Internally Verifiable | Hold | 2026-07-17 |
+| Terraform modules created or maintained | Repository or approved internal module inventory | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 |
+| Automation workflows built | Named workflow registry and ownership confirmation | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 |
+| Certifications earned | Certificate IDs or approved public verification links | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 |
+| Projects completed | Approved project registry and definition of `Completed` | Shaik Althaf | Internally Verifiable | Hold | 2026-07-17 |
+| Teams mentored | Organization-approved records and counting rule | Shaik Althaf / organization | Internally Verifiable | Hold | 2026-07-17 |
+| Students trained or mentored | Deduplicated enrollment or event records | PROSKILL IT Technologies | Internally Verifiable | Hold | 2026-07-17 |
+
+## Approval Record Template
+
+| Metric ID | Approved Wording | Private Evidence Reference | Scope / Period | Approver | Approval Date | Revalidate By |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pending | Pending | Do not commit sensitive evidence | Pending | Pending | Pending | Pending |
+
+Absence of evidence means absence of the metric. It must not be rounded, softened, or republished through testimonials, structured data, image text, or metadata.
+
+Prefer evidence-led qualitative statements when a number is held or prohibited. Describe the architecture, reusable workflow, operational pattern, security decision, or implementation lesson without inventing an outcome.
