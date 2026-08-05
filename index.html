@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260805">
+  <link rel="stylesheet" href="styles.css?v=20260805_v3">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ALTHAF SHAIK — Cloud &amp; Network Automation Engineer">
   <meta property="og:description" content="Enterprise Azure | Terraform | DevOps | Networking | Palo Alto Security Hardening">
@@ -48,6 +48,57 @@
     ]
   }
   </script>
+
+<style>
+/* CRITICAL INLINE LAYOUT FALLBACK */
+:root {
+  --azure-primary: #0078d4;
+  --bg-main: #ffffff;
+  --bg-surface: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --border-subtle: #e2e8f0;
+  --border-azure: rgba(0, 120, 212, 0.25);
+  --shell-max: 1280px;
+  --header-height: 4.5rem;
+}
+body { margin: 0; background: #ffffff; color: #0f172a; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+.shell { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+.site-header { position: fixed; top: 0; left: 0; right: 0; height: 4.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; z-index: 1000; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+.brand { display: flex; align-items: center; gap: 0.75rem; color: #0f172a; text-decoration: none; font-weight: 700; }
+.brand-avatar-mini { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid #0078d4; }
+.primary-nav { display: flex; align-items: center; gap: 1.25rem; }
+.primary-nav a { text-decoration: none; color: #334155; font-size: 0.925rem; font-weight: 500; padding: 0.4rem 0.75rem; border-radius: 8px; }
+.primary-nav a:hover { color: #0078d4; background: rgba(0,120,212,0.08); }
+.nav-resume-btn { background: rgba(0,120,212,0.08)!important; color: #0078d4!important; border: 1px solid rgba(0,120,212,0.25)!important; font-weight: 600!important; }
+.nav-cta { background: #0078d4!important; color: #ffffff!important; font-weight: 600!important; border-radius: 8px!important; padding: 0.5rem 1.1rem!important; }
+.hero { position: relative; min-height: 90vh; display: flex; align-items: center; padding-top: 6rem; padding-bottom: 4rem; overflow: hidden; background: #ffffff; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+.status-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1rem; background: #ffffff; border: 1px solid rgba(0,120,212,0.25); border-radius: 9999px; font-size: 0.875rem; font-weight: 600; color: #0078d4; margin-bottom: 1.25rem; }
+.status-dot-active { width: 8px; height: 8px; border-radius: 50%; background: #10b981; }
+.hero h1 { font-size: clamp(2.4rem, 4.2vw, 3.8rem); margin: 0 0 1rem 0; color: #0f172a; }
+.hero-title-sub { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+.hero-title-sub span { background: rgba(0,120,212,0.08); color: #0078d4; padding: 0.25rem 0.75rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(0,120,212,0.2); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.85rem 1.75rem; font-size: 0.975rem; font-weight: 600; border-radius: 14px; text-decoration: none; cursor: pointer; border: 1px solid transparent; }
+.button-primary { background: #0078d4; color: #ffffff; }
+.button-secondary { background: #ffffff; color: #0078d4; border-color: rgba(0,120,212,0.25); }
+.button-ghost { background: #f8fafc; color: #0f172a; border-color: #e2e8f0; }
+.portrait-stage { position: relative; display: flex; flex-direction: column; align-items: center; }
+.portrait-frame { position: relative; width: 100%; max-width: 400px; border-radius: 24px; overflow: hidden; background: #ffffff; border: 2px solid rgba(0,120,212,0.25); }
+.portrait-frame img { width: 100%; height: 440px; object-fit: cover; object-position: center top; display: block; }
+.marquee-section { padding: 2rem 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; overflow: hidden; }
+.marquee-title { text-align: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-weight: 700; margin-bottom: 1.25rem; }
+.marquee-track { display: flex; gap: 1.5rem; width: max-content; animation: marquee 25s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-item { display: flex; align-items: center; gap: 0.6rem; background: #ffffff; border: 1px solid #e2e8f0; padding: 0.6rem 1.25rem; border-radius: 14px; font-size: 0.9rem; font-weight: 600; color: #0f172a; white-space: nowrap; }
+.overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.statement-card, .pillar-card, .case-study-card, .tech-card, .cert-card, .award-card, .leadership-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; }
+@media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; } .overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .overview-grid, .pillars-grid, .case-studies-grid, .tech-grid, .certs-grid, .awards-grid, .leadership-grid { grid-template-columns: 1fr; } }
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
