@@ -39,7 +39,7 @@ const CASE_STUDIES_DATA = {
     terraform: `resource "azurerm_subscription_template_deployment" "migration_cutover" {
   name             = "sub-migration-prod-eastus"
   location         = "eastus"
-  template_content = file("\${path.module}/templates/sub_migration.json")
+  template_content = file("${path.module}/templates/sub_migration.json")
   parameters_content = jsonencode({
     targetSubscriptionId = var.target_sub_id
   })
@@ -606,34 +606,34 @@ function renderModalContent(container, data) {
   container.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
       <div style="display: flex; gap: 0.5rem; align-items: center;">
-        <span class="badge badge-azure">\${data.badge}</span>
-        <span style="font-size: 0.75rem; background: var(--bg-surface-elevated); padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-weight: 600; color: var(--azure-primary);">\${data.complexity}</span>
+        <span class="badge badge-azure">${data.badge}</span>
+        <span style="font-size: 0.75rem; background: var(--bg-surface-elevated); padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-weight: 600; color: var(--azure-primary);">${data.complexity}</span>
       </div>
-      <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">Timeline: \${data.timeline}</span>
+      <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">Timeline: ${data.timeline}</span>
     </div>
-    <h2>\${data.title}</h2>
+    <h2>${data.title}</h2>
     
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Business Challenge</div>
-    <p>\${data.problem}</p>
+    <p>${data.problem}</p>
 
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Solution Architecture</div>
-    <p>\${data.solution}</p>
+    <p>${data.solution}</p>
     
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Architecture Pattern</div>
-    <p style="background: var(--bg-surface); padding: 0.85rem 1.1rem; border-radius: var(--radius-sm); font-size: 0.9rem; border-left: 3px solid var(--azure-primary); border: 1px solid var(--border-subtle);">\${data.architecture}</p>
+    <p style="background: var(--bg-surface); padding: 0.85rem 1.1rem; border-radius: var(--radius-sm); font-size: 0.9rem; border-left: 3px solid var(--azure-primary); border: 1px solid var(--border-subtle);">${data.architecture}</p>
 
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Quantitative Results &amp; Business Impact</div>
     <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;">
-      \${data.metrics.map(m => `<span style="background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); font-weight: 600; font-size: 0.85rem;">✓ \${m}</span>`).join('')}
+      ${data.metrics.map(m => `<span style="background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); font-weight: 600; font-size: 0.85rem;">✓ ${m}</span>`).join('')}
     </div>
-    <p>\${data.businessValue}</p>
+    <p>${data.businessValue}</p>
 
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Terraform / HCL Blueprint Sample</div>
-    <pre class="code-block"><code>\${escapeHtml(data.terraform)}</code></pre>
+    <pre class="code-block"><code>${escapeHtml(data.terraform)}</code></pre>
 
     <div style="font-size: 1.05rem; font-weight: 600; color: var(--azure-primary); margin-top: 1.5rem; margin-bottom: 0.5rem;">Technologies Used</div>
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
-      \${data.tech.map(t => `<span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-surface); padding: 0.25rem 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary);">\${t}</span>`).join('')}
+      ${data.tech.map(t => `<span style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-surface); padding: 0.25rem 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary);">${t}</span>`).join('')}
     </div>
   `;
 }

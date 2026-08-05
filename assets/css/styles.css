@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 em, h2 em {
   font-style: normal;
-  color: var(--azure-primary);
+  color: #005a9e;
   background: linear-gradient(135deg, var(--azure-primary) 0%, var(--azure-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -140,7 +140,7 @@ p {
 }
 
 a {
-  color: var(--azure-primary);
+  color: #005a9e;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -233,7 +233,7 @@ img, svg {
 
 .brand small {
   font-size: 0.75rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   font-weight: 600;
 }
 
@@ -263,7 +263,7 @@ img, svg {
 }
 
 .primary-nav a:hover {
-  color: var(--azure-primary);
+  color: #005a9e;
   background-color: rgba(0, 120, 212, 0.08);
   transform: translateY(-1px);
 }
@@ -349,14 +349,14 @@ img, svg {
 
 .button-secondary {
   background: #ffffff;
-  color: var(--azure-primary);
+  color: #005a9e;
   border-color: var(--border-azure);
   box-shadow: var(--shadow-sm);
 }
 
 .button-secondary:hover {
   background: var(--bg-surface-elevated);
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-2px);
 }
 
@@ -401,7 +401,7 @@ img, svg {
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 1.25rem;
   box-shadow: var(--shadow-sm);
 }
@@ -424,7 +424,7 @@ img, svg {
 .hero-title-sub {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 1.25rem;
   display: flex;
   flex-wrap: wrap;
@@ -480,7 +480,7 @@ img, svg {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--azure-primary);
+  color: #005a9e;
   font-family: var(--font-heading);
 }
 
@@ -627,7 +627,7 @@ img, svg {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 0.75rem;
 }
 
@@ -659,7 +659,7 @@ img, svg {
 }
 
 .statement-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   box-shadow: var(--shadow-azure), var(--shadow-md);
   transform: translateY(-4px);
 }
@@ -668,7 +668,7 @@ img, svg {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 1rem;
   display: block;
 }
@@ -699,7 +699,7 @@ img, svg {
 .exp-date {
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   background: rgba(0, 120, 212, 0.08);
   padding: 0.4rem 0.9rem;
   border-radius: var(--radius-full);
@@ -716,7 +716,7 @@ img, svg {
 
 .exp-highlights-grid h5 {
   font-size: 1.1rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 0.75rem;
 }
 
@@ -743,7 +743,7 @@ img, svg {
 }
 
 .expandable-panel:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   box-shadow: var(--shadow-md);
 }
 
@@ -762,7 +762,7 @@ img, svg {
 
 .expandable-header:hover {
   background: var(--bg-surface);
-  color: var(--azure-primary);
+  color: #005a9e;
 }
 
 .expandable-icon {
@@ -770,7 +770,7 @@ img, svg {
   height: 28px;
   border-radius: 50%;
   background: rgba(0, 120, 212, 0.08);
-  color: var(--azure-primary);
+  color: #005a9e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,7 +827,7 @@ img, svg {
 
 .search-input-wrapper input:focus {
   outline: none;
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.15);
 }
@@ -877,7 +877,7 @@ img, svg {
 .tech-filter-btn:hover, .tech-filter-btn.active {
   background: var(--azure-primary);
   color: #ffffff;
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   box-shadow: var(--shadow-azure);
 }
 
@@ -901,7 +901,7 @@ img, svg {
 }
 
 .case-study-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-6px);
   box-shadow: var(--shadow-md), var(--shadow-azure);
 }
@@ -924,7 +924,7 @@ img, svg {
   letter-spacing: 0.04em;
 }
 
-.badge-azure { background: rgba(0, 120, 212, 0.1); color: #0078d4; border: 1px solid rgba(0, 120, 212, 0.3); }
+.badge-azure { background: rgba(0, 120, 212, 0.1); color: #005a9e; border: 1px solid rgba(0, 120, 212, 0.3); }
 
 .card-num {
   font-family: var(--font-mono);
@@ -962,7 +962,7 @@ img, svg {
 
 .card-metrics strong {
   font-size: 1.05rem;
-  color: var(--azure-primary);
+  color: #005a9e;
 }
 
 .card-metrics span {
@@ -990,7 +990,7 @@ img, svg {
 .button-card-details {
   background: transparent;
   border: 1px solid var(--border-azure);
-  color: var(--azure-primary);
+  color: #005a9e;
   padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
@@ -1026,7 +1026,7 @@ img, svg {
 }
 
 .leadership-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -1038,14 +1038,14 @@ img, svg {
 
 .leadership-card h4 {
   font-size: 0.95rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 0.75rem;
 }
 
 .text-link {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--azure-primary);
+  color: #005a9e;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -1070,7 +1070,7 @@ img, svg {
 }
 
 .pillar-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-5px);
   box-shadow: var(--shadow-azure), var(--shadow-md);
 }
@@ -1085,7 +1085,7 @@ img, svg {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   margin-bottom: 1.25rem;
 }
 
@@ -1139,7 +1139,7 @@ img, svg {
 }
 
 .timeline-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
 }
@@ -1148,7 +1148,7 @@ img, svg {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--azure-primary);
+  color: #005a9e;
   background: rgba(0, 120, 212, 0.08);
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-full);
@@ -1176,7 +1176,7 @@ img, svg {
 }
 
 .tech-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-5px);
   box-shadow: var(--shadow-azure), var(--shadow-md);
 }
@@ -1208,7 +1208,7 @@ img, svg {
 
 .tech-card-title small {
   font-size: 0.8rem;
-  color: var(--azure-primary);
+  color: #005a9e;
   font-weight: 600;
 }
 
@@ -1260,7 +1260,7 @@ img, svg {
 }
 
 .cert-card:hover, .award-card:hover {
-  border-color: var(--azure-primary);
+  border-color: #005a9e;
   transform: translateY(-6px);
   box-shadow: var(--shadow-azure), var(--shadow-md);
 }
@@ -1293,7 +1293,7 @@ img, svg {
   width: 100%;
   padding: 0.75rem 1rem;
   background: rgba(0, 120, 212, 0.08);
-  color: var(--azure-primary);
+  color: #005a9e;
   border: 1px solid var(--border-azure);
   border-radius: var(--radius-sm);
   font-weight: 600;
