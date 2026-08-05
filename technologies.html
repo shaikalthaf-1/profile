@@ -3,97 +3,409 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07111f">
-  <title>Technologies &amp; Skills Matrix — Shaik Althaf</title>
-  <meta name="description" content="Technical skill proficiency matrix covering Azure, AWS, Terraform, Palo Alto, DevSecOps, Docker, Kubernetes, and Scripting.">
+  <meta name="theme-color" content="#0078d4">
+  <title>Technologies &amp; Skills Matrix — ALTHAF SHAIK</title>
+  <meta name="description" content="Technical proficiency matrix, years of experience, official logos, and project breakdown across Cloud Platforms, IaC, DevSecOps, Networking, and Kubernetes by Althaf Shaik.">
+  <meta name="author" content="Althaf Shaik">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaikalthaf-1.github.io/profile/technologies.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260805">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Technologies &amp; Skills Matrix — ALTHAF SHAIK">
+  <meta property="og:description" content="Azure, Terraform, Palo Alto, Kubernetes, GitHub Actions, DevSecOps & Prometheus Observability">
+  <meta property="og:url" content="https://shaikalthaf-1.github.io/profile/technologies.html">
+  <meta property="og:image" content="assets/Shaik_Profile.svg">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
   <header class="site-header" data-header>
     <div class="header-inner shell">
-      <a class="brand" href="index.html">
-        <span class="brand-avatar-mini">
-          <img src="assets/Shaik_Profile.svg" alt="Shaik Althaf Avatar" width="36" height="36">
+      <a class="brand" href="index.html" aria-label="Althaf Shaik portfolio home">
+        <span class="brand-avatar-mini" aria-hidden="true">
+          <img src="assets/Shaik_Profile.svg" alt="Althaf Shaik Avatar" width="40" height="40">
         </span>
-        <span><strong>Shaik Althaf</strong><small>Sr. DevOps Engineer · Uniper</small></span>
+        <span><strong>ALTHAF SHAIK</strong><small>Sr. DevOps Engineer · Uniper</small></span>
       </a>
 
-      <nav class="primary-nav" data-navigation>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-navigation>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="experience.html">Experience</a>
         <a href="case-studies.html">Case Studies</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html#leadership">Leadership</a>
         <a href="technologies.html" class="is-active">Skills</a>
-        <a href="assets/Shaik_Althaf_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">Resume 📥</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
+        <a href="assets/Shaik_Althaf_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">Download Resume 📥</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main style="padding-top: calc(var(--header-height) + 3rem); padding-bottom: 5rem;">
+  <main id="main-content" style="padding-top: calc(var(--header-height) + 3rem); padding-bottom: 5rem;">
     <div class="shell">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow"><span></span> Core Technical Stack</p>
-        <h1>Technologies &amp; <em>Skill Matrix.</em></h1>
-        <p class="hero-lead">Comprehensive breakdown of enterprise cloud infrastructure, networking, DevOps, security, containerization, and automation tools.</p>
+      
+      <!-- HERO HEADING -->
+      <div class="section-heading" data-reveal style="margin-bottom: 2.5rem;">
+        <p class="eyebrow"><span></span> Verified Proficiency</p>
+        <h1 style="font-size: clamp(2.4rem, 4vw, 3.6rem);">Technology &amp; <em>Skills Matrix.</em></h1>
+        <p class="hero-lead">Comprehensive technical breakdown across enterprise cloud platforms, infrastructure automation, network security, DevSecOps pipelines, container orchestration, and observability tools.</p>
       </div>
 
-      <div class="expertise-grid" style="margin-top: 2rem;">
-        <article data-reveal>
-          <span class="expertise-icon">☁️</span>
-          <h3>Cloud Platforms</h3>
-          <p><strong>Azure:</strong> Virtual WAN, Virtual Hub, VNet, App Services, App Gateway WAF v2, Resource Mover, Traffic Manager, Azure Key Vault, Private Endpoints.<br>
-          <strong>AWS:</strong> EC2, VPC, S3, IAM, Auto Scaling, ELB/ALB, CloudWatch, Inspector.<br>
-          <strong>GCP:</strong> Compute Engine, VPC Network, IAM.</p>
+      <!-- DASHBOARD SEARCH & FILTER CONTROLS -->
+      <div class="dashboard-controls" data-reveal style="margin-bottom: 3rem;">
+        <div class="dashboard-search-row">
+          <div class="search-input-wrapper">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" id="tech-search" placeholder="Search technology by name, capability, or project (e.g. Azure, Terraform, Palo Alto, Kubernetes)..." aria-label="Search technologies">
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div class="filter-bar">
+            <button class="tech-filter-btn active" data-category="all">All Technologies (12)</button>
+            <button class="tech-filter-btn" data-category="cloud">Cloud Platforms</button>
+            <button class="tech-filter-btn" data-category="networking">Networking &amp; Security</button>
+            <button class="tech-filter-btn" data-category="iac">Infrastructure as Code</button>
+            <button class="tech-filter-btn" data-category="devops">DevSecOps &amp; CI/CD</button>
+            <button class="tech-filter-btn" data-category="containers">Containers &amp; K8s</button>
+            <button class="tech-filter-btn" data-category="observability">Observability &amp; Code</button>
+          </div>
+
+          <span id="tech-count" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--azure-primary); font-weight: 600;">Showing 12 Core Technologies</span>
+        </div>
+      </div>
+
+      <!-- ANIMATED TECHNOLOGY CARDS MATRIX -->
+      <div class="tech-grid" id="tech-grid">
+        
+        <!-- TECH 1: Microsoft Azure -->
+        <article class="tech-card" data-category="cloud" data-projects="Uniper Virtual WAN, Azure Enterprise Migration, AKS Policy Hardening" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">☁️</div>
+              <div class="tech-card-title">
+                <h3>Microsoft Azure</h3>
+                <small>Cloud Infrastructure &amp; Governance</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>98% — Expert Master</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 98%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Virtual WAN, Virtual Hub, App Gateway WAF v2, Resource Mover, Private Endpoints, Key Vault, Azure Policy, Management Groups, CAF Landing Zones.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Azure</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Uniper vWAN Backbone</span><span>Sub Migration</span><span>AKS Security</span>
+            </div>
+          </div>
         </article>
 
-        <article data-reveal>
-          <span class="expertise-icon">🌐</span>
-          <h3>Cloud Networking &amp; Security</h3>
-          <p><strong>Firewalls:</strong> Palo Alto Cloud NGFW, Panorama API, Azure Firewall.<br>
-          <strong>SD-WAN:</strong> Silver Peak SD-WAN integration, BGP Routing, Azure Route Server.<br>
-          <strong>Architecture:</strong> DMZ Micro-segmentation, Private Endpoints, DNS, NSG, Route Tables.</p>
+        <!-- TECH 2: Terraform (HCL) -->
+        <article class="tech-card" data-category="iac" data-projects="Modular HCL Libraries, OPA Rego Pre-Commit, Self-Service Catalog" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">🏗️</div>
+              <div class="tech-card-title">
+                <h3>Terraform (HCL)</h3>
+                <span class="badge badge-azure" style="float: right; font-size: 0.7rem;">6+ Years</span>
+                <h3>Infrastructure as Code</h3>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>95% — Expert Master</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Versioned Modular Registries, State Refactoring, Plan Automation, OPA Rego Policy Enforcement, Checkov Pre-Commit Security Gates.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Terraform</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Modular Blueprints</span><span>Self-Service Catalog</span><span>vHUB Automation</span>
+            </div>
+          </div>
         </article>
 
-        <article data-reveal>
-          <span class="expertise-icon">🛠️</span>
-          <h3>Infrastructure as Code (IaC)</h3>
-          <p><strong>Terraform:</strong> Modular Blueprints, State Refactoring, Custom Provider Integration.<br>
-          <strong>Policy-as-Code:</strong> OPA (Rego), Checkov, TFLint, Sentinel.<br>
-          <strong>Other:</strong> ARM Templates, Bicep, Ansible Configuration Management.</p>
+        <!-- TECH 3: Palo Alto Cloud NGFW -->
+        <article class="tech-card" data-category="networking" data-projects="Azure Virtual Hub Integration, Panorama API Rule Sync, Zero-Trust DMZ" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">🛡️</div>
+              <div class="tech-card-title">
+                <h3>Palo Alto Cloud NGFW</h3>
+                <small>Perimeter Firewall &amp; Panorama API</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>92% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Managed NVA Clusters in Azure vHUB, Panorama REST API Sync, Custom Zone Rules, Zero-Trust Perimeter Hardening, 100% Traffic Inspection.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Palo Alto</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Uniper vHUB NGFW</span><span>Panorama API Sync</span><span>Zero-Trust DMZ</span>
+            </div>
+          </div>
         </article>
 
-        <article data-reveal>
-          <span class="expertise-icon">🚀</span>
-          <h3>DevSecOps &amp; CI/CD</h3>
-          <p><strong>Pipelines:</strong> Azure DevOps Pipelines (YAML), GitHub Actions, Jenkins.<br>
-          <strong>Security Gates:</strong> SonarQube static code quality, Trivy container vulnerability scanning.<br>
-          <strong>Artifacts:</strong> Sonatype Nexus, Azure Container Registry (ACR).</p>
+        <!-- TECH 4: Azure Virtual WAN & vHUB -->
+        <article class="tech-card" data-category="networking" data-projects="Uniper Global WAN Backbone, Dual-Region vHUB Peering, Custom Route Tables" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">🌐</div>
+              <div class="tech-card-title">
+                <h3>Azure Virtual WAN &amp; vHUB</h3>
+                <small>Enterprise Network Backbone</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>95% — Expert Master</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Multi-Region Virtual Hubs, Custom Inspection Route Tables, Silver Peak SD-WAN Dynamic BGP Routing, Sub-10ms Cross-VNet Latency.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using vWAN</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Uniper Global vWAN</span><span>Dual vHUB DR</span><span>Custom Routing</span>
+            </div>
+          </div>
         </article>
 
-        <article data-reveal>
-          <span class="expertise-icon">🐳</span>
-          <h3>Containers &amp; Kubernetes</h3>
-          <p><strong>Kubernetes:</strong> Azure Kubernetes Service (AKS), Ingress Controllers (NGINX), Helm Charts, Azure CNI.<br>
-          <strong>Containers:</strong> Docker build optimization, Pod security policies, Defender for Containers.</p>
+        <!-- TECH 5: Azure DevOps & GitHub Actions -->
+        <article class="tech-card" data-category="devops" data-projects="Enterprise YAML Pipelines, Ephemeral Runner Fleets, Multi-Tenant CI/CD" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">⚡</div>
+              <div class="tech-card-title">
+                <h3>Azure DevOps &amp; GitHub Actions</h3>
+                <small>CI/CD Pipeline Automation</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>94% — Expert Master</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 94%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Multi-Stage YAML Release Pipelines, Ephemeral Self-Hosted Runner Containers in Private VNet, Artifact Registries, Service Endpoints.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using CI/CD</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Enterprise YAML Pipelines</span><span>Private Runner Fleet</span>
+            </div>
+          </div>
         </article>
 
-        <article data-reveal>
-          <span class="expertise-icon">📊</span>
-          <h3>Monitoring, Scripting &amp; ITSM</h3>
-          <p><strong>Monitoring:</strong> Prometheus Operators, Grafana Dashboards, Azure Monitor, KQL, PagerDuty.<br>
-          <strong>Scripting:</strong> Shell Scripting (Bash), Python, Groovy, YAML.<br>
-          <strong>ITSM:</strong> ServiceNow Catalog API Integration.</p>
+        <!-- TECH 6: Kubernetes (AKS) & Docker -->
+        <article class="tech-card" data-category="containers" data-projects="Uniper Production AKS, Trivy Image Scanning, NGINX Ingress Controller" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">☸️</div>
+              <div class="tech-card-title">
+                <h3>Kubernetes (AKS) &amp; Docker</h3>
+                <small>Container Orchestration</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>90% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Private AKS Clusters, Azure CNI, Pod Security Standards, Defender for Containers, Docker Containerization, NGINX Ingress Controller.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using K8s</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Private AKS Hardening</span><span>Docker Microservices</span>
+            </div>
+          </div>
         </article>
+
+        <!-- TECH 7: Jenkins & AI AutoFix Agent -->
+        <article class="tech-card" data-category="devops" data-projects="CloudOPS Pipeline, Custom AI Agent Plugin, Stack-Trace Diagnostics" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">⚙️</div>
+              <div class="tech-card-title">
+                <h3>Jenkins &amp; AI AutoFix Agent</h3>
+                <small>Pipeline Engine &amp; AI Innovation</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>92% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Jenkins Pipeline Groovy Scripts, Custom AI AutoFix Extension Plugin, Log Diagnostics Extraction, Automated PR Fix Suggestions.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Jenkins</div>
+            <div class="card-tags" style="margin:0;">
+              <span>CloudOPS Platform</span><span>AI AutoFix Plugin</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TECH 8: DevSecOps (SonarQube, Trivy, OPA) -->
+        <article class="tech-card" data-category="devops" data-projects="Security Quality Gates, Container Scanning, Policy-as-Code" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">🔒</div>
+              <div class="tech-card-title">
+                <h3>DevSecOps Security Tools</h3>
+                <small>SonarQube · Trivy · OPA · Checkov</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>93% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 93%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Static Code Analysis (SonarQube), Container Vulnerability Scanning (Trivy), Policy-as-Code (OPA Rego), IaC Security Auditing (Checkov).</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using DevSecOps</div>
+            <div class="card-tags" style="margin:0;">
+              <span>SonarQube Gates</span><span>Trivy AKS Scanner</span><span>OPA Policy</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TECH 9: Amazon Web Services (AWS) -->
+        <article class="tech-card" data-category="cloud" data-projects="EC2 Auto Scaling, VPC Flow Logs, IAM Security Policies, MacroCloud Multi-Cloud" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">📦</div>
+              <div class="tech-card-title">
+                <h3>Amazon Web Services (AWS)</h3>
+                <small>Cloud Infrastructure &amp; Services</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>88% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">EC2, VPC, S3 Access Logging, IAM Roles &amp; Policies, Elastic Load Balancers (ALB), Auto Scaling Groups, CloudWatch, AWS Inspector.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using AWS</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Uniper AWS Services</span><span>MacroCloud Multi-Tenant</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TECH 10: Silver Peak SD-WAN & App Gateway -->
+        <article class="tech-card" data-category="networking" data-projects="Global Branch Office SD-WAN, OWASP WAF v2 DMZ, TLS 1.3 Offloading" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">📡</div>
+              <div class="tech-card-title">
+                <h3>SD-WAN &amp; Application Gateway</h3>
+                <small>Silver Peak &amp; App Gateway WAF v2</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>90% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Silver Peak SD-WAN Integration via BGP Dynamic Routing into Azure vHUB, Application Gateway WAF v2 DMZ, OWASP 3.2 Rules, TLS 1.3 Offloading.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using SD-WAN &amp; WAF</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Silver Peak vHUB BGP</span><span>WAF v2 DMZ Subnet</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TECH 11: Prometheus & Grafana Observability -->
+        <article class="tech-card" data-category="observability" data-projects="Uniper Observability Engine, KQL Log Analytics, PagerDuty Escalation" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">📊</div>
+              <div class="tech-card-title">
+                <h3>Prometheus &amp; Grafana</h3>
+                <small>Observability &amp; Monitoring</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>91% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 91%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Prometheus Operators, Grafana Analytics Dashboards, Azure Monitor, Log Analytics KQL Queries, PagerDuty Urgent Alert Escalations.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Observability</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Uniper Observability</span><span>Grafana Dashboards</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TECH 12: Python & Shell (Bash) Scripting -->
+        <article class="tech-card" data-category="observability" data-projects="Azure Resource Migration Scripts, AI Agent Logic, Infrastructure Automation" data-reveal>
+          <div>
+            <div class="tech-card-header">
+              <div class="tech-icon">🐍</div>
+              <div class="tech-card-title">
+                <h3>Python &amp; Shell (Bash)</h3>
+                <small>Automation &amp; Scripting</small>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <div class="progress-labels"><span>Proficiency Level</span><span>92% — Advanced</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1rem;">Python Automation Scripts, Azure SDK for Python, Bash Shell Pipeline Utilities, JSON/YAML Parsing, REST API Client Orchestration.</p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.4rem;">Projects Using Scripting</div>
+            <div class="card-tags" style="margin:0;">
+              <span>Python Azure Automation</span><span>Bash Runner Scripts</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">ALTHAF SHAIK</a>
+        <p>Senior Cloud &amp; Network Automation Engineer.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer-links">
+        <a href="assets/Shaik_Althaf_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume PDF 📥</a>
+        <a href="https://macrocloud.in/" target="_blank" rel="noopener noreferrer">MacroCloud ↗</a>
+        <a href="https://github.com/shaikalthaf-1" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/shaik-althaf/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
     <div class="shell footer-bottom">
-      <span>© <span data-year></span> Shaik Althaf · Senior Cloud &amp; Network Automation Engineer</span>
-      <span><a href="index.html">Home</a> · <a href="contact.html">Contact</a></span>
+      <span>© <span data-year></span> ALTHAF SHAIK · All Rights Reserved</span>
+      <span>Dubai, UAE · Hyderabad, India</span>
     </div>
   </footer>
 

@@ -353,6 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initAnimatedCounters();
   initCaseStudyFiltersAndSearch();
+  initTechPageFilters();
   initModalEngine();
   initCurrentYear();
 });
@@ -506,6 +507,60 @@ function initCaseStudyFiltersAndSearch() {
       filterCards();
     });
   }
+}
+
+/* Technologies Page Live Filter & Search Engine */
+function initTechPageFilters() {
+  const searchInput = document.getElementById('tech-search');
+  const filterBtns = document.querySelectorAll('.tech-filter-btn');
+  const cards = document.querySelectorAll('.tech-card');
+  const countEl = document.getElementById('tech-count');
+
+  if (!cards.length) return;
+
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  const filterTechCards = () => {
+    let visible = 0;
+
+    cards.forEach(card => {
+      const name = (card.querySelector('h3') ? card.querySelector('h3').textContent : '').toLowerCase();
+      const desc = (card.querySelector('p') ? card.querySelector('p').textContent : '').toLowerCase();
+      const category = card.getAttribute('data-category');
+      const projects = (card.getAttribute('data-projects') || '').toLowerCase();
+
+      const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+      const matchesSearch = (!searchQuery || name.includes(searchQuery) || desc.includes(searchQuery) || projects.includes(searchQuery));
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = 'flex';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countEl) {
+      countEl.textContent = `Showing ${visible} Core Technologies`;
+    }
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      filterTechCards();
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.getAttribute('data-category');
+      filterTechCards();
+    });
+  });
 }
 
 /* Modal Renderer Engine */
