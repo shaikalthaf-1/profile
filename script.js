@@ -1,15 +1,16 @@
 'use strict';
 
 /* ==========================================================================
-   ENTERPRISE CASE STUDIES DATABASE (20 DETAILED CASE STUDIES)
+   ENTERPRISE CASE STUDIES DATABASE (15 FEATURED CASE STUDIES)
    ========================================================================== */
 const CASE_STUDIES_DATA = {
   'cs-1': {
-    title: 'Azure Multi-Region & Secure Virtual Hub Architecture',
-    category: 'cloud',
-    badge: 'Azure & Security',
-    metrics: ['100% Inbound/Outbound Traffic Hardened', 'Sub-10ms Cross-VNet Latency'],
-    tech: ['Azure Virtual WAN', 'vHUB', 'Palo Alto Cloud NGFW', 'Terraform', 'Azure Networking'],
+    title: 'Azure Virtual WAN & Secure Network Architecture',
+    category: 'networking',
+    badge: 'Azure Virtual WAN',
+    complexity: 'Mission Critical',
+    metrics: ['100% Traffic Hardened', 'Sub-10ms Cross-VNet Latency'],
+    tech: ['Azure Virtual WAN', 'vHUB', 'Palo Alto Cloud NGFW', 'Terraform', 'Networking'],
     problem: 'Enterprise multi-region VNet connectivity lacked centralized security traffic inspection, creating fragmented firewall configurations and unpredictable latency.',
     solution: 'Designed and deployed an Azure Virtual Hub network backbone with Palo Alto Cloud NGFW integrated using Terraform. Implemented custom Virtual Hub Route Tables forcing 100% of spoke and internet traffic through zero-trust inspection nodes.',
     architecture: 'Dual-Region Hub-and-Spoke model with Azure vHUB in Primary East US and Secondary West Europe connected via Global VNet Peering and Palo Alto Cloud NGFW.',
@@ -26,9 +27,10 @@ const CASE_STUDIES_DATA = {
   },
 
   'cs-2': {
-    title: 'Enterprise Subscription-to-Subscription Azure Migration',
+    title: 'Azure Enterprise Migration & Subscription Consolidation',
     category: 'cloud',
-    badge: 'Enterprise Migration',
+    badge: 'Azure Enterprise Migration',
+    complexity: 'Enterprise Hardened',
     metrics: ['Zero Downtime', '100% IaC Replicable'],
     tech: ['Azure Resource Mover', 'Terraform', 'Azure DevOps', 'PowerShell'],
     problem: 'Corporate restructuring required moving 50+ enterprise workloads across Azure subscriptions without business downtime or resource configuration loss.',
@@ -47,9 +49,10 @@ const CASE_STUDIES_DATA = {
   },
 
   'cs-3': {
-    title: 'Enterprise Resiliency & Multi-Region Disaster Recovery',
+    title: 'Enterprise Disaster Recovery & Multi-Region Resiliency',
     category: 'cloud',
-    badge: 'Resiliency & DR',
+    badge: 'Disaster Recovery',
+    complexity: 'Mission Critical',
     metrics: ['RTO < 15 Mins', 'RPO < 1 Min'],
     tech: ['Azure Site Recovery', 'Traffic Manager', 'Azure Networking', 'Terraform'],
     problem: 'Production application platforms lacked verified multi-region failover capabilities, leaving mission-critical services vulnerable to single-region Azure outages.',
@@ -72,7 +75,8 @@ const CASE_STUDIES_DATA = {
   'cs-4': {
     title: 'CloudOPS — End-to-End Enterprise CI/CD & DevSecOps Platform',
     category: 'devops',
-    badge: 'DevSecOps & CI/CD',
+    badge: 'CloudOPS & DevSecOps',
+    complexity: 'Advanced Architecture',
     metrics: ['40%+ Deployment Speedup', '100% Automated Security Scanning'],
     tech: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes (AKS)', 'SonarQube', 'Trivy'],
     problem: 'Manual application builds and unstandardized deployment scripts created deployment bottlenecks and frequent release errors.',
@@ -90,9 +94,10 @@ const CASE_STUDIES_DATA = {
   },
 
   'cs-5': {
-    title: 'Self-Service Multi-Cloud Infrastructure Catalog',
-    category: 'ai',
-    badge: 'Self-Service & Automation',
+    title: 'Enterprise Service Catalog & Self-Service Automation',
+    category: 'automation',
+    badge: 'Enterprise Service Catalog',
+    complexity: 'Advanced Architecture',
     metrics: ['~40% Setup Time Saved', 'Multi-Cloud Support'],
     tech: ['Azure', 'AWS', 'GCP', 'Terraform', 'Python', 'Web API'],
     problem: 'Development teams faced long lead times when requesting cloud infrastructure, waiting up to 5 days for manual ops fulfillment.',
@@ -111,23 +116,220 @@ const CASE_STUDIES_DATA = {
   'cs-6': {
     title: 'AI Jenkins Plugin (AutoFix Agent)',
     category: 'ai',
-    badge: 'AI Innovation',
+    badge: 'AI Jenkins Plugin',
+    complexity: 'Advanced Innovation',
     metrics: ['75% Debugging Time Saved', 'Autonomous Root-Cause Analysis'],
-    tech: ['AI Agents', 'Jenkins Plugin', 'Python', 'LLM API', 'Groovy'],
+    tech: ['AI Agent', 'Jenkins Plugin', 'Python', 'LLM Integration', 'Groovy'],
     problem: 'Engineering teams lost hundreds of hours manually analyzing verbose CI/CD failure logs to diagnose transient pipeline errors.',
     solution: 'Engineered a custom Jenkins extension powered by an autonomous AI agent that extracts build log stack traces, identifies root causes, and recommends automated fix actions.',
     architecture: 'Jenkins Build Failure Event -> AI Agent Plugin Handler -> Log Extraction -> LLM Diagnostics Engine -> Automated GitHub PR Suggestion.',
-    terraform: `# Deployed as custom Jenkins Plugin Extension`,
+    terraform: `# Custom Jenkins Plugin Extension Component`,
     businessValue: 'Dramatically reduced MTTR for CI/CD failures and eliminated repetitive troubleshooting overhead for DevOps engineers.',
     timeline: '2 Months'
   },
 
   'cs-7': {
+    title: 'Azure Landing Zone & Management Group Governance',
+    category: 'cloud',
+    badge: 'Azure Landing Zone',
+    complexity: 'Enterprise Hardened',
+    metrics: ['100% Policy Compliance', 'Automated CAF Governance'],
+    tech: ['Azure CAF', 'Management Groups', 'Azure Policy', 'Terraform', 'Bicep'],
+    problem: 'Rapid cloud adoption led to inconsistent subscription configurations, security drift, and fragmented RBAC across business units.',
+    solution: 'Architected a scalable Azure Landing Zone hierarchy aligned with Microsoft Cloud Adoption Framework (CAF). Enforced automated guardrails via Azure Policy and Terraform.',
+    architecture: 'Tenant Root Group -> Platform & Workloads Management Groups -> Core Networking, Management, & Security Subscriptions.',
+    terraform: `module "enterprise_landing_zone" {
+  source    = "Azure/caf-enterprise-scale/azurerm"
+  version   = "5.0.0"
+  root_id   = "uniper-enterprise"
+  root_name = "Uniper Global Enterprise"
+}`,
+    businessValue: 'Standardized subscription provisioning and enforced mandatory security policies across all cloud workloads automatically.',
+    timeline: '3 Months'
+  },
+
+  'cs-8': {
+    title: 'Modular Terraform Blueprint Libraries & State Governance',
+    category: 'automation',
+    badge: 'Terraform Modules',
+    complexity: 'Enterprise Hardened',
+    metrics: ['40% Setup Time Saved', 'Zero Drift'],
+    tech: ['Terraform', 'HCL', 'OPA Rego', 'Checkov', 'Azure Blob State'],
+    problem: 'Duplicate, unversioned Terraform code created deployment inconsistencies and state lock errors across engineering teams.',
+    solution: 'Created a centralized, version-controlled module registry for Azure VNets, vHUB, Palo Alto NGFW, AKS, and Key Vault with automated OPA Rego policy testing.',
+    architecture: 'GitHub Central Module Registry -> Semantic Release Tags -> Pre-Commit Checkov Scanning -> Automated Private Registry Publishing.',
+    terraform: `module "azure_secure_vnet" {
+  source  = "app.terraform.io/uniper/network/azurerm"
+  version = "2.4.0"
+  vnet_name = "vnet-prod-eastus"
+  address_space = ["10.0.0.0/16"]
+}`,
+    businessValue: 'Eliminated code duplication and ensured 100% compliance with corporate infrastructure standards across all engineering squads.',
+    timeline: '3 Months'
+  },
+
+  'cs-9': {
+    title: 'Azure Network Modernization & Palo Alto NGFW Automation',
+    category: 'networking',
+    badge: 'Azure Network Modernization',
+    complexity: 'Mission Critical',
+    metrics: ['100% Perimeter Inspection', 'Automated Rule Sync'],
+    tech: ['Palo Alto Cloud NGFW', 'Panorama API', 'Azure vHUB', 'Terraform'],
+    problem: 'Manual Palo Alto firewall rule changes created configuration bottlenecks and security audit delays across Azure VNets.',
+    solution: 'Automated Palo Alto Cloud NGFW rule updates via Terraform and Panorama REST API integration, enabling dynamic security policy deployment during CI/CD execution.',
+    architecture: 'Terraform Code -> Panorama REST API Sync -> Palo Alto Cloud NGFW Cluster -> Dynamic Zone Rule Refresh.',
+    terraform: `resource "panos_security_rule_group" "edge_protection" {
+  position_keyword = "top"
+  rules {
+    name                  = "Allow-HTTPS-Inbound"
+    source_zones          = ["untrust"]
+    destination_zones     = ["trust"]
+    source_addresses      = ["any"]
+    destination_addresses = [var.public_vip]
+    applications          = ["ssl", "web-browsing"]
+    services              = ["application-default"]
+    actions               = "allow"
+  }
+}`,
+    businessValue: 'Accelerated firewall rule change velocity from days to minutes while maintaining complete auditability and zero-trust perimeter control.',
+    timeline: '3 Months'
+  },
+
+  'cs-10': {
+    title: 'GitHub Actions Enterprise Workflow & Runner Fleet Automation',
+    category: 'devops',
+    badge: 'GitHub Actions',
+    complexity: 'Advanced Architecture',
+    metrics: ['65% Build Speedup', 'Isolated Private VNet Runners'],
+    tech: ['GitHub Actions', 'Self-Hosted Runners', 'Docker', 'Azure VNet', 'Terraform'],
+    problem: 'Public GitHub-hosted runners lacked direct network access to private Azure resources, forcing risky temporary firewall exceptions.',
+    solution: 'Deployed an auto-scaling fleet of self-hosted GitHub Actions runner containers inside private Azure VNet subnets with ephemeral VM scaling.',
+    architecture: 'GitHub Webhook -> Azure Container Instances Auto-Scaler -> Private VNet Runner Ephemeral Execution -> Instant Runner Deletion.',
+    terraform: `resource "azurerm_container_group" "github_runner" {
+  name                = "aci-runner-fleet"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  ip_address_type     = "Private"
+  subnet_ids          = [azurerm_subnet.runner_subnet.id]
+  os_type             = "Linux"
+  
+  container {
+    name   = "runner"
+    image  = "myacr.azurecr.io/github-runner:latest"
+    cpu    = "2.0"
+    memory = "4.0"
+  }
+}`,
+    businessValue: 'Enhanced pipeline build security by eliminating public IP exposures while reducing build execution times by 65%.',
+    timeline: '2 Months'
+  },
+
+  'cs-11': {
+    title: 'Enterprise Observability & Prometheus/Grafana Alerting Engine',
+    category: 'cloud',
+    badge: 'Enterprise Monitoring',
+    complexity: 'Enterprise Hardened',
+    metrics: ['90% Anomaly Detection Rate', '60% MTTR Reduction'],
+    tech: ['Prometheus', 'Grafana', 'Azure Monitor', 'KQL', 'PagerDuty'],
+    problem: 'Fragmented monitoring tools caused notification fatigue and delayed detection of infrastructure performance degradation.',
+    solution: 'Constructed a unified observability platform deploying Prometheus operators, Grafana dashboards, Log Analytics KQL queries, and automated PagerDuty escalation policies.',
+    architecture: 'Prometheus Exporters -> Log Analytics Workspace -> Grafana Analytics Dashboard -> KQL Anomaly Detection -> PagerDuty Urgent Escalation.',
+    terraform: `resource "azurerm_monitor_scheduled_query_rules_alert" "memory_alert" {
+  name                = "alert-high-memory-aks"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  action {
+    action_group = [azurerm_monitor_action_group.pagerduty.id]
+  }
+  data_source_id = azurerm_log_analytics_workspace.law.id
+  query          = "Perf | where CounterName == 'PercentUsedMemory' | summarize avg(CounterValue) by Computer"
+}`,
+    businessValue: 'Proactively detected 90% of potential outages before customer impact, drastically lowering mean-time-to-resolution (MTTR).',
+    timeline: '3 Months'
+  },
+
+  'cs-12': {
+    title: 'Azure Virtual Hub DMZ & Application Gateway WAF v2 Hardening',
+    category: 'networking',
+    badge: 'Azure Virtual Hub',
+    complexity: 'Mission Critical',
+    metrics: ['OWASP Top 10 Protection', 'SSL Offloading & Inspection'],
+    tech: ['Azure App Gateway WAF v2', 'Azure vHUB', 'Public VIP', 'TLS 1.3'],
+    problem: 'Public web applications were vulnerable to HTTP layer attacks and lacked centralized TLS termination and OWASP inspection.',
+    solution: 'Deployed Azure Application Gateway WAF v2 in a dedicated DMZ subnet integrated with Azure Virtual Hub, forcing all public HTTPS traffic through OWASP rule inspection.',
+    architecture: 'Internet -> App Gateway WAF v2 (DMZ) -> Palo Alto Cloud NGFW -> Internal vHUB -> Private Spoke Workloads.',
+    terraform: `resource "azurerm_web_application_firewall_policy" "waf_policy" {
+  name                = "waf-policy-prod"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  
+  managed_rules {
+    managed_rule_set {
+      type    = "OWASP"
+      version = "3.2"
+    }
+  }
+}`,
+    businessValue: 'Secured all public enterprise endpoints against web application threats and simplified SSL certificate management.',
+    timeline: '2 Months'
+  },
+
+  'cs-13': {
+    title: 'Enterprise AKS Zero-Trust Policy & Container Hardening',
+    category: 'devops',
+    badge: 'Enterprise CI/CD',
+    complexity: 'Mission Critical',
+    metrics: ['CIS Benchmark Compliant', 'Zero Critical CVE Pods'],
+    tech: ['Kubernetes (AKS)', 'Azure Policy', 'Defender for Containers', 'Trivy'],
+    problem: 'Unrestricted pod deployments on Kubernetes clusters posed severe security risks from privilege escalation and unvetted container images.',
+    solution: 'Hardened Azure Kubernetes Service (AKS) clusters using Azure Policy for Kubernetes, restricted pod security admission standards, and embedded Trivy image scanning into CI/CD.',
+    architecture: 'Azure Policy Gatekeeper -> AKS Admission Controller -> Pod Security Standards (Restricted) -> Trivy Scan Gate.',
+    terraform: `resource "azurerm_kubernetes_cluster" "aks_secure" {
+  name                = "aks-prod-eastus"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  dns_prefix          = "aks-prod"
+
+  private_cluster_enabled = true
+  azure_policy_enabled    = true
+
+  default_node_pool {
+    name       = "system"
+    node_count = 3
+    vm_size    = "Standard_D4s_v5"
+  }
+}`,
+    businessValue: 'Achieved complete CIS Kubernetes Benchmark compliance and prevented unauthorized container execution across production environments.',
+    timeline: '3 Months'
+  },
+
+  'cs-14': {
+    title: 'Automated Azure Key Vault Secret & Identity Lifecycle',
+    category: 'automation',
+    badge: 'Infrastructure Automation',
+    complexity: 'Enterprise Hardened',
+    metrics: ['Zero Hardcoded Credentials', 'Automated Secret Rotation'],
+    tech: ['Azure Key Vault', 'Managed Identity', 'Terraform', 'Azure Policy'],
+    problem: 'Hardcoded credentials in application source code created severe compliance risks and password management friction.',
+    solution: 'Implemented zero-trust passwordless authentication using Azure Managed Identities and automated Key Vault secret rotation workflows.',
+    architecture: 'Azure Managed Identity -> RBAC Secret Officer Role -> Key Vault Private Endpoint -> Automated Event Grid Secret Rotation.',
+    terraform: `resource "azurerm_key_vault_secret" "db_secret" {
+  name         = "db-prod-password"
+  value        = random_password.pwd.result
+  key_vault_id = azurerm_key_vault.kv.id
+  expiration_date = timeadd(timestamp(), "2160h") # 90 days
+}`,
+    businessValue: 'Eliminated hardcoded secrets across 100+ application repositories and enforced automated password rotation policies.',
+    timeline: '2 Months'
+  },
+
+  'cs-15': {
     title: 'MacroCloud Console — Multi-Tenant Cloud Operations Platform',
     category: 'multicloud',
-    badge: 'MacroCloud SaaS',
-    metrics: ['Multi-Tenant Isolation', 'Automated Cross-Cloud RBAC'],
-    tech: ['MacroCloud Platform', 'Azure/AWS API', 'Node.js', 'Python', 'RBAC Engine'],
+    badge: 'CloudOPS',
+    complexity: 'Advanced Architecture',
+    metrics: ['Multi-Tenant Workspace RBAC', 'Automated Sub Migration'],
+    tech: ['MacroCloud SaaS', 'Azure/AWS API', 'Node.js', 'Python', 'RBAC Engine'],
     problem: 'Managing multi-tenant cloud workspaces across Azure and AWS required complex, manual RBAC and workspace isolation handling.',
     solution: 'Architected MacroCloud Console (`console.macrocloud.in`), a unified platform automating Resource Group and Subscription migrations, multi-tenant workspace provisioning, and centralized RBAC policy enforcement.',
     architecture: 'Multi-tenant SaaS Architecture with Tenant Isolation Proxy, OAuth2/SSO Provider, Cross-Cloud API Orchestrator, and Live Activity Logging.',
@@ -146,85 +348,14 @@ const CASE_STUDIES_DATA = {
    APP INITIALIZATION & INTERACTIVE ENGINE
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-  initNetworkCanvas();
   initHeaderScroll();
   initMobileNav();
-  initScrollSpy();
   initScrollReveal();
   initAnimatedCounters();
-  initCaseStudyFilters();
+  initCaseStudyFiltersAndSearch();
   initModalEngine();
   initCurrentYear();
 });
-
-/* Canvas Network Background Animation */
-function initNetworkCanvas() {
-  const canvas = document.getElementById('network-canvas');
-  if (!canvas) return;
-
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let particles = [];
-
-  const resize = () => {
-    width = canvas.width = canvas.offsetWidth;
-    height = canvas.height = canvas.offsetHeight;
-  };
-
-  window.addEventListener('resize', resize);
-  resize();
-
-  const particleCount = Math.min(Math.floor(width / 25), 45);
-  for (let i = 0; i < particleCount; i++) {
-    particles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.8,
-      vy: (Math.random() - 0.5) * 0.8,
-      radius: Math.random() * 2 + 1.5
-    });
-  }
-
-  const animate = () => {
-    ctx.clearRect(0, 0, width, height);
-    
-    // Draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 150) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 120, 212, ${0.15 * (1 - dist / 150)})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-
-    // Draw particles
-    particles.forEach(p => {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = '#0078d4';
-      ctx.fill();
-
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-    });
-
-    requestAnimationFrame(animate);
-  };
-
-  animate();
-}
 
 /* Header Scroll Effect */
 function initHeaderScroll() {
@@ -259,30 +390,6 @@ function initMobileNav() {
       document.body.classList.remove('menu-open');
     });
   });
-}
-
-/* ScrollSpy for Active Navigation Link */
-function initScrollSpy() {
-  const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
-  const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-
-  if (!sections.length) return;
-
-  const onScroll = () => {
-    const scrollPos = window.scrollY + 180;
-
-    sections.forEach(section => {
-      if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-        const id = section.getAttribute('id');
-        navLinks.forEach(link => {
-          const isMatch = link.getAttribute('href') === `#${id}`;
-          link.classList.toggle('is-active', isMatch);
-        });
-      }
-    });
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 /* Scroll Reveal Animations */
@@ -337,33 +444,71 @@ function initAnimatedCounters() {
   counterEls.forEach(el => observer.observe(el));
 }
 
-/* Case Study Category Filters */
-function initCaseStudyFilters() {
+/* Case Study Search & Filter Engine */
+function initCaseStudyFiltersAndSearch() {
+  const searchInput = document.getElementById('case-study-search');
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const techSelect = document.getElementById('tech-select');
   const cards = document.querySelectorAll('.case-study-card');
+  const resultCount = document.getElementById('result-count');
 
-  if (!filterBtns.length || !cards.length) return;
+  if (!cards.length) return;
+
+  let activeCategory = 'all';
+  let activeTech = 'all';
+  let searchQuery = '';
+
+  const filterCards = () => {
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const title = (card.querySelector('h3') ? card.querySelector('h3').textContent : '').toLowerCase();
+      const summary = (card.querySelector('.card-summary') ? card.querySelector('.card-summary').textContent : '').toLowerCase();
+      const category = card.getAttribute('data-category');
+      const tags = (card.getAttribute('data-tech') || '').toLowerCase();
+
+      const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+      const matchesTech = (activeTech === 'all' || tags.includes(activeTech.toLowerCase()));
+      const matchesSearch = (!searchQuery || title.includes(searchQuery) || summary.includes(searchQuery) || tags.includes(searchQuery));
+
+      if (matchesCategory && matchesTech && matchesSearch) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (resultCount) {
+      resultCount.textContent = `Showing ${visibleCount} Enterprise Case Studies`;
+    }
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      filterCards();
+    });
+  }
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const category = btn.getAttribute('data-filter');
-
-      cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      activeCategory = btn.getAttribute('data-filter');
+      filterCards();
     });
   });
+
+  if (techSelect) {
+    techSelect.addEventListener('change', (e) => {
+      activeTech = e.target.value;
+      filterCards();
+    });
+  }
 }
 
-/* Case Study Modal Engine */
+/* Modal Renderer Engine */
 function initModalEngine() {
   const backdrop = document.getElementById('modal-backdrop');
   const closeBtn = document.getElementById('modal-close');
@@ -404,8 +549,11 @@ function initModalEngine() {
 
 function renderModalContent(container, data) {
   container.innerHTML = `
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-      <span class="badge badge-azure">\${data.badge}</span>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <span class="badge badge-azure">\${data.badge}</span>
+        <span style="font-size: 0.75rem; background: var(--bg-surface-elevated); padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-weight: 600; color: var(--azure-primary);">\${data.complexity}</span>
+      </div>
       <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">Timeline: \${data.timeline}</span>
     </div>
     <h2>\${data.title}</h2>
