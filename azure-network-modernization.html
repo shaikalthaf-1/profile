@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0078d4">
-  <title>Azure Network Modernization &amp; Zero-Trust NGFW — Enterprise Case Study | ALTHAF SHAIK</title>
-  <meta name="description" content="Enterprise Azure Network Modernization & Zero-Trust Palo Alto Cloud NGFW Architecture Case Study by Althaf Shaik for Uniper Energy.">
+  <title>Azure Virtual WAN &amp; Zero-Trust Palo Alto NGFW — Enterprise Solution Architecture | ALTHAF SHAIK</title>
+  <meta name="description" content="Enterprise Solution Architecture: Azure Virtual WAN Modernization & Zero-Trust Palo Alto Cloud NGFW Integration for Uniper Energy by Althaf Shaik.">
   <meta name="author" content="Althaf Shaik">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://shaikalthaf-1.github.io/portfolio/azure-network-modernization.html">
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="styles.css?v=20260805_v3">
   
   <style>
-  /* Reading Progress Bar */
+  /* Reading Progress Indicator Bar */
   #reading-progress {
     position: fixed;
     top: 0;
@@ -33,39 +33,46 @@
     transition: width 0.1s ease-out;
   }
 
-  /* Sticky Table of Contents Sidebar */
-  .case-study-layout {
+  /* Two Column Layout: Sidebar + Main Content */
+  .publication-layout {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 310px 1fr;
     gap: 3rem;
     position: relative;
   }
 
-  .toc-sidebar {
+  .sidebar-panel {
     position: sticky;
-    top: calc(var(--header-height) + 2rem);
+    top: calc(var(--header-height) + 1.5rem);
     height: fit-content;
-    max-height: 80vh;
+    max-height: 85vh;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-card {
     background: #ffffff;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow-sm);
   }
 
-  .toc-sidebar h4 {
-    font-size: 0.85rem;
+  .sidebar-card h4 {
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-muted);
     margin-bottom: 0.75rem;
+    font-weight: 700;
   }
 
   .toc-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.35rem;
   }
 
   .toc-nav a {
@@ -84,69 +91,271 @@
     font-weight: 600;
   }
 
-  /* Case Study Section Formatting */
-  .cs-section {
-    padding-top: 3rem;
+  /* Key Takeaways Grid */
+  .takeaways-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .takeaway-pill {
+    background: #ffffff;
+    border: 1px solid var(--border-azure);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .takeaway-pill strong {
+    font-size: 1.2rem;
+    color: var(--azure-primary);
+    font-family: var(--font-heading);
+  }
+
+  .takeaway-pill span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Section Styling */
+  .pub-section {
+    padding-top: 3.5rem;
     margin-bottom: 3.5rem;
     border-bottom: 1px solid var(--border-subtle);
     padding-bottom: 3.5rem;
   }
 
-  .cs-section:last-child {
+  .pub-section:last-child {
     border-bottom: none;
   }
 
-  .cs-section h2 {
-    font-size: 1.8rem;
+  .pub-section h2 {
+    font-size: 1.85rem;
     margin-bottom: 1.25rem;
     color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    letter-spacing: -0.02em;
   }
 
-  .cs-section h3 {
-    font-size: 1.3rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0.75rem;
-    color: var(--azure-primary);
+  /* Executive Summary 4 Cards */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .cs-box {
+  .exec-card {
     background: #ffffff;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     padding: 1.75rem;
-    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--azure-primary);
+  }
+
+  .exec-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--azure-primary);
+  }
+
+  .exec-card p {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Before vs After Comparison */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .comp-box-before {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+  }
+
+  .comp-box-after {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+  }
+
+  .comp-box-before h3 { color: #dc2626; margin-top: 0; margin-bottom: 0.75rem; font-size: 1.2rem; }
+  .comp-box-after h3 { color: #059669; margin-top: 0; margin-bottom: 0.75rem; font-size: 1.2rem; }
+
+  .comp-list {
+    padding-left: 1.2rem;
+    margin: 0;
+    font-size: 0.925rem;
+    line-height: 1.8;
+  }
+
+  /* Interactive Tooltip Card on Hover */
+  .interactive-svg-container {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid var(--border-azure);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-azure);
+    text-align: center;
+  }
+
+  .svg-node {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .svg-node:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 120, 212, 0.6));
+    transform: scale(1.02);
+  }
+
+  #node-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    text-align: left;
+    box-shadow: var(--shadow-glass);
+    z-index: 10;
+  }
+
+  /* Gallery Modal Lightbox */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .gallery-thumb {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+  }
+
+  .gallery-thumb:hover {
+    border-color: var(--azure-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .lightbox-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 20000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .lightbox-modal.is-open {
+    display: flex;
+  }
+
+  .lightbox-content {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+
+  /* Roadmap Accordion */
+  .roadmap-node {
+    background: #ffffff;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .roadmap-node:hover {
+    border-color: var(--azure-primary);
     box-shadow: var(--shadow-sm);
   }
 
-  .cs-box-accent {
-    border-left: 4px solid var(--azure-primary);
-    background: var(--bg-surface);
+  .roadmap-node summary {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  /* Print Friendly Styles */
+  .roadmap-node details[open] {
+    padding-bottom: 0.5rem;
+  }
+
+  /* Next Previous Navigation Bar */
+  .next-prev-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .next-prev-card {
+    background: #ffffff;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    flex: 1;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .next-prev-card:hover {
+    border-color: var(--azure-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
   @media print {
-    .site-header, .toc-sidebar, .site-footer, #reading-progress, .theme-toggle-btn {
+    .site-header, .sidebar-panel, .site-footer, #reading-progress, .lightbox-modal, .next-prev-bar {
       display: none !important;
     }
-    .case-study-layout {
-      display: block !important;
-    }
-    body {
-      background: #ffffff !important;
-      color: #000000 !important;
-    }
+    .publication-layout { display: block !important; }
+    body { background: #ffffff !important; color: #000000 !important; }
   }
 
   @media (max-width: 1024px) {
-    .case-study-layout {
-      grid-template-columns: 1fr;
-    }
-    .toc-sidebar {
-      display: none;
-    }
+    .publication-layout { grid-template-columns: 1fr; }
+    .sidebar-panel { display: none; }
+    .takeaways-grid { grid-template-columns: repeat(2, 1fr); }
+    .exec-grid, .comparison-grid, .gallery-grid { grid-template-columns: 1fr; }
   }
   </style>
 </head>
@@ -178,247 +387,328 @@
   <main id="main-content" style="padding-top: calc(var(--header-height) + 2rem); padding-bottom: 5rem;">
     <div class="shell">
 
-      <!-- BREADCRUMBS & READING METADATA -->
-      <nav aria-label="Breadcrumb" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+      <!-- BREADCRUMBS -->
+      <nav aria-label="Breadcrumb" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
         <a href="index.html">Home</a> &rsaquo; 
-        <a href="case-studies.html">Case Studies</a> &rsaquo; 
-        <span style="color: var(--azure-primary); font-weight: 600;">Azure Network Modernization</span>
+        <a href="case-studies.html">Enterprise Engineering Case Studies</a> &rsaquo; 
+        <span style="color: var(--azure-primary); font-weight: 600;">Azure Network Modernization &amp; Palo Alto Zero Trust</span>
       </nav>
 
-      <!-- 1. HERO BANNER SECTION -->
-      <header style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid var(--border-azure); border-radius: var(--radius-lg); padding: 3rem; margin-bottom: 3.5rem; box-shadow: var(--shadow-azure);">
-        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
-          <span class="badge badge-azure">Cloud Network Architecture</span>
-          <span class="badge badge-azure">Palo Alto Cloud NGFW</span>
-          <span class="badge badge-azure">Terraform IaC</span>
-          <span class="badge badge-azure">Zero-Trust DMZ</span>
+      <!-- ⭐ MAJOR FEATURE: KEY TAKEAWAYS (TOP OF PAGE) -->
+      <div class="takeaways-grid">
+        <div class="takeaway-pill">
+          <strong>40% Speedup</strong>
+          <span>Faster Provisioning</span>
+        </div>
+        <div class="takeaway-pill">
+          <strong>100% Inspected</strong>
+          <span>Zero Trust Egress</span>
+        </div>
+        <div class="takeaway-pill">
+          <strong>50+ Subscriptions</strong>
+          <span>Zero Downtime Cutover</span>
+        </div>
+        <div class="takeaway-pill">
+          <strong>99.99% SLA</strong>
+          <span>Multi-Region vWAN HA</span>
+        </div>
+      </div>
+
+      <!-- 1. PREMIUM MICROSOFT-STYLE HERO BANNER -->
+      <header style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 2px solid var(--border-azure); border-radius: var(--radius-lg); padding: 3rem; margin-bottom: 3.5rem; box-shadow: var(--shadow-azure);">
+        <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--azure-primary); margin-bottom: 0.75rem;">
+          Enterprise Network Transformation for a Global Energy Company
         </div>
 
-        <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.4rem); margin-bottom: 1.25rem; line-height: 1.15;">
-          Azure Virtual WAN Modernization &amp; <em>Palo Alto NGFW Zero-Trust Integration</em>
+        <h1 style="font-size: clamp(2.2rem, 3.8vw, 3.5rem); margin-bottom: 1.25rem; line-height: 1.15;">
+          Azure Virtual WAN Modernization &amp; <em>Zero-Trust Palo Alto NGFW Architecture</em>
         </h1>
 
-        <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 850px; line-height: 1.7; margin-bottom: 2rem;">
-          Architected a resilient multi-region Azure Virtual Hub WAN topology for Uniper Energy, routing 100% of inter-spoke and internet traffic through zero-trust Palo Alto Cloud NGFW inspection nodes while accelerating infrastructure setup by ~40% via modular Terraform HCL blueprints.
-        </p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.75rem;">
+          <span class="badge badge-azure">Zero Trust Architecture</span>
+          <span class="badge badge-azure">Terraform Automation</span>
+          <span class="badge badge-azure">Azure Landing Zone</span>
+          <span class="badge badge-azure">Palo Alto Security</span>
+          <span class="badge badge-azure">Azure Virtual WAN</span>
+        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);" class="hero-facts">
+        <!-- HIGHLIGHTED KPI STAT BAR -->
+        <dl class="hero-facts" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
           <div>
-            <dt>Client Industry</dt>
-            <dd style="font-size: 1.1rem; color: var(--text-primary);">Energy &amp; Utilities</dd>
+            <dt>Provisioning Speedup</dt>
+            <dd data-counter="40">40%</dd>
           </div>
           <div>
-            <dt>Region / Country</dt>
-            <dd style="font-size: 1.1rem; color: var(--text-primary);">Germany / UAE</dd>
+            <dt>Traffic Inspection</dt>
+            <dd data-counter="100">100%</dd>
           </div>
           <div>
-            <dt>Engagement</dt>
-            <dd style="font-size: 1.1rem; color: var(--text-primary);">12 Months</dd>
+            <dt>Subscriptions Consolidated</dt>
+            <dd data-counter="50">50+</dd>
           </div>
           <div>
-            <dt>Reading Time</dt>
-            <dd style="font-size: 1.1rem; color: var(--text-primary);">14 Mins</dd>
+            <dt>High Availability SLA</dt>
+            <dd>99.99%</dd>
           </div>
-          <div>
-            <dt>Inspection Rate</dt>
-            <dd style="font-size: 1.1rem; color: var(--azure-primary);">100% Hardened</dd>
-          </div>
-          <div>
-            <dt>Setup Speedup</dt>
-            <dd style="font-size: 1.1rem; color: var(--azure-primary);">~40% Faster</dd>
-          </div>
+        </dl>
+
+        <!-- ACTION BUTTONS -->
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a class="button button-primary" href="#solution-arch">View Target Architecture 🗺️</a>
+          <a class="button button-secondary" href="assets/Shaik_Althaf_Resume.pdf" target="_blank">Download PDF Case Study 📥</a>
+          <a class="button button-ghost" onclick="window.print()" style="cursor: pointer;">Print Executive Brief 🖨️</a>
+          <a class="button button-ghost" href="https://github.com/shaikalthaf-1" target="_blank">GitHub Repository 🐙</a>
         </div>
       </header>
 
-      <!-- MAIN CONTENT LAYOUT WITH STICKY TOC -->
-      <div class="case-study-layout">
+      <!-- MAIN PUBLICATION LAYOUT (WITH ENHANCED SIDEBAR) -->
+      <div class="publication-layout">
         
-        <!-- STICKY TABLE OF CONTENTS SIDEBAR -->
-        <aside class="toc-sidebar" aria-label="Table of Contents">
-          <h4>Case Study Navigation</h4>
-          <nav class="toc-nav">
-            <a href="#exec-summary">1. Executive Summary</a>
-            <a href="#customer-bg">2. Customer Background</a>
-            <a href="#business-challenge">3. Business Challenge</a>
-            <a href="#existing-arch">4. Existing Architecture</a>
-            <a href="#requirements">5. Business Requirements</a>
-            <a href="#solution-overview">6. Solution Overview</a>
-            <a href="#solution-arch">7. Solution Architecture</a>
-            <a href="#azure-services">8. Azure Services Used</a>
-            <a href="#terraform-impl">9. Terraform Implementation</a>
-            <a href="#network-arch">10. Network Architecture</a>
-            <a href="#security-arch">11. Zero-Trust Security</a>
-            <a href="#deployment-process">12. Deployment Process</a>
-            <a href="#validation">13. Validation &amp; Testing</a>
-            <a href="#challenges">14. Challenges &amp; Risks</a>
-            <a href="#lessons">15. Lessons Learned</a>
-            <a href="#business-impact">16. Business Impact</a>
-            <a href="#tech-stack">17. Technology Stack</a>
-            <a href="#timeline">18. Project Timeline</a>
-            <a href="#gallery">19. Diagram Showcase</a>
-            <a href="#related">20. Related Studies</a>
-            <a href="#contact">21. Contact Advisory</a>
-          </nav>
+        <!-- ENHANCED SIDEBAR PANEL -->
+        <aside class="sidebar-panel">
+          
+          <!-- SIDEBAR 1: TABLE OF CONTENTS -->
+          <div class="sidebar-card">
+            <h4>Publication Navigation</h4>
+            <nav class="toc-nav">
+              <a href="#exec-summary">1. Executive Summary</a>
+              <a href="#before-after">2. Before vs. After Matrix</a>
+              <a href="#customer-bg">3. Customer Background</a>
+              <a href="#business-challenge">4. Business Challenge</a>
+              <a href="#solution-arch">5. Interactive Architecture</a>
+              <a href="#kpi-dashboard">6. Animated KPI Dashboard</a>
+              <a href="#azure-services">7. Technology Service Cards</a>
+              <a href="#terraform-impl">8. Terraform HCL Blueprint</a>
+              <a href="#network-arch">9. Subnet LLD Specification</a>
+              <a href="#roadmap">10. 8-Stage Delivery Roadmap</a>
+              <a href="#gallery">11. Image &amp; Diagram Gallery</a>
+              <a href="#lessons">12. Engineering Takeaways</a>
+              <a href="#related">13. Related Solutions</a>
+              <a href="#contact">14. Advisory Call-to-Action</a>
+            </nav>
+          </div>
+
+          <!-- SIDEBAR 2: ENGAGEMENT METADATA -->
+          <div class="sidebar-card">
+            <h4>Engagement Details</h4>
+            <dl style="display: flex; flex-direction: column; gap: 0.85rem; margin: 0; font-size: 0.85rem;">
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Client Industry</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--text-primary);">Energy &amp; Utilities (Uniper)</dd>
+              </div>
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Geography / Hubs</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--text-primary);">Germany / UAE / Global</dd>
+              </div>
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Cloud Infrastructure</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--azure-primary);">Microsoft Azure &amp; AWS</dd>
+              </div>
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Automation Stack</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--azure-primary);">Terraform HCL, GitHub Actions</dd>
+              </div>
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Architecture Level</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--text-primary);">L400 Principal Enterprise</dd>
+              </div>
+              <div>
+                <dt style="color: var(--text-muted); font-weight: 600;">Reading Time</dt>
+                <dd style="margin: 0; font-weight: 700; color: var(--text-primary);">14 Mins</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- SIDEBAR 3: QUICK ACTIONS & DOWNLOADS -->
+          <div class="sidebar-card">
+            <h4>Executive Actions</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <a class="button button-primary" href="assets/Shaik_Althaf_Resume.pdf" download style="font-size: 0.85rem; padding: 0.6rem;">Download PDF 📥</a>
+              <button onclick="window.print()" class="button button-secondary" style="font-size: 0.85rem; padding: 0.6rem;">Print Executive Version 🖨️</button>
+              <a class="button button-ghost" href="https://www.linkedin.com/in/shaik-althaf/" target="_blank" style="font-size: 0.85rem; padding: 0.6rem;">Share on LinkedIn 💼</a>
+            </div>
+          </div>
+
         </aside>
 
-        <!-- CASE STUDY BODY CONTENT -->
-        <article class="case-study-body">
+        <!-- MAIN PUBLICATION CONTENT BODY -->
+        <article>
 
-          <!-- 2. EXECUTIVE SUMMARY -->
-          <section id="exec-summary" class="cs-section">
-            <h2>Executive Summary</h2>
-            <div class="cs-box cs-box-accent">
-              <p>Uniper, a leading international energy supplier operating critical power generation and gas storage infrastructure across Europe, required a complete overhaul of their legacy hub-and-spoke Azure network. Prior to intervention, cloud workloads suffered from fragmented VNet peering, manual firewall rule configuration, unmonitored egress paths, and slow deployment cycles taking 3+ weeks per environment.</p>
-              <p><strong>Solution Delivered:</strong> Engineered a unified Azure Virtual WAN (vWAN) dual-hub architecture spanning Azure East US and West Europe. Integrated Palo Alto Cloud NGFW NVAs directly inside Azure Virtual Hubs, establishing automated Panorama REST API rule sync, BGP dynamic routing, UDR route overrides, and modular Terraform IaC blueprints.</p>
-              <p><strong>Quantifiable Business Impact:</strong> Accelerated new hub/spoke environment setup speed by <strong>~40%</strong>, enforced <strong>100% Zero-Trust traffic inspection</strong> across inbound/outbound/east-west flows, achieved zero-downtime cutover across 50+ production subscriptions, and pre-emptively resolved 90% of anomalies via Prometheus &amp; Grafana integration.</p>
+          <!-- 2. EXECUTIVE SUMMARY 4-CARD GRID -->
+          <section id="exec-summary" class="pub-section">
+            <h2>1. Executive Summary &amp; Business Value</h2>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2rem;">
+              Uniper, a global energy supplier managing critical European power generation and gas trading infrastructure, partnered with our cloud architecture team to modernize their multi-subscription Azure network perimeter.
+            </p>
+
+            <div class="exec-grid">
+              <div class="exec-card">
+                <h3>01. Business Challenge</h3>
+                <p>Fragmented VNet peering mesh across 50+ subscriptions, uninspected internet egress bypasses, manual 3-week provisioning delays, and single-point-of-failure firewall VMs.</p>
+              </div>
+              <div class="exec-card">
+                <h3>02. Technical Solution</h3>
+                <p>Architected dual Azure Virtual WAN Hubs (East US and West Europe) with integrated Palo Alto Cloud NGFW NVAs, BGP dynamic routing, and modular Terraform IaC blueprints.</p>
+              </div>
+              <div class="exec-card">
+                <h3>03. Execution &amp; Outcome</h3>
+                <p>Executed zero-downtime cutover across live production energy trading workloads, establishing 100% Zero-Trust traffic inspection and automated Panorama rule sync.</p>
+              </div>
+              <div class="exec-card">
+                <h3>04. Business Value Delivered</h3>
+                <p>Accelerated new environment setup speed by ~40%, achieved 99.99% multi-region availability, and pre-emptively resolved 90% of anomalies via Prometheus &amp; Grafana.</p>
+              </div>
             </div>
           </section>
 
-          <!-- 3. CUSTOMER BACKGROUND -->
-          <section id="customer-bg" class="cs-section">
-            <h2>Customer Background</h2>
-            <div class="cs-box">
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Industry:</strong> Enterprise Energy, Power Generation &amp; Global Energy Trading</li>
-                <li><strong>Scale:</strong> 11,000+ employees, operating across 40+ countries with 50+ Azure subscriptions</li>
-                <li><strong>Cloud Maturity:</strong> Advanced hybrid-cloud multi-region adoption transitioning from legacy on-premises datacenters to Azure CAF Landing Zones</li>
-                <li><strong>Primary Goal:</strong> Establish a zero-trust network perimeter with automated Terraform IaC governance without degrading cross-region application latency</li>
+          <!-- 3. BEFORE VS AFTER COMPARISON MATRIX -->
+          <section id="before-after" class="pub-section">
+            <h2>2. Architectural Transformation: Before vs. After</h2>
+            <p>Direct architectural comparison showing operational and security enhancements before and after modernization.</p>
+
+            <div class="comparison-grid">
+              <div class="comp-box-before">
+                <h3>❌ BEFORE (Legacy Architecture)</h3>
+                <ul class="comp-list">
+                  <li><strong>Manual Routing:</strong> Complex mesh of 120+ unmonitored VNet peerings with static UDRs.</li>
+                  <li><strong>Security Blindspots:</strong> Direct uninspected internet egress via public IPs in spoke VNets.</li>
+                  <li><strong>Slow Provisioning:</strong> 3-week manual ticket approval process for new environment setups.</li>
+                  <li><strong>Single Point of Failure:</strong> Legacy standalone firewall NVA virtual machines without SLA failover.</li>
+                  <li><strong>Uncoordinated Security:</strong> Manual firewall policy updates across individual devices.</li>
+                </ul>
+              </div>
+
+              <div class="comp-box-after">
+                <h3>✅ AFTER (Modernized Zero-Trust Architecture)</h3>
+                <ul class="comp-list">
+                  <li><strong>Virtual WAN Hub Backbone:</strong> Centralized managed routing over Azure global high-speed backbone.</li>
+                  <li><strong>100% Zero-Trust Egress:</strong> Forced packet inspection via Palo Alto Cloud NGFW NVAs.</li>
+                  <li><strong>Automated Terraform IaC:</strong> Environment provisioning accelerated by ~40% via modular blueprints.</li>
+                  <li><strong>High Availability (99.99% SLA):</strong> Dual-region Virtual Hubs with BGP active-active failover.</li>
+                  <li><strong>Panorama Centralized Sync:</strong> Automated REST API policy deployment across all firewalls.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. CUSTOMER BACKGROUND -->
+          <section id="customer-bg" class="pub-section">
+            <h2>3. Customer Background &amp; Scale</h2>
+            <div class="statement-card">
+              <ul style="padding-left: 1.2rem; line-height: 1.8; margin: 0;">
+                <li><strong>Organization:</strong> Uniper SE (Leading European Energy &amp; Power Generation Supplier)</li>
+                <li><strong>Scale:</strong> 11,000+ employees, operating across 40+ countries with 50+ enterprise Azure subscriptions</li>
+                <li><strong>Cloud Trajectory:</strong> Advanced multi-region adoption under Microsoft Cloud Adoption Framework (CAF)</li>
+                <li><strong>Mandate:</strong> Establish a compliant, zero-trust network perimeter with automated Terraform governance</li>
               </ul>
             </div>
           </section>
 
-          <!-- 4. BUSINESS CHALLENGE -->
-          <section id="business-challenge" class="cs-section">
-            <h2>Business Challenge &amp; Pain Points</h2>
-            <div class="cs-box" style="border-left: 4px solid #ef4444;">
-              <h3 style="color: #dc2626; margin-top: 0;">Key Operational &amp; Technical Bottlenecks</h3>
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Complex Peering Mesh:</strong> Over 120 custom VNet peering connections created an unmaintainable mesh with routing loops and overlapping IP ranges.</li>
-                <li><strong>Security Blindspots:</strong> Internet egress traffic bypassed centralized firewalls via individual public IPs, violating corporate compliance rules.</li>
-                <li><strong>Manual Provisioning Delay:</strong> Provisioning a new spoke VNet required 15+ manual Azure portal steps and 3 weeks of manual security approvals.</li>
-                <li><strong>Lack of High Availability:</strong> Single-instance legacy firewall NVA virtual machines represented single points of failure during maintenance windows.</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 5. EXISTING ARCHITECTURE DIAGRAM -->
-          <section id="existing-arch" class="cs-section">
-            <h2>Legacy Architecture (Pre-Intervention)</h2>
-            <p>Below is the legacy network topology illustrating fragmented VNet peering, manual UDR overrides, and unmonitored egress paths.</p>
-
-            <div class="cs-box" style="text-align: center; background: var(--bg-surface);">
-              <svg viewBox="0 0 700 240" width="100%" height="auto" style="max-width: 650px;">
-                <rect width="700" height="240" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-                <text x="350" y="30" font-weight="700" font-size="14" text-anchor="middle" fill="#dc2626">Legacy Azure Network Topology (Unmonitored Egress &amp; Peering Mesh)</text>
-
-                <!-- Spoke 1 -->
-                <rect x="50" y="70" width="150" height="110" rx="8" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,4"/>
-                <text x="125" y="100" font-weight="700" font-size="12" text-anchor="middle" fill="#0f172a">Spoke VNet 1</text>
-                <text x="125" y="120" font-size="10" text-anchor="middle" fill="#64748b">Direct Egress (Bypassed)</text>
-
-                <!-- Legacy Firewall Hub -->
-                <rect x="275" y="70" width="150" height="110" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-                <text x="350" y="100" font-weight="700" font-size="12" text-anchor="middle" fill="#0f172a">Legacy NVA VM</text>
-                <text x="350" y="120" font-size="10" text-anchor="middle" fill="#dc2626">Single Point of Failure</text>
-
-                <!-- Spoke 2 -->
-                <rect x="500" y="70" width="150" height="110" rx="8" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,4"/>
-                <text x="575" y="100" font-weight="700" font-size="12" text-anchor="middle" fill="#0f172a">Spoke VNet 2</text>
-                <text x="575" y="120" font-size="10" text-anchor="middle" fill="#64748b">Ad-hoc Peering Mesh</text>
-
-                <!-- Messy Peering Line -->
-                <line x1="200" y1="125" x2="275" y2="125" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,4"/>
-                <line x1="425" y1="125" x2="500" y2="125" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,4"/>
-                <line x1="200" y1="150" x2="500" y2="150" stroke="#dc2626" stroke-width="2"/>
-              </svg>
-            </div>
-          </section>
-
-          <!-- 6. BUSINESS REQUIREMENTS -->
-          <section id="requirements" class="cs-section">
-            <h2>Business &amp; Technical Requirements</h2>
+          <!-- 5. BUSINESS CHALLENGE -->
+          <section id="business-challenge" class="pub-section">
+            <h2>4. Business &amp; Operational Challenges</h2>
             <div class="overview-grid">
-              <div class="statement-card">
-                <span class="card-index">01. Security &amp; Compliance</span>
-                <h3>Zero-Trust Perimeter</h3>
-                <p>Mandatory 100% packet inspection for all inbound, outbound, and inter-spoke traffic through Palo Alto Cloud NGFW with Panorama centralized rule management.</p>
+              <div class="statement-card" style="border-top: 4px solid #ef4444;">
+                <span class="card-index" style="color: #dc2626;">Operational Bottleneck</span>
+                <h3>3-Week Setup Delays</h3>
+                <p>Provisioning a new spoke VNet required 15+ manual Azure portal steps and lengthy security reviews.</p>
               </div>
 
-              <div class="statement-card">
-                <span class="card-index">02. Automation &amp; Speed</span>
-                <h3>Modular Terraform IaC</h3>
-                <p>100% Infrastructure-as-Code via versioned Terraform HCL modules with automated Azure DevOps pipeline deployment and OPA Rego pre-commit gates.</p>
+              <div class="statement-card" style="border-top: 4px solid #ef4444;">
+                <span class="card-index" style="color: #dc2626;">Compliance Risk</span>
+                <h3>Uninspected Outbound Traffic</h3>
+                <p>Developers attached public IPs to spoke workloads, bypassing core security inspection policies.</p>
               </div>
 
-              <div class="statement-card">
-                <span class="card-index">03. Resilience &amp; SLA</span>
-                <h3>99.99% Availability</h3>
-                <p>Dual-region Azure Virtual WAN Hubs (East US and West Europe) with active-active BGP dynamic routing and automatic failover in &lt;10 seconds.</p>
+              <div class="statement-card" style="border-top: 4px solid #ef4444;">
+                <span class="card-index" style="color: #dc2626;">Resilience Risk</span>
+                <h3>Firewall NVA Single Failures</h3>
+                <p>Legacy single-instance firewall VMs caused unexpected outage risks during routine maintenance.</p>
               </div>
             </div>
           </section>
 
-          <!-- 7. SOLUTION OVERVIEW -->
-          <section id="solution-overview" class="cs-section">
-            <h2>Solution Overview</h2>
-            <div class="cs-box cs-box-accent">
-              <p>The proposed modernization replaced fragmented VNet peering with **Azure Virtual WAN (vWAN)**, establishing a managed hub backbone. Key components include:</p>
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Azure Virtual Hub Integration:</strong> Deployed Virtual Hubs in East US and West Europe connected via high-speed Azure global backbone.</li>
-                <li><strong>Palo Alto Cloud NGFW NVA:</strong> Integrated NVA firewalls directly into Virtual Hubs with BGP route propagation for zero-trust traffic inspection.</li>
-                <li><strong>Application Gateway WAF v2:</strong> Standardized public HTTPS ingress with OWASP Top 10 rule protection and TLS 1.3 termination in DMZ subnets.</li>
-                <li><strong>Azure Private Link &amp; Key Vault:</strong> Disabled public endpoints for PaaS services (SQL, Storage, Key Vault), routing traffic internally over Private Endpoints.</li>
-              </ul>
-            </div>
-          </section>
+          <!-- 6. INTERACTIVE ARCHITECTURE WITH TOOLTIP CARD -->
+          <section id="solution-arch" class="pub-section">
+            <h2>5. Target Solution Architecture (Interactive)</h2>
+            <p>Hover or click on any architecture component node below to view its purpose, business value, and Terraform module details.</p>
 
-          <!-- 8. SOLUTION ARCHITECTURE DIAGRAM -->
-          <section id="solution-arch" class="cs-section">
-            <h2>Target Solution Architecture (Modernized vWAN)</h2>
-            <p>Interactive high-level architecture schematic illustrating Virtual Hubs, Palo Alto Cloud NGFW inspection nodes, App Gateway WAF v2, and Private Link integration.</p>
-
-            <div class="cs-box" style="text-align: center; background: #ffffff;">
+            <div class="interactive-svg-container">
               <svg viewBox="0 0 750 320" width="100%" height="auto" style="max-width: 720px;">
                 <rect width="750" height="320" rx="14" fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
-                <text x="375" y="30" font-weight="800" font-size="15" text-anchor="middle" fill="#0078d4">Azure Virtual WAN Dual-Hub &amp; Palo Alto Zero-Trust Architecture</text>
+                <text x="375" y="30" font-weight="800" font-size="15" text-anchor="middle" fill="#0078d4">Target Azure Virtual WAN &amp; Palo Alto Zero-Trust Architecture</text>
 
-                <!-- Virtual Hub East US -->
-                <rect x="50" y="60" width="280" height="220" rx="10" fill="#f8fafc" stroke="#0078d4" stroke-width="1.5"/>
-                <text x="190" y="85" font-weight="700" font-size="13" text-anchor="middle" fill="#0f172a">vHUB East US (Primary)</text>
+                <!-- Node 1: vHUB East US -->
+                <g class="svg-node" onclick="showNodeInfo('vhub_east')">
+                  <rect x="50" y="60" width="280" height="220" rx="10" fill="#f8fafc" stroke="#0078d4" stroke-width="1.5"/>
+                  <text x="190" y="85" font-weight="700" font-size="13" text-anchor="middle" fill="#0f172a">vHUB East US (Primary Hub)</text>
+                </g>
                 
-                <rect x="70" y="105" width="240" height="50" rx="6" fill="rgba(0,120,212,0.1)" stroke="#0078d4"/>
-                <text x="190" y="135" font-weight="700" font-size="11" text-anchor="middle" fill="#0078d4">Palo Alto Cloud NGFW (NVA)</text>
+                <!-- Node 2: Palo Alto NGFW -->
+                <g class="svg-node" onclick="showNodeInfo('palo_nva')">
+                  <rect x="70" y="105" width="240" height="50" rx="6" fill="rgba(0,120,212,0.12)" stroke="#0078d4" stroke-width="1.5"/>
+                  <text x="190" y="135" font-weight="700" font-size="11" text-anchor="middle" fill="#0078d4">Palo Alto Cloud NGFW (NVA)</text>
+                </g>
 
-                <rect x="70" y="170" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
-                <text x="190" y="195" font-size="11" text-anchor="middle" fill="#334155">App Gateway WAF v2 (DMZ)</text>
+                <!-- Node 3: App Gateway WAF v2 -->
+                <g class="svg-node" onclick="showNodeInfo('app_gw')">
+                  <rect x="70" y="170" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+                  <text x="190" y="195" font-size="11" text-anchor="middle" fill="#334155">App Gateway WAF v2 (DMZ Ingress)</text>
+                </g>
 
-                <rect x="70" y="220" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
-                <text x="190" y="245" font-size="11" text-anchor="middle" fill="#334155">Private Link &amp; Key Vault</text>
+                <!-- Node 4: Private Link -->
+                <g class="svg-node" onclick="showNodeInfo('private_link')">
+                  <rect x="70" y="220" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+                  <text x="190" y="245" font-size="11" text-anchor="middle" fill="#334155">Private Link &amp; Key Vault</text>
+                </g>
 
-                <!-- High Speed Backbone Line -->
+                <!-- Backbone Line -->
                 <line x1="330" y1="130" x2="420" y2="130" stroke="#0078d4" stroke-width="4" stroke-dasharray="6,6"/>
-                <text x="375" y="120" font-size="10" font-weight="700" text-anchor="middle" fill="#0078d4">Azure Backbone (Global Mesh)</text>
+                <text x="375" y="120" font-size="10" font-weight="700" text-anchor="middle" fill="#0078d4">Azure Backbone Mesh</text>
 
-                <!-- Virtual Hub West Europe -->
-                <rect x="420" y="60" width="280" height="220" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="1.5"/>
-                <text x="560" y="85" font-weight="700" font-size="13" text-anchor="middle" fill="#0f172a">vHUB West Europe (DR)</text>
-
-                <rect x="440" y="105" width="240" height="50" rx="6" fill="rgba(56,189,248,0.15)" stroke="#0284c7"/>
-                <text x="560" y="135" font-weight="700" font-size="11" text-anchor="middle" fill="#0284c7">Palo Alto Cloud NGFW (NVA)</text>
-
-                <rect x="440" y="170" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
-                <text x="560" y="195" font-size="11" text-anchor="middle" fill="#334155">Spoke VNet Workloads</text>
-
-                <rect x="440" y="220" width="240" height="40" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
-                <text x="560" y="245" font-size="11" text-anchor="middle" fill="#334155">Private AKS Clusters</text>
+                <!-- Node 5: vHUB West Europe -->
+                <g class="svg-node" onclick="showNodeInfo('vhub_west')">
+                  <rect x="420" y="60" width="280" height="220" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="1.5"/>
+                  <text x="560" y="85" font-weight="700" font-size="13" text-anchor="middle" fill="#0f172a">vHUB West Europe (DR Hub)</text>
+                </g>
               </svg>
+
+              <!-- TOOLTIP DISPLAY BOX -->
+              <div id="node-tooltip">
+                <strong id="tooltip-title" style="font-size: 1.05rem; color: #38bdf8; display: block; margin-bottom: 0.25rem;">Component Information</strong>
+                <div id="tooltip-body">Click on any node above to inspect component purpose, business benefit, and Terraform HCL details.</div>
+              </div>
             </div>
           </section>
 
-          <!-- 9. AZURE SERVICES USED -->
-          <section id="azure-services" class="cs-section">
-            <h2>Azure Services &amp; Architecture Roles</h2>
+          <!-- 7. ANIMATED KPI METRICS DASHBOARD -->
+          <section id="kpi-dashboard" class="pub-section">
+            <h2>6. Animated Executive KPI Dashboard</h2>
+            <div class="takeaways-grid">
+              <div class="takeaway-pill" style="border-top: 4px solid #0078d4;">
+                <strong data-counter="40">~40%</strong>
+                <span>Faster Provisioning Speed</span>
+              </div>
+              <div class="takeaway-pill" style="border-top: 4px solid #10b981;">
+                <strong data-counter="100">100%</strong>
+                <span>Zero-Trust Inspection</span>
+              </div>
+              <div class="takeaway-pill" style="border-top: 4px solid #0284c7;">
+                <strong data-counter="50">50+</strong>
+                <span>Subscriptions Migrated</span>
+              </div>
+              <div class="takeaway-pill" style="border-top: 4px solid #9333ea;">
+                <strong data-counter="90">90%</strong>
+                <span>Anomaly Pre-emption</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8. RICH TECHNOLOGY SERVICE CARDS -->
+          <section id="azure-services" class="pub-section">
+            <h2>7. Core Technology Service Cards</h2>
             <div class="tech-grid">
+              
               <div class="tech-card">
                 <div class="tech-card-header">
                   <div class="tech-icon">🌐</div>
@@ -427,7 +717,11 @@
                     <small>Managed Backbone</small>
                   </div>
                 </div>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Central routing hub automating branch-to-cloud and VNet-to-VNet transit with BGP dynamic route propagation.</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                  <strong>Purpose:</strong> Centralized hub routing branch-to-cloud and VNet-to-VNet transit over Azure's global network.<br>
+                  <strong>Business Value:</strong> Replaced 120+ custom peerings with an auto-scaling managed mesh.<br>
+                  <strong>Terraform Module:</strong> `modules/azure_vhub`
+                </p>
               </div>
 
               <div class="tech-card">
@@ -435,10 +729,14 @@
                   <div class="tech-icon">🛡️</div>
                   <div class="tech-card-title">
                     <h3>Palo Alto Cloud NGFW</h3>
-                    <small>Zero-Trust Security</small>
+                    <small>Zero-Trust NVA</small>
                   </div>
                 </div>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Next-generation firewall NVA inspecting 100% of L4-L7 traffic with Panorama REST API synchronization.</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                  <strong>Purpose:</strong> Next-generation firewall NVA inspecting 100% of L4-L7 inbound, outbound, and lateral traffic.<br>
+                  <strong>Business Value:</strong> Eliminated security blindspots with Panorama centralized rule deployment.<br>
+                  <strong>Terraform Module:</strong> `modules/palo_alto_ngfw`
+                </p>
               </div>
 
               <div class="tech-card">
@@ -446,45 +744,33 @@
                   <div class="tech-icon">🔐</div>
                   <div class="tech-card-title">
                     <h3>App Gateway WAF v2</h3>
-                    <small>Ingress Protection</small>
+                    <small>DMZ Ingress</small>
                   </div>
                 </div>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Application-layer load balancer with OWASP core rule sets and TLS 1.3 offloading in DMZ subnets.</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                  <strong>Purpose:</strong> Managed web application firewall offloading TLS 1.3 and enforcing OWASP Core Rule Sets.<br>
+                  <strong>Business Value:</strong> Protects public endpoints against SQLi, XSS, and DDoS threats.<br>
+                  <strong>Terraform Module:</strong> `modules/app_gateway_waf`
+                </p>
               </div>
+
             </div>
           </section>
 
-          <!-- 10. TERRAFORM IMPLEMENTATION -->
-          <section id="terraform-impl" class="cs-section">
-            <h2>Terraform IaC Blueprint &amp; Folder Structure</h2>
-            <p>Production HCL folder structure and modular code snippet for Azure Virtual Hub route table overrides.</p>
+          <!-- 9. TERRAFORM IMPLEMENTATION CODE BLUEPRINT -->
+          <section id="terraform-impl" class="pub-section">
+            <h2>8. Terraform IaC Blueprint &amp; State Locking</h2>
+            <p>Production HCL code blueprint illustrating custom Virtual Hub route table overrides and Azure Blob state locking.</p>
 
             <div class="code-block">
-              <pre><code># Modular Terraform Folder Structure
-├── modules/
-│   ├── azure_vhub/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── palo_alto_ngfw/
-│   │   ├── main.tf
-│   │   └── panorama_sync.tf
-│   └── app_gateway_waf/
-├── environments/
-│   ├── prod_eastus.tfvars
-│   └── prod_westeurope.tfvars
-└── main.tf</code></pre>
-            </div>
-
-            <div class="code-block">
-              <pre><code># Azure Virtual Hub Custom Route Table Override (HCL)
+              <pre><code># Azure Virtual Hub Custom Route Table Override (HCL 2.0)
 resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
   name           = "rt-vhub-zero-trust"
   virtual_hub_id = azurerm_virtual_hub.vhub_eastus.id
-  labels         = ["production", "zero-trust"]
+  labels         = ["production", "zero-trust-egress"]
 
   route {
-    name              = "All-Traffic-To-PaloAlto"
+    name              = "All-Traffic-To-PaloAlto-NVA"
     destinations_type = "CIDR"
     destinations      = ["0.0.0.0/0", "10.0.0.0/8"]
     next_hop_type     = "ResourceId"
@@ -494,14 +780,14 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
             </div>
           </section>
 
-          <!-- 11. NETWORK ARCHITECTURE & LLD TABLE -->
-          <section id="network-arch" class="cs-section">
-            <h2>Low-Level Network &amp; Subnet Design (LLD)</h2>
+          <!-- 10. NETWORK ARCHITECTURE & LLD TABLE -->
+          <section id="network-arch" class="pub-section">
+            <h2>9. Low-Level Subnet Specification (LLD)</h2>
             <div style="overflow-x: auto;">
               <table style="width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-size: 0.9rem;">
                 <thead>
                   <tr style="background: var(--bg-surface); border-bottom: 2px solid var(--border-subtle); text-align: left;">
-                    <th style="padding: 0.85rem 1rem;">Subnet Name</th>
+                    <th style="padding: 0.85rem 1rem;">Subnet Identifier</th>
                     <th style="padding: 0.85rem 1rem;">CIDR Prefix</th>
                     <th style="padding: 0.85rem 1rem;">Security Zone</th>
                     <th style="padding: 0.85rem 1rem;">Routing Policy</th>
@@ -518,245 +804,152 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
                     <td style="padding: 0.85rem 1rem; font-weight: 600;">`snet-palo-nva`</td>
                     <td style="padding: 0.85rem 1rem; font-family: var(--font-mono);">10.100.2.0/24</td>
                     <td style="padding: 0.85rem 1rem;">Firewall Core</td>
-                    <td style="padding: 0.85rem 1rem;">BGP Propagation Enabled</td>
+                    <td style="padding: 0.85rem 1rem;">BGP Propagation Active</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
                     <td style="padding: 0.85rem 1rem; font-weight: 600;">`snet-aks-private`</td>
                     <td style="padding: 0.85rem 1rem; font-family: var(--font-mono);">10.100.16.0/20</td>
                     <td style="padding: 0.85rem 1rem;">Internal Microservices</td>
-                    <td style="padding: 0.85rem 1rem;">Internal Only &rarr; Private Link</td>
+                    <td style="padding: 0.85rem 1rem;">Private Link &rarr; Key Vault</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </section>
 
-          <!-- 12. SECURITY & GOVERNANCE -->
-          <section id="security-arch" class="cs-section">
-            <h2>Zero-Trust Security &amp; Compliance Controls</h2>
+          <!-- 11. 8-STAGE EXPANDABLE ROADMAP -->
+          <section id="roadmap" class="pub-section">
+            <h2>10. 8-Stage Enterprise Implementation Roadmap</h2>
+            <p>Click on any milestone stage below to view technical execution details.</p>
+
+            <details class="roadmap-node" open>
+              <summary>Stage 1: Architecture Workshop &amp; Requirement Alignment <span>Month 1</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Conducted technical alignment workshops with Uniper infrastructure leads, defining CAF Landing Zone specifications and zero-trust firewall metrics.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 2: Azure CAF Landing Zone Blueprinting <span>Month 2</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Established Azure Policy governance, subscription hierarchy, and Entra ID PIM privileged access management controls.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 3: Virtual Hub Connectivity &amp; Backbone Provisioning <span>Months 3 - 4</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Deployed East US and West Europe Virtual Hubs connected over Azure's global high-speed backbone mesh.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 4: Palo Alto Cloud NGFW Integration &amp; Panorama Sync <span>Months 5 - 6</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Integrated NVA firewalls into Virtual Hubs and automated Panorama REST API policy synchronization.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 5: Terraform HCL Automation &amp; CI/CD Pipeline Build <span>Months 7 - 8</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Authored versioned Terraform module registries with OPA Rego pre-commit security gates in GitHub Actions.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 6: Validation, Failover Probes &amp; Security Penetration <span>Months 9 - 10</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Simulated primary node outages, confirming BGP route convergence failover in 8.4 seconds with zero packet loss.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 7: Zero-Downtime Subscription Cutover &amp; Go-Live <span>Month 11</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Executed zero-downtime cutover across 50+ enterprise production subscriptions during live energy trading hours.</p>
+            </details>
+
+            <details class="roadmap-node">
+              <summary>Stage 8: Observability Integration &amp; Continuous Optimization <span>Month 12</span></summary>
+              <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 0.75rem;">Constructed Prometheus &amp; Grafana KQL monitoring dashboards pre-emptively catching 90% of operational anomalies.</p>
+            </details>
+          </section>
+
+          <!-- 12. IMAGE & DIAGRAM GALLERY WITH LIGHTBOX -->
+          <section id="gallery" class="pub-section">
+            <h2>11. Diagram &amp; Architectural Artifact Gallery</h2>
+            <p>Click any artifact thumbnail below to view the expanded high-resolution schematic.</p>
+
+            <div class="gallery-grid">
+              <div class="gallery-thumb" onclick="openLightbox('vWAN Target Topology Schematic', 'High-level Azure Virtual WAN dual-hub architecture spanning East US and West Europe.')">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗺️</div>
+                <strong style="font-size: 0.9rem;">vWAN Target Topology</strong>
+              </div>
+
+              <div class="gallery-thumb" onclick="openLightbox('Modular Terraform Blueprint Structure', 'Directory tree and state locking workflow for reusable HCL modules.')">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏗️</div>
+                <strong style="font-size: 0.9rem;">Terraform HCL Registry</strong>
+              </div>
+
+              <div class="gallery-thumb" onclick="openLightbox('GitHub Actions DevSecOps Pipeline', 'Multi-stage YAML pipeline incorporating SonarQube, Trivy, and OPA Rego gates.')">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+                <strong style="font-size: 0.9rem;">CI/CD Security Pipeline</strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- 13. ENGINEERING TAKEAWAYS -->
+          <section id="lessons" class="pub-section">
+            <h2>12. Key Engineering Takeaways</h2>
             <div class="cs-box">
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Identity Governance:</strong> Standardized Azure Entra ID Privileged Identity Management (PIM) with mandatory Just-In-Time (JIT) access approval.</li>
-                <li><strong>Policy-as-Code:</strong> Implemented OPA Rego and Checkov static scanning in CI/CD pipelines to block non-compliant VNet deployments.</li>
-                <li><strong>Data Loss Prevention:</strong> Disabled public network access across 100% of Azure Storage Accounts and Azure SQL databases.</li>
+              <ul style="padding-left: 1.2rem; line-height: 1.8; margin: 0;">
+                <li><strong>Modularize IaC Early:</strong> Authoring versioned Terraform modules saved 120+ hours of refactoring during production rollout.</li>
+                <li><strong>Enforce Pre-Commit Policy Gates:</strong> Static security scanning via OPA Rego prevented 95% of potential VNet misconfigurations prior to deployment.</li>
+                <li><strong>Validate Failover Continuously:</strong> Automated BGP health probes ensure multi-region failovers execute within specified SLAs (&lt;10s).</li>
               </ul>
             </div>
           </section>
 
-          <!-- 13. DEPLOYMENT PROCESS -->
-          <section id="deployment-process" class="cs-section">
-            <h2>5-Stage CI/CD Deployment Process</h2>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div class="cs-box">
-                <strong style="color: var(--azure-primary);">Stage 1: Terraform HCL Linting &amp; Static Security Scan</strong>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem;">Automated GitHub Actions running `terraform fmt`, SonarQube, and Checkov compliance validation.</p>
-              </div>
-              <div class="cs-box">
-                <strong style="color: var(--azure-primary);">Stage 2: Plan Generation &amp; Azure Blob State Locking</strong>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem;">Execution of `terraform plan` with state locking stored securely in Azure Storage blob containers.</p>
-              </div>
-              <div class="cs-box">
-                <strong style="color: var(--azure-primary);">Stage 3: Peer Code Review &amp; Approval Gate</strong>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem;">Mandatory review by 2 Senior Cloud Architects before automated pipeline release approval.</p>
-              </div>
-              <div class="cs-box">
-                <strong style="color: var(--azure-primary);">Stage 4: Automated Terraform Apply &amp; BGP Route Sync</strong>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem;">Provisioning of vHUB resources and dynamic BGP route synchronization with Palo Alto Panorama.</p>
-              </div>
-              <div class="cs-box">
-                <strong style="color: var(--azure-primary);">Stage 5: Post-Deployment Connectivity &amp; Failover Verification</strong>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem;">Automated health probes verifying &lt;10ms cross-region latency and zero packet loss during NVA failover.</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- 14. VALIDATION & TESTING -->
-          <section id="validation" class="cs-section">
-            <h2>Validation &amp; Failover Testing</h2>
-            <div class="cs-box cs-box-accent">
-              <p>Automated validation tests conducted post-deployment:</p>
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Failover Recovery:</strong> Simulated primary Palo Alto NVA node failure; BGP route convergence rerouted traffic to standby NVA node in <strong>8.4 seconds</strong> (SLA &lt;15s).</li>
-                <li><strong>Egress Inspection Validation:</strong> 100% of outbound HTTP/HTTPS requests were logged and verified by Panorama firewall rules.</li>
-                <li><strong>Latency Testing:</strong> Cross-region ping latency between East US and West Europe averaged <strong>72ms</strong> via Azure global backbone.</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 15. CHALLENGES & RISKS -->
-          <section id="challenges" class="cs-section">
-            <h2>Challenges &amp; Operational Mitigations</h2>
+          <!-- 14. NEXT / PREVIOUS CASE STUDY NAVIGATION & RELATED CARDS -->
+          <section id="related" class="pub-section">
+            <h2>13. Related Enterprise Solutions</h2>
             <div class="overview-grid">
+              
               <div class="statement-card">
-                <h3>Challenge: Overlapping Subnet IP Ranges</h3>
-                <p>Legacy VNets used conflicting CIDR blocks. Managed transition using Azure NAT Gateways before cutover.</p>
-              </div>
-              <div class="statement-card">
-                <h3>Challenge: Asymmetric Routing</h3>
-                <p>BGP path selection caused asymmetric packets. Fixed via BGP AS-Path Prepending and UDR metrics.</p>
-              </div>
-              <div class="statement-card">
-                <h3>Challenge: Zero Downtime SLA</h3>
-                <p>Cutover executed during live trading hours using parallel vHUB staging and DNS TTL reduction.</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- 16. LESSONS LEARNED -->
-          <section id="lessons" class="cs-section">
-            <h2>Engineering Lessons Learned</h2>
-            <div class="cs-box">
-              <ul style="padding-left: 1.2rem; line-height: 1.8;">
-                <li><strong>Modularize Early:</strong> Reusable Terraform HCL modules saved over 120 hours of refactoring during Phase 2.</li>
-                <li><strong>Automate Route Verification:</strong> BGP route tables should be continuously monitored via KQL Log Analytics alerts.</li>
-                <li><strong>Enforce Pre-Commit Scanning:</strong> Catching misconfigurations at PR stage prevented 95% of security defects.</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- 17. BUSINESS IMPACT COUNTERS -->
-          <section id="business-impact" class="cs-section">
-            <h2>Quantifiable Business Impact</h2>
-            <dl class="hero-facts" style="grid-template-columns: repeat(4, 1fr);">
-              <div>
-                <dt>Provisioning Speedup</dt>
-                <dd>~40%</dd>
-              </div>
-              <div>
-                <dt>Traffic Hardened</dt>
-                <dd>100%</dd>
-              </div>
-              <div>
-                <dt>Subscriptions Migrated</dt>
-                <dd>50+</dd>
-              </div>
-              <div>
-                <dt>Anomaly Detection</dt>
-                <dd>90%</dd>
-              </div>
-            </dl>
-          </section>
-
-          <!-- 18. TECHNOLOGY STACK -->
-          <section id="tech-stack" class="cs-section">
-            <h2>Technology Stack</h2>
-            <div class="card-tags" style="font-size: 1rem;">
-              <span style="padding: 0.5rem 1rem;">Microsoft Azure</span>
-              <span style="padding: 0.5rem 1rem;">Terraform HCL</span>
-              <span style="padding: 0.5rem 1rem;">Palo Alto Cloud NGFW</span>
-              <span style="padding: 0.5rem 1rem;">Azure Virtual WAN</span>
-              <span style="padding: 0.5rem 1rem;">Azure DevOps</span>
-              <span style="padding: 0.5rem 1rem;">GitHub Actions</span>
-              <span style="padding: 0.5rem 1rem;">Kubernetes (AKS)</span>
-              <span style="padding: 0.5rem 1rem;">Python</span>
-              <span style="padding: 0.5rem 1rem;">Prometheus &amp; Grafana</span>
-            </div>
-          </section>
-
-          <!-- 19. PROJECT TIMELINE -->
-          <section id="timeline" class="cs-section">
-            <h2>6-Phase Delivery Timeline</h2>
-            <div class="timeline-container">
-              <div class="timeline-line"></div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                  <span class="timeline-date">Months 1 - 2</span>
-                  <h3>Phase 1: Architecture Design &amp; CAF Alignment</h3>
-                  <p>Requirements gathering, Azure CAF Landing Zone design, and Palo Alto NVA sizing.</p>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                  <span class="timeline-date">Months 3 - 5</span>
-                  <h3>Phase 2: Terraform HCL Module Authoring</h3>
-                  <p>Built reusable Terraform modules for vHUB, Palo Alto NGFW, App Gateway, and Private Link.</p>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                  <span class="timeline-date">Months 6 - 8</span>
-                  <h3>Phase 3: Staging Hub Deployment &amp; BGP Testing</h3>
-                  <p>Deployed staging vHUB, configured Panorama API sync, and conducted failover testing.</p>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                  <span class="timeline-date">Months 9 - 12</span>
-                  <h3>Phase 4: Zero-Downtime Subscription Cutover</h3>
-                  <p>Migrated 50+ enterprise subscriptions to new Virtual Hub backbone with zero downtime.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- 20. DIAGRAM SHOWCASE -->
-          <section id="gallery" class="cs-section">
-            <h2>Architecture Diagram Showcase</h2>
-            <div class="cs-box" style="text-align: center;">
-              <svg viewBox="0 0 700 200" width="100%" height="auto">
-                <rect width="700" height="200" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
-                <text x="350" y="40" font-weight="700" font-size="14" text-anchor="middle" fill="#0078d4">Azure Virtual WAN Traffic Flow Schematic</text>
-                <circle cx="150" cy="110" r="30" fill="rgba(0,120,212,0.1)" stroke="#0078d4" stroke-width="2"/>
-                <text x="150" y="115" font-size="12" font-weight="700" text-anchor="middle" fill="#0078d4">Ingress WAF</text>
-
-                <line x1="180" y1="110" x2="320" y2="110" stroke="#0078d4" stroke-width="3" stroke-dasharray="4,4"/>
-
-                <circle cx="350" cy="110" r="35" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
-                <text x="350" y="115" font-size="12" font-weight="700" text-anchor="middle" fill="#059669">Palo Alto NVA</text>
-
-                <line x1="385" y1="110" x2="520" y2="110" stroke="#0078d4" stroke-width="3" stroke-dasharray="4,4"/>
-
-                <circle cx="550" cy="110" r="30" fill="rgba(56,189,248,0.2)" stroke="#0284c7" stroke-width="2"/>
-                <text x="550" y="115" font-size="12" font-weight="700" text-anchor="middle" fill="#0284c7">Spoke AKS</text>
-              </svg>
-            </div>
-          </section>
-
-          <!-- 21. RELATED CASE STUDIES -->
-          <section id="related" class="cs-section">
-            <h2>Related Enterprise Case Studies</h2>
-            <div class="overview-grid">
-              <div class="statement-card">
-                <span class="card-index">Case Study 02</span>
+                <span class="card-index">Enterprise Solution 02</span>
                 <h3>Infrastructure Automation</h3>
                 <p>Modular HCL blueprints &amp; OPA Rego pre-commit gates for Azure Landing Zones.</p>
-                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Case Study &rarr;</a>
+                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Solution Architecture &rarr;</a>
               </div>
 
               <div class="statement-card">
-                <span class="card-index">Case Study 03</span>
+                <span class="card-index">Enterprise Solution 03</span>
                 <h3>Enterprise Subscription Migration</h3>
                 <p>Zero-downtime cutover across 50+ production Azure workloads.</p>
-                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Case Study &rarr;</a>
+                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Solution Architecture &rarr;</a>
               </div>
 
               <div class="statement-card">
-                <span class="card-index">Case Study 04</span>
+                <span class="card-index">Enterprise Solution 04</span>
                 <h3>AI Jenkins Plugin (AutoFix Agent)</h3>
                 <p>Autonomous AI agent extension diagnosing build stack traces and suggesting PR fixes.</p>
-                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Case Study &rarr;</a>
+                <a href="case-studies.html" style="font-weight: 600; font-size: 0.875rem; margin-top: 0.5rem; display: inline-block;">Read Solution Architecture &rarr;</a>
               </div>
+
+            </div>
+
+            <!-- NEXT / PREVIOUS NAVIGATION BAR -->
+            <div class="next-prev-bar">
+              <a href="case-studies.html" class="next-prev-card">
+                <small style="color: var(--text-muted); font-weight: 600;">&larr; PREVIOUS SOLUTION</small>
+                <strong style="display: block; font-size: 1.05rem; color: var(--azure-primary); margin-top: 0.25rem;">Infrastructure Automation &amp; CAF Landing Zones</strong>
+              </a>
+              <a href="case-studies.html" class="next-prev-card" style="text-align: right;">
+                <small style="color: var(--text-muted); font-weight: 600;">NEXT SOLUTION &rarr;</small>
+                <strong style="display: block; font-size: 1.05rem; color: var(--azure-primary); margin-top: 0.25rem;">Enterprise Subscription-to-Subscription Migration</strong>
+              </a>
             </div>
           </section>
 
-          <!-- 22. CONTACT & ADVISORY CALL-TO-ACTION -->
-          <section id="contact" class="cs-section" style="border-bottom: none;">
-            <div style="background: linear-gradient(135deg, #0078d4 0%, #004578 100%); color: #ffffff; border-radius: var(--radius-lg); padding: 3rem; text-align: center; box-shadow: var(--shadow-azure);">
-              <h2 style="color: #ffffff; font-size: 2.2rem; margin-bottom: 0.75rem;">Interested in a Similar Solution?</h2>
+          <!-- 15. PROFESSIONAL EXECUTIVE CTA FOOTER -->
+          <section id="contact" class="pub-section" style="border-bottom: none;">
+            <div style="background: linear-gradient(135deg, #0078d4 0%, #004578 100%); color: #ffffff; border-radius: var(--radius-lg); padding: 3.5rem; text-align: center; box-shadow: var(--shadow-azure);">
+              <h2 style="color: #ffffff; font-size: 2.2rem; margin-bottom: 0.75rem;">Interested in an Enterprise Cloud Transformation?</h2>
               <p style="color: #e2e8f0; max-width: 650px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
-                Schedule an enterprise cloud architecture review or discuss custom Palo Alto &amp; Terraform automation for your organization.
+                Schedule a principal cloud architecture review or discuss custom Palo Alto, Azure Virtual WAN, and Terraform automation for your organization.
               </p>
               <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a class="button" style="background: #ffffff; color: #0078d4; font-weight: 700;" href="contact.html">Schedule Architecture Review ✉️</a>
                 <a class="button button-secondary" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);" href="https://calendly.com/shaikalthafcgl/30min" target="_blank">Book 30-Min Call ↗</a>
+                <a class="button button-ghost" style="background: transparent; color: #ffffff; border-color: rgba(255,255,255,0.3);" href="assets/Shaik_Althaf_Resume.pdf" target="_blank">Download Resume PDF 📥</a>
               </div>
             </div>
           </section>
@@ -766,6 +959,15 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
       </div>
     </div>
   </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLightbox()">&times;</button>
+      <h3 id="lightbox-title" style="color: var(--azure-primary); margin-bottom: 0.5rem;"></h3>
+      <p id="lightbox-desc" style="color: var(--text-secondary);"></p>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -796,7 +998,7 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
 
   <script src="script.js?v=20260805_v3" defer></script>
   <script>
-    // Reading Progress Indicator & Sticky TOC Highlighter
+    // Reading Progress Bar & TOC Highlight
     window.addEventListener('scroll', () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -804,7 +1006,6 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
       const progressBar = document.getElementById('reading-progress');
       if (progressBar) progressBar.style.width = scrolled + '%';
 
-      // Highlight active TOC item
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.toc-nav a');
       
@@ -823,6 +1024,53 @@ resource "azurerm_virtual_hub_route_table" "vhub_route_table" {
         }
       });
     });
+
+    // Interactive Architecture Tooltip Display
+    function showNodeInfo(nodeKey) {
+      const title = document.getElementById('tooltip-title');
+      const body = document.getElementById('tooltip-body');
+      const container = document.getElementById('node-tooltip');
+      
+      const nodeData = {
+        'vhub_east': {
+          title: 'Azure Virtual Hub East US (Primary)',
+          body: 'Managed central routing hub automating VNet transit over Azure global backbone. Terraform Module: modules/azure_vhub'
+        },
+        'palo_nva': {
+          title: 'Palo Alto Cloud NGFW (Zero-Trust NVA)',
+          body: 'Inspects 100% of L4-L7 inbound, outbound, and lateral traffic. Panorama API automated rule sync. Terraform Module: modules/palo_alto_ngfw'
+        },
+        'app_gw': {
+          title: 'Application Gateway WAF v2 (DMZ Ingress)',
+          body: 'Offloads TLS 1.3 and enforces OWASP Core Rule Sets for public HTTP/HTTPS traffic. Terraform Module: modules/app_gateway_waf'
+        },
+        'private_link': {
+          title: 'Azure Private Link & Key Vault',
+          body: 'Disables public network endpoints across SQL and Storage, routing internal traffic over private IPs.'
+        },
+        'vhub_west': {
+          title: 'Azure Virtual Hub West Europe (DR Hub)',
+          body: 'Secondary Disaster Recovery hub with active-active BGP failover in <10 seconds.'
+        }
+      };
+
+      if (nodeData[nodeKey] && title && body && container) {
+        title.textContent = nodeData[nodeKey].title;
+        body.textContent = nodeData[nodeKey].body;
+        container.style.display = 'block';
+      }
+    }
+
+    // Gallery Lightbox Modal
+    function openLightbox(title, desc) {
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-desc').textContent = desc;
+      document.getElementById('lightbox-modal').classList.add('is-open');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('is-open');
+    }
   </script>
 </body>
 </html>
