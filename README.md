@@ -22,7 +22,7 @@ This repository contains the complete production-ready enterprise web applicatio
   9. `resume.html` — Embedded PDF Viewer, Download Buttons, ATS-Structured Text Resume.
   10. `contact.html` — Direct Communication Details, Modern Form Handler, Interactive Location Map SVG.
   11. `404.html` — Custom Microsoft Fluent Light Error Page.
-- **Embedded Resume & Avatar**: Integrated vector avatar (`assets/Shaik_Profile.svg`) and PDF resume (`assets/Shaik_Althaf_Resume.pdf`).
+- **Embedded Resume & Avatar**: Integrated vector avatar (`assets/Shaik_Profile.svg`) and PDF resume (`assets/`).
 - **SEO & PWA Configured**: Complete `sitemap.xml`, `robots.txt`, `manifest.json`, Schema.org JSON-LD, and Open Graph metadata.
 
 ---
@@ -33,7 +33,7 @@ This repository contains the complete production-ready enterprise web applicatio
 .
 ├── assets/
 │   ├── Shaik_Profile.svg                   # Official vector profile photo
-│   └── Shaik_Althaf_Resume.pdf             # Executive 2026 PDF Resume
+│   └──              # Executive 2026 PDF Resume
 ├── docs/
 │   └── github-pages-deployment-guide.md    # Step-by-step deployment guide
 ├── index.html                              # Home Page
