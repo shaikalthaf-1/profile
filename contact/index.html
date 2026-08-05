@@ -292,31 +292,90 @@ body { margin: 0; background: #ffffff; color: #0f172a; font-family: 'Inter', sys
   </main>
 
   <!-- FOOTER -->
+    <!-- ENTERPRISE 4-COLUMN FOOTER & BOTTOM METADATA BAR -->
   <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div>
-        <a class="footer-brand" href="../">ALTHAF SHAIK</a>
-        <p>Senior DevOps &amp; Network Automation Engineer.</p>
+    <div class="shell">
+      <div class="footer-4col-grid">
+        
+        <!-- COL 1: ABOUT -->
+        <div class="footer-col">
+          <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About</h4>
+          <ul>
+            <li><a href="../about/">About Me</a></li>
+            <li><a href="../experience/">Experience</a></li>
+            <li><a href="../about/#leadership">Leadership</a></li>
+            <li><a href="../achievements/">Achievements</a></li>
+            <li><a href="../experience/#timeline">Career Timeline</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 2: ENTERPRISE CASE STUDIES -->
+        <div class="footer-col">
+          <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Enterprise Case Studies</h4>
+          <ul>
+            <li><a href="../case-studies/">Infrastructure Automation <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/azure-network-modernization/">Azure Network Modernization <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/">CloudOps Platform <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/">Azure Migration <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/">Disaster Recovery <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/azure-network-modernization/">Azure Virtual WAN <span class="arrow">&rsaquo;</span></a></li>
+            <li><a href="../case-studies/">AI Jenkins AutoFix <span class="arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- COL 3: RESOURCES -->
+        <div class="footer-col">
+          <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Resources</h4>
+          <ul>
+            <li><a href="https://calendly.com/shaikalthafcgl/30min" target="_blank" rel="noopener noreferrer">Book a Meeting 🗓️</a></li>
+            <li><a href="../certifications/">Certifications</a></li>
+            <li><a href="../technologies/">Technologies</a></li>
+            <li><a href="../case-studies/">Architecture Library</a></li>
+            <li><a href="#" onclick="alert('Engineering Blog coming soon!'); return false;">Blog (Coming Soon)</a></li>
+            <li><a href="../case-studies/">Downloads</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 4: CONTACT -->
+        <div class="footer-col">
+          <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Dubai, UAE</div>
+            <div class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Hyderabad, India</div>
+            <a class="footer-contact-item" href="mailto:shaik.althaf@macrocloud.in"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> shaik.althaf@macrocloud.in</a>
+            <a class="footer-contact-item wa-item" href="https://wa.me/919010213122" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 90102 13122</a>
+            <a class="footer-contact-item" href="https://www.linkedin.com/in/shaik-althaf/" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn Profile</a>
+            <a class="footer-contact-item" href="https://github.com/shaikalthaf-1" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> GitHub Profile</a>
+          </div>
+        </div>
+
       </div>
-      <nav aria-label="Footer navigation">
-        <a href="../">Home</a>
-        <a href="../about/">About</a>
-        <a href="../experience/">Experience</a>
-        <a href="../case-studies/">Case Studies</a>
-        <a href="../contact/">Contact</a>
-      </nav>
-            <div class="footer-links">
-        <a href="https://wa.me/919010213122" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600;">WhatsApp: +91 9010213122</a>
-        <a href="mailto:shaik.althaf@macrocloud.in">shaik.althaf@macrocloud.in</a>
-        <a href="https://calendly.com/shaikalthafcgl/30min" target="_blank" rel="noopener noreferrer" class="nav-meeting-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ui-icon" style="vertical-align:-2px; margin-right:4px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a Meeting</a>
-        <a href="https://macrocloud.in/" target="_blank" rel="noopener noreferrer">MacroCloud ↗</a>
-        <a href="https://github.com/shaikalthaf-1" aria-label="Althaf Shaik GitHub Profile" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/shaik-althaf/" aria-label="Althaf Shaik LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+
+      <!-- LOWER FOOTER BOTTOM METADATA BAR -->
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-meta">
+          <div class="footer-author-info">
+            <strong>&copy; 2026 Althaf Shaik</strong>
+            <span>Sr DevOps &amp; Network Automation Engineer</span>
+          </div>
+
+          <div class="footer-tech-stack">
+            <span>Built with HTML5, CSS3, JavaScript</span>
+            <span>Hosted on GitHub Pages</span>
+            <span>Version 2.0</span>
+          </div>
+
+          <div class="footer-meta-links">
+            <a href="../privacy-policy/" onclick="alert('Privacy Policy: All information presented is for professional portfolio purposes.'); return false;">Privacy Policy</a>
+            <a href="../sitemap.xml" target="_blank">Sitemap</a>
+            <a href="../contact/">Feedback</a>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top-btn" aria-label="Scroll back to top of page">
+              Back to Top <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="shell footer-bottom">
-      <span>© <span data-year></span> ALTHAF SHAIK  All Rights Reserved</span>
-      <span>Dubai, UAE  Hyderabad, India</span>
+
     </div>
   </footer>
 
