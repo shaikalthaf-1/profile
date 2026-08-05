@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>20 Enterprise Case Studies — Shaik Althaf</title>
+  <meta name="description" content="20 comprehensive enterprise cloud, DevOps, networking, and platform automation case studies by Shaik Althaf.">
+  <link rel="stylesheet" href="styles.css?v=20260805">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="header-inner shell">
+      <a class="brand" href="index.html">
+        <span class="brand-avatar-mini">
+          <img src="assets/Shaik_Profile.svg" alt="Shaik Althaf Avatar" width="36" height="36">
+        </span>
+        <span><strong>Shaik Althaf</strong><small>Sr. DevOps Engineer · Uniper</small></span>
+      </a>
+
+      <nav class="primary-nav" data-navigation>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="case-studies.html" class="is-active">Case Studies</a>
+        <a href="projects.html">Projects</a>
+        <a href="technologies.html">Skills</a>
+        <a href="assets/Shaik_Althaf_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">Resume 📥</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 3rem); padding-bottom: 5rem;">
+    <div class="shell">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow"><span></span> Enterprise Portfolio</p>
+        <h1>20 Enterprise <em>Case Studies &amp; Projects.</em></h1>
+        <p class="hero-lead">Deep-dive technical case studies covering infrastructure automation, Azure Virtual WAN, Palo Alto firewalls, DevSecOps pipelines, disaster recovery, and multi-cloud platform engineering.</p>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar" data-reveal>
+        <button class="filter-btn active" data-filter="all">All Projects (20)</button>
+        <button class="filter-btn" data-filter="cloud">Cloud &amp; Networking</button>
+        <button class="filter-btn" data-filter="devops">DevOps &amp; DevSecOps</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
+        <button class="filter-btn" data-filter="multicloud">Multi-Cloud &amp; SaaS</button>
+      </div>
+
+      <!-- 20 Case Studies Grid -->
+      <div class="case-studies-grid" id="case-studies-list">
+        <!-- Javascript dynamically renders or static HTML renders all 20 cards -->
+        <!-- Card 1 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">Azure &amp; Security</span><span class="card-num">01</span></div>
+          <h3>Azure Multi-Region &amp; Secure Virtual Hub Architecture</h3>
+          <p class="card-summary">Designed &amp; implemented Azure Virtual Hub integrated with Palo Alto Cloud NGFW using Terraform for automated routing and security enforcement.</p>
+          <div class="card-metrics"><div><strong>100%</strong><span>Traffic Hardened</span></div><div><strong>Sub-10ms</strong><span>VNet Latency</span></div></div>
+          <div class="card-tags"><span>Azure vHUB</span><span>Palo Alto NGFW</span><span>Terraform</span><span>SD-WAN</span></div>
+          <button class="button-card-details" data-open-modal="cs-1">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-migration">Enterprise Migration</span><span class="card-num">02</span></div>
+          <h3>Enterprise Subscription-to-Subscription Azure Migration</h3>
+          <p class="card-summary">Automated cross-region subscription migration for production workloads with reproducible Terraform infrastructure rebuilds.</p>
+          <div class="card-metrics"><div><strong>Zero</strong><span>Downtime Impact</span></div><div><strong>100%</strong><span>IaC Replicable</span></div></div>
+          <div class="card-tags"><span>Azure</span><span>Terraform</span><span>Azure DevOps</span><span>Shell</span></div>
+          <button class="button-card-details" data-open-modal="cs-2">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-resiliency">Resiliency &amp; DR</span><span class="card-num">03</span></div>
+          <h3>Enterprise Resiliency &amp; Multi-Region Disaster Recovery</h3>
+          <p class="card-summary">Architected multi-region failover and automated disaster recovery procedures for critical enterprise applications.</p>
+          <div class="card-metrics"><div><strong>High Availability</strong><span>Multi-Region DR</span></div><div><strong>Min RTO/RPO</strong><span>Automated Failover</span></div></div>
+          <div class="card-tags"><span>Azure DR</span><span>Traffic Manager</span><span>Networking</span><span>Terraform</span></div>
+          <button class="button-card-details" data-open-modal="cs-3">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">DevSecOps &amp; CI/CD</span><span class="card-num">04</span></div>
+          <h3>CloudOPS — End-to-End Enterprise CI/CD &amp; DevSecOps Platform</h3>
+          <p class="card-summary">Constructed standardized delivery pipelines with Maven, Jenkins, Docker, Kubernetes (AKS), SonarQube, and Trivy security scanning.</p>
+          <div class="card-metrics"><div><strong>40%+</strong><span>Faster Releases</span></div><div><strong>Automated</strong><span>Security Gates</span></div></div>
+          <div class="card-tags"><span>Jenkins</span><span>GitHub Actions</span><span>AKS</span><span>SonarQube</span><span>Trivy</span></div>
+          <button class="button-card-details" data-open-modal="cs-4">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="case-study-card" data-category="ai" data-reveal>
+          <div class="card-top"><span class="badge badge-ai">Self-Service &amp; Automation</span><span class="card-num">05</span></div>
+          <h3>Self-Service Multi-Cloud Infrastructure Catalog</h3>
+          <p class="card-summary">Built an automated service catalog enabling pre-approved Azure, AWS, and GCP infrastructure provisioning through Terraform workflows.</p>
+          <div class="card-metrics"><div><strong>~40%</strong><span>Setup Time Saved</span></div><div><strong>Multi-Cloud</strong><span>Azure · AWS · GCP</span></div></div>
+          <div class="card-tags"><span>Multi-Cloud</span><span>Terraform</span><span>Python</span><span>Self-Service</span></div>
+          <button class="button-card-details" data-open-modal="cs-5">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="case-study-card" data-category="ai" data-reveal>
+          <div class="card-top"><span class="badge badge-ai">AI Innovation</span><span class="card-num">06</span></div>
+          <h3>AI Jenkins Plugin (AutoFix Agent)</h3>
+          <p class="card-summary">Engineered a custom Jenkins extension featuring an autonomous AI agent to analyze build failures and suggest automated fixes.</p>
+          <div class="card-metrics"><div><strong>Autonomous</strong><span>Root Cause Analysis</span></div><div><strong>Reduced MTTR</strong><span>Instant AI Diagnostics</span></div></div>
+          <div class="card-tags"><span>AI Agent</span><span>Jenkins Plugin</span><span>Python</span><span>LLM Integration</span></div>
+          <button class="button-card-details" data-open-modal="cs-6">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="case-study-card" data-category="multicloud" data-reveal>
+          <div class="card-top"><span class="badge badge-saas">MacroCloud Platform</span><span class="card-num">07</span></div>
+          <h3>MacroCloud Console — Multi-Tenant Cloud Operations Platform</h3>
+          <p class="card-summary">Architected MacroCloud Console to automate Resource Group &amp; Subscription migrations with multi-tenant RBAC and workspace isolation.</p>
+          <div class="card-metrics"><div><strong>Multi-Tenant</strong><span>Workspace RBAC</span></div><div><strong>Automated</strong><span>Migration Console</span></div></div>
+          <div class="card-tags"><span>MacroCloud</span><span>Multi-Tenant</span><span>Azure/AWS API</span><span>Node/Python</span></div>
+          <button class="button-card-details" data-open-modal="cs-7">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">IaC Governance</span><span class="card-num">08</span></div>
+          <h3>Infrastructure as Code Policy Governance</h3>
+          <p class="card-summary">Integrated Open Policy Agent (OPA) Rego policies into GitHub Actions PR pipelines, blocking non-compliant infrastructure changes before deployment.</p>
+          <div class="card-metrics"><div><strong>100%</strong><span>Policy Compliance</span></div><div><strong>Zero</strong><span>Resource Drift</span></div></div>
+          <div class="card-tags"><span>OPA</span><span>Rego</span><span>Checkov</span><span>Terraform</span></div>
+          <button class="button-card-details" data-open-modal="cs-8">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">Firewall Security</span><span class="card-num">09</span></div>
+          <h3>Palo Alto Cloud NGFW Automation &amp; Security Hardening</h3>
+          <p class="card-summary">Automated Palo Alto Cloud NGFW rule updates via Terraform and Panorama API integration, ensuring dynamic security policy sync.</p>
+          <div class="card-metrics"><div><strong>100%</strong><span>Perimeter Inspection</span></div><div><strong>Automated</strong><span>Policy Sync</span></div></div>
+          <div class="card-tags"><span>Palo Alto</span><span>Panorama</span><span>Azure vHUB</span><span>Terraform</span></div>
+          <button class="button-card-details" data-open-modal="cs-9">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">Pipeline Architecture</span><span class="card-num">10</span></div>
+          <h3>Azure DevOps Multi-Tenant Pipeline Architecture</h3>
+          <p class="card-summary">Designed a centralized YAML template repository with standardized build, test, and release templates referencing Azure Key Vault for secret management.</p>
+          <div class="card-metrics"><div><strong>50+</strong><span>Pipelines Standardized</span></div><div><strong>70%</strong><span>Maintenance Saved</span></div></div>
+          <div class="card-tags"><span>Azure DevOps</span><span>YAML</span><span>Azure Key Vault</span><span>PowerShell</span></div>
+          <button class="button-card-details" data-open-modal="cs-10">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">Observability</span><span class="card-num">11</span></div>
+          <h3>Enterprise Prometheus &amp; Grafana Observability Engine</h3>
+          <p class="card-summary">Deployed Prometheus operators on AKS and configured Grafana dashboards with KQL integrations to monitor infrastructure health and trigger PagerDuty alerts.</p>
+          <div class="card-metrics"><div><strong>90%</strong><span>Anomalies Detected</span></div><div><strong>60%</strong><span>MTTR Reduction</span></div></div>
+          <div class="card-tags"><span>Prometheus</span><span>Grafana</span><span>Azure Monitor</span><span>KQL</span></div>
+          <button class="button-card-details" data-open-modal="cs-11">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">DMZ Security</span><span class="card-num">12</span></div>
+          <h3>Azure DMZ Micro-segmentation &amp; Application Gateway WAF v2</h3>
+          <p class="card-summary">Provisioned Azure Application Gateway WAF v2 with custom rule sets, HTTPS offloading, and Private Endpoint connections to backend AKS clusters.</p>
+          <div class="card-metrics"><div><strong>OWASP Top 10</strong><span>Protected</span></div><div><strong>Zero</strong><span>WAF Bypasses</span></div></div>
+          <div class="card-tags"><span>App Gateway</span><span>WAF v2</span><span>Private Endpoints</span><span>NSG</span></div>
+          <button class="button-card-details" data-open-modal="cs-12">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 13 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">Kubernetes Security</span><span class="card-num">13</span></div>
+          <h3>Enterprise AKS Zero-Trust Security &amp; Policy Hardening</h3>
+          <p class="card-summary">Enforced Azure Policy for Kubernetes, restricted pod security admission, enabled Defender for Containers, and integrated Trivy scanning in CI/CD.</p>
+          <div class="card-metrics"><div><strong>CIS Benchmark</strong><span>Compliant</span></div><div><strong>Zero</strong><span>Critical CVEs</span></div></div>
+          <div class="card-tags"><span>AKS</span><span>Azure Policy</span><span>Defender for Containers</span><span>Trivy</span></div>
+          <button class="button-card-details" data-open-modal="cs-13">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 14 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">CI/CD Infrastructure</span><span class="card-num">14</span></div>
+          <h3>Self-Hosted Auto-Scaling GitHub Actions Runner Fleet</h3>
+          <p class="card-summary">Deployed an auto-scaling runner fleet inside Azure VNets using containerized runners managed by Terraform.</p>
+          <div class="card-metrics"><div><strong>65%</strong><span>Build Speedup</span></div><div><strong>Private VNet</strong><span>Execution</span></div></div>
+          <div class="card-tags"><span>GitHub Actions</span><span>Azure VNet</span><span>Docker</span><span>Runners</span></div>
+          <button class="button-card-details" data-open-modal="cs-14">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 15 -->
+        <article class="case-study-card" data-category="ai" data-reveal>
+          <div class="card-top"><span class="badge badge-ai">ITSM Automation</span><span class="card-num">15</span></div>
+          <h3>ServiceNow Automated Infrastructure Provisioning</h3>
+          <p class="card-summary">Integrated ServiceNow catalog items directly with Azure DevOps pipeline REST APIs to execute Terraform provisioning automatically upon approval.</p>
+          <div class="card-metrics"><div><strong>5 Days -> 15 Mins</strong><span>Provisioning Time</span></div><div><strong>100%</strong><span>Self-Service</span></div></div>
+          <div class="card-tags"><span>ServiceNow</span><span>Azure DevOps</span><span>REST API</span><span>Terraform</span></div>
+          <button class="button-card-details" data-open-modal="cs-15">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 16 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">Hybrid Networking</span><span class="card-num">16</span></div>
+          <h3>Azure ExpressRoute &amp; Hybrid Cloud Connectivity Backbone</h3>
+          <p class="card-summary">Configured dual-provider Azure ExpressRoute circuits with active-active BGP routing and fallback VPN gateways.</p>
+          <div class="card-metrics"><div><strong>10 Gbps</strong><span>Bandwidth</span></div><div><strong>99.99%</strong><span>SLA Availability</span></div></div>
+          <div class="card-tags"><span>ExpressRoute</span><span>BGP Routing</span><span>VPN Gateway</span><span>Azure</span></div>
+          <button class="button-card-details" data-open-modal="cs-16">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 17 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">SD-WAN Networking</span><span class="card-num">17</span></div>
+          <h3>Silver Peak SD-WAN &amp; Azure Virtual Hub Integration</h3>
+          <p class="card-summary">Integrated Silver Peak SD-WAN virtual appliances directly into Azure Virtual Hub with dynamic BGP route propagation.</p>
+          <div class="card-metrics"><div><strong>Global</strong><span>SD-WAN Mesh</span></div><div><strong>Automated</strong><span>Route Sync</span></div></div>
+          <div class="card-tags"><span>Silver Peak</span><span>SD-WAN</span><span>Azure vHUB</span><span>BGP</span></div>
+          <button class="button-card-details" data-open-modal="cs-17">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 18 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">Identity &amp; Secrets</span><span class="card-num">18</span></div>
+          <h3>Automated Azure Key Vault Secret &amp; Identity Lifecycle</h3>
+          <p class="card-summary">Implemented Azure Managed Identities and Azure Key Vault with automated secret rotation policies managed via Terraform.</p>
+          <div class="card-metrics"><div><strong>Zero</strong><span>Hardcoded Keys</span></div><div><strong>Automated</strong><span>Rotation</span></div></div>
+          <div class="card-tags"><span>Key Vault</span><span>Managed Identity</span><span>Terraform</span><span>Azure</span></div>
+          <button class="button-card-details" data-open-modal="cs-18">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 19 -->
+        <article class="case-study-card" data-category="cloud" data-reveal>
+          <div class="card-top"><span class="badge badge-azure">AWS Infrastructure</span><span class="card-num">19</span></div>
+          <h3>AWS EC2 Auto Scaling &amp; Elastic Load Balancer Optimization</h3>
+          <p class="card-summary">Architected dynamic EC2 Auto Scaling Groups behind Application Load Balancers with CloudWatch target tracking metrics.</p>
+          <div class="card-metrics"><div><strong>Auto-Scaling</strong><span>Enabled</span></div><div><strong>30%</strong><span>Cost Saved</span></div></div>
+          <div class="card-tags"><span>AWS EC2</span><span>ALB</span><span>VPC</span><span>Auto Scaling</span><span>CloudWatch</span></div>
+          <button class="button-card-details" data-open-modal="cs-19">View Full Case Study Details ↗</button>
+        </article>
+
+        <!-- Card 20 -->
+        <article class="case-study-card" data-category="devops" data-reveal>
+          <div class="card-top"><span class="badge badge-devops">Multi-Cloud Governance</span><span class="card-num">20</span></div>
+          <h3>Multi-Cloud DevSecOps Governance &amp; Compliance Framework</h3>
+          <p class="card-summary">Established a unified DevSecOps compliance framework with standardized Terraform modules, GitHub Actions security gates, and centralized logging.</p>
+          <div class="card-metrics"><div><strong>SOC2 &amp; ISO</strong><span>Ready</span></div><div><strong>Unified</strong><span>Telemetry</span></div></div>
+          <div class="card-tags"><span>Multi-Cloud</span><span>Terraform</span><span>GitHub Actions</span><span>SonarQube</span></div>
+          <button class="button-card-details" data-open-modal="cs-20">View Full Case Study Details ↗</button>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- CASE STUDY DETAIL MODAL OVERLAY -->
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="shell footer-bottom">
+      <span>© <span data-year></span> Shaik Althaf · Senior Cloud &amp; Network Automation Engineer</span>
+      <span><a href="index.html">Home</a> · <a href="contact.html">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260805" defer></script>
+</body>
+</html>

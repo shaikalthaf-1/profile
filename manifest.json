@@ -1,0 +1,15 @@
+{
+  "short_name": "Shaik Althaf",
+  "name": "Shaik Althaf — Senior Cloud & Network Automation Engineer",
+  "icons": [
+    {
+      "src": "assets/Shaik_Profile.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/profile/",
+  "background_color": "#07111f",
+  "theme_color": "#0078d4",
+  "display": "standalone"
+}
